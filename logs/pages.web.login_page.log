@@ -1,0 +1,14 @@
+2025-11-17 09:30:31 | INFO | pages.web.login_page | Launch HP Portal
+2025-11-17 09:30:34 | INFO | pages.web.login_page | Enter username
+2025-11-17 09:30:34 | INFO | pages.web.login_page | Enter username
+2025-11-17 09:36:31 | INFO | pages.web.login_page | Launch HP Portal
+2025-11-17 09:36:34 | INFO | pages.web.login_page | Enter username
+2025-11-17 09:36:34 | INFO | pages.web.login_page | Enter username
+2025-11-17 09:37:33 | INFO | pages.web.login_page | Launch HP Portal
+2025-11-17 09:37:36 | INFO | pages.web.login_page | Enter username
+2025-11-17 09:37:36 | INFO | pages.web.login_page | Enter password
+2025-11-17 09:39:04 | INFO | pages.web.login_page | Launch HP Portal
+2025-11-17 09:39:07 | INFO | pages.web.login_page | Enter username
+2025-11-17 09:39:07 | INFO | pages.web.login_page | Enter password
+2025-11-17 09:39:07 | INFO | pages.web.login_page | Click Login button
+2025-11-17 09:39:09 | INFO | pages.web.login_page | Check if login was successful

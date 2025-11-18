@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 82, in _safe_action
+    return func(*args, **kwargs)   # SUCCESS → exit immediately
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 148, in _click
+    self.driver.wait_for_element(locator_type, locator_value)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\core\web_driver.py", line 63, in wait_for_element
+    WebDriverWait(self.driver, timeout).until(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        EC.presence_of_element_located((getattr(By, locator_type.upper()), locator_value))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff66781e8e5+80021]
+	GetHandleVerifier [0x0x7ff66781e940+80112]
+	(No symbol) [0x0x7ff6675a060f]
+	(No symbol) [0x0x7ff6675f8854]
+	(No symbol) [0x0x7ff6675f8b1c]
+	(No symbol) [0x0x7ff66764c927]
+	(No symbol) [0x0x7ff66762126f]
+	(No symbol) [0x0x7ff66764968a]
+	(No symbol) [0x0x7ff667621003]
+	(No symbol) [0x0x7ff6675e95d1]
+	(No symbol) [0x0x7ff6675ea3f3]
+	GetHandleVerifier [0x0x7ff667addc7d+2960429]
+	GetHandleVerifier [0x0x7ff667ad7f3a+2936554]
+	GetHandleVerifier [0x0x7ff667af8977+3070247]
+	GetHandleVerifier [0x0x7ff6678383ce+185214]
+	GetHandleVerifier [0x0x7ff66783fe1f+216527]
+	GetHandleVerifier [0x0x7ff667827b24+117460]
+	GetHandleVerifier [0x0x7ff667827cdf+117903]
+	GetHandleVerifier [0x0x7ff66780dbb8+11112]
+	BaseThreadInitThunk [0x0x7ff85caae8d7+23]
+	RtlUserThreadStart [0x0x7ff85daec53c+44]
+
