@@ -1,23 +1,21 @@
-2025-11-18 13:25:22 | INFO | core.web_driver | Launching Chrome browser...
-2025-11-18 13:25:28 | INFO | tests.test_login | Starting test_login_web with user=student
-2025-11-18 13:25:28 | INFO | LoginPage | Navigating to HP Portal Login URL
-2025-11-18 13:25:34 | INFO | LoginPage | Entering username into input field
-2025-11-18 13:25:34 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
-2025-11-18 13:25:34 | INFO | LoginPage | Entering password into input field
-2025-11-18 13:25:34 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
-2025-11-18 13:25:35 | INFO | LoginPage | Clicking Login button
-2025-11-18 13:25:35 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 1
-2025-11-18 13:25:45 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 1/3...
-2025-11-18 13:25:46 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 2
-2025-11-18 13:25:56 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 2/3...
-2025-11-18 13:25:56 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 3
-2025-11-18 13:26:06 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 3/3...
-2025-11-18 13:26:06 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 4
+2025-11-19 09:20:10 | INFO | core.web_driver | Launching Chrome browser...
+2025-11-19 09:20:15 | INFO | tests.test_login | Starting test_login_web with user=student
+2025-11-19 09:20:15 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 09:20:19 | INFO | LoginPage | Entering username into input field
+2025-11-19 09:20:19 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 09:20:19 | INFO | LoginPage | Entering password into input field
+2025-11-19 09:20:19 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 09:20:19 | INFO | LoginPage | Clicking Login button
+2025-11-19 09:20:19 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 1
+2025-11-19 09:20:30 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 09:20:30 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 2
+2025-11-19 09:20:40 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 2/2...
+2025-11-19 09:20:40 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 3
 --- Logging error ---
 Traceback (most recent call last):
-  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 82, in _safe_action
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 83, in _safe_action
     return func(*args, **kwargs)   # SUCCESS → exit immediately
-  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 148, in _click
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 149, in _click
     self.driver.wait_for_element(locator_type, locator_value)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\praveen.kittali\Working\Agentra_3.0\core\web_driver.py", line 63, in wait_for_element
@@ -31,27 +29,26 @@ Traceback (most recent call last):
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 Stacktrace:
-	GetHandleVerifier [0x0x7ff66781e8e5+80021]
-	GetHandleVerifier [0x0x7ff66781e940+80112]
-	(No symbol) [0x0x7ff6675a060f]
-	(No symbol) [0x0x7ff6675f8854]
-	(No symbol) [0x0x7ff6675f8b1c]
-	(No symbol) [0x0x7ff66764c927]
-	(No symbol) [0x0x7ff66762126f]
-	(No symbol) [0x0x7ff66764968a]
-	(No symbol) [0x0x7ff667621003]
-	(No symbol) [0x0x7ff6675e95d1]
-	(No symbol) [0x0x7ff6675ea3f3]
-	GetHandleVerifier [0x0x7ff667addc7d+2960429]
-	GetHandleVerifier [0x0x7ff667ad7f3a+2936554]
-	GetHandleVerifier [0x0x7ff667af8977+3070247]
-	GetHandleVerifier [0x0x7ff6678383ce+185214]
-	GetHandleVerifier [0x0x7ff66783fe1f+216527]
-	GetHandleVerifier [0x0x7ff667827b24+117460]
-	GetHandleVerifier [0x0x7ff667827cdf+117903]
-	GetHandleVerifier [0x0x7ff66780dbb8+11112]
-	BaseThreadInitThunk [0x0x7ff85caae8d7+23]
-	RtlUserThreadStart [0x0x7ff85daec53c+44]
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff78794a235
+	0x7ff7876a2630
+	0x7ff7874316dd
+	0x7ff78748a27e
+	0x7ff78748a58c
+	0x7ff7874ded77
+	0x7ff7874dbaba
+	0x7ff78747b0ed
+	0x7ff78747bf63
+	0x7ff787975d60
+	0x7ff78796fe8a
+	0x7ff787991005
+	0x7ff7876bd71e
+	0x7ff7876c4e1f
+	0x7ff7876ab7c4
+	0x7ff7876ab97f
+	0x7ff7876918e8
+	0x7ff9c6afe8d7
+	0x7ff9c7ccc53c
 
 
 During handling of the above exception, another exception occurred:
@@ -146,36 +143,35 @@ Call stack:
     self.login_page.click_login()
   File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\web\login_page.py", line 34, in click_login
     self.click(*LoginPageLocators.LOGIN_BUTTON)
-  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 140, in click
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 141, in click
     return self._safe_action(
-  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 96, in _safe_action
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 97, in _safe_action
     return self._fail(
-  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 110, in _fail
+  File "C:\Users\praveen.kittali\Working\Agentra_3.0\pages\base_page.py", line 111, in _fail
     self.logger.error(error_msg)
-Message: "❌ Failed after 3 retries (TimeoutException) during: Clicking element (xpath, //button[@id='submit2'])\nMessage: \nStacktrace:\n\tGetHandleVerifier [0x0x7ff66781e8e5+80021]\n\tGetHandleVerifier [0x0x7ff66781e940+80112]\n\t(No symbol) [0x0x7ff6675a060f]\n\t(No symbol) [0x0x7ff6675f8854]\n\t(No symbol) [0x0x7ff6675f8b1c]\n\t(No symbol) [0x0x7ff66764c927]\n\t(No symbol) [0x0x7ff66762126f]\n\t(No symbol) [0x0x7ff66764968a]\n\t(No symbol) [0x0x7ff667621003]\n\t(No symbol) [0x0x7ff6675e95d1]\n\t(No symbol) [0x0x7ff6675ea3f3]\n\tGetHandleVerifier [0x0x7ff667addc7d+2960429]\n\tGetHandleVerifier [0x0x7ff667ad7f3a+2936554]\n\tGetHandleVerifier [0x0x7ff667af8977+3070247]\n\tGetHandleVerifier [0x0x7ff6678383ce+185214]\n\tGetHandleVerifier [0x0x7ff66783fe1f+216527]\n\tGetHandleVerifier [0x0x7ff667827b24+117460]\n\tGetHandleVerifier [0x0x7ff667827cdf+117903]\n\tGetHandleVerifier [0x0x7ff66780dbb8+11112]\n\tBaseThreadInitThunk [0x0x7ff85caae8d7+23]\n\tRtlUserThreadStart [0x0x7ff85daec53c+44]\n"
+Message: "❌ Failed after 2 retries (TimeoutException) during: Clicking element (xpath, //button[@id='submit2'])\nMessage: \nStacktrace:\nSymbols not available. Dumping unresolved backtrace:\n\t0x7ff78794a235\n\t0x7ff7876a2630\n\t0x7ff7874316dd\n\t0x7ff78748a27e\n\t0x7ff78748a58c\n\t0x7ff7874ded77\n\t0x7ff7874dbaba\n\t0x7ff78747b0ed\n\t0x7ff78747bf63\n\t0x7ff787975d60\n\t0x7ff78796fe8a\n\t0x7ff787991005\n\t0x7ff7876bd71e\n\t0x7ff7876c4e1f\n\t0x7ff7876ab7c4\n\t0x7ff7876ab97f\n\t0x7ff7876918e8\n\t0x7ff9c6afe8d7\n\t0x7ff9c7ccc53c\n"
 Arguments: ()
-2025-11-18 13:26:17 | ERROR | LoginPage | ❌ Failed after 3 retries (TimeoutException) during: Clicking element (xpath, //button[@id='submit2'])
+2025-11-19 09:20:51 | ERROR | LoginPage | ❌ Failed after 2 retries (TimeoutException) during: Clicking element (xpath, //button[@id='submit2'])
 Message: 
 Stacktrace:
-	GetHandleVerifier [0x0x7ff66781e8e5+80021]
-	GetHandleVerifier [0x0x7ff66781e940+80112]
-	(No symbol) [0x0x7ff6675a060f]
-	(No symbol) [0x0x7ff6675f8854]
-	(No symbol) [0x0x7ff6675f8b1c]
-	(No symbol) [0x0x7ff66764c927]
-	(No symbol) [0x0x7ff66762126f]
-	(No symbol) [0x0x7ff66764968a]
-	(No symbol) [0x0x7ff667621003]
-	(No symbol) [0x0x7ff6675e95d1]
-	(No symbol) [0x0x7ff6675ea3f3]
-	GetHandleVerifier [0x0x7ff667addc7d+2960429]
-	GetHandleVerifier [0x0x7ff667ad7f3a+2936554]
-	GetHandleVerifier [0x0x7ff667af8977+3070247]
-	GetHandleVerifier [0x0x7ff6678383ce+185214]
-	GetHandleVerifier [0x0x7ff66783fe1f+216527]
-	GetHandleVerifier [0x0x7ff667827b24+117460]
-	GetHandleVerifier [0x0x7ff667827cdf+117903]
-	GetHandleVerifier [0x0x7ff66780dbb8+11112]
-	BaseThreadInitThunk [0x0x7ff85caae8d7+23]
-	RtlUserThreadStart [0x0x7ff85daec53c+44]
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff78794a235
+	0x7ff7876a2630
+	0x7ff7874316dd
+	0x7ff78748a27e
+	0x7ff78748a58c
+	0x7ff7874ded77
+	0x7ff7874dbaba
+	0x7ff78747b0ed
+	0x7ff78747bf63
+	0x7ff787975d60
+	0x7ff78796fe8a
+	0x7ff787991005
+	0x7ff7876bd71e
+	0x7ff7876c4e1f
+	0x7ff7876ab7c4
+	0x7ff7876ab97f
+	0x7ff7876918e8
+	0x7ff9c6afe8d7
+	0x7ff9c7ccc53c
 

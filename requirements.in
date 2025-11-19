@@ -1,0 +1,8 @@
+selenium
+Appium-Python-Client
+pytest
+pytest-xdist
+requests
+pandas
+allure-pytest
+pywinauto
