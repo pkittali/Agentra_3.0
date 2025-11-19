@@ -1,0 +1,10 @@
+2025-11-19 10:58:44 | INFO | core.web_driver | Launching Chrome browser...
+2025-11-19 10:58:46 | INFO | tests.test_login | Starting test_login_web with user=student
+2025-11-19 10:58:46 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 10:58:50 | INFO | LoginPage | Entering username into input field
+2025-11-19 10:58:50 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 10:58:50 | INFO | LoginPage | Entering password into input field
+2025-11-19 10:58:50 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 10:58:50 | INFO | LoginPage | Clicking Login button
+2025-11-19 10:58:50 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 10:58:51 | INFO | LoginPage | Checking if login was successful

@@ -1,1 +1,9 @@
-base_url: 'https://example.com'\n
+default_env: "dev"
+
+browser: "chrome"
+implicit_wait: 5
+explicit_wait: 20
+
+applications:
+  web_portal: "https://practicetestautomation.com"
+  hp_smart: "app-specific-url-if-needed"
