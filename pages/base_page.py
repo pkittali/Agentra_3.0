@@ -37,6 +37,7 @@ from selenium.common.exceptions import (
     WebDriverException
 )
 
+#test
 # Appium exceptions
 try:
     from appium.webdriver.common.exceptions import WebDriverException as AppiumDriverException
