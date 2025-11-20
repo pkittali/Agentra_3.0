@@ -1,5 +1,11 @@
 import pytest
 import apps
+from core.configManager import ConfigManager
+
+@pytest.fixture(scope="session")
+def config():
+    return ConfigManager()
+
 
 def pytest_addoption(parser):
     """Registers custom CLI arguments.
@@ -37,15 +43,15 @@ def driver(request):
         raise ValueError(f"Unknown platform: {platform}")
 
 @pytest.fixture
-def hpApp(request, driver):
+def hpApp(request, driver, config):
     platform = request.config.getoption("--platform")
 
     if platform == "web":
         from apps.hp_web_app import HPAppWeb
-        return HPAppWeb(driver)
+        return HPAppWeb(driver, config)
     elif platform == "mobile":
         from apps.hp_mobile_app import HPAppMobile
-        return HPAppMobile(driver)
+        return HPAppMobile(driver, config)
     elif platform == "desktop":
         from apps.hp_desktop_app import HPAppDesktop
-        return HPAppDesktop(driver)
+        return HPAppDesktop(driver, config)

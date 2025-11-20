@@ -7,6 +7,17 @@ logger = get_logger(__name__)
 
 @pytest.mark.flaky(reruns=2, reruns_delay=5)
 @pytest.mark.parametrize('user,pwd', [('student','Password123')])
+
+@allure.title("Test Login Functionality on Web Platform")
+@allure.description("""
+This test validates the login functionality on the web platform using valid user credentials.
+It ensures that:
+1. The login page opens correctly.
+2. Username and password are entered.
+3. Login action succeeds.
+4. Success message or post-login page is visible.
+""")
+
 def test_login_web(hpApp, user, pwd):
 
     """
@@ -59,7 +70,6 @@ def test_login_web(hpApp, user, pwd):
           in Page Objects.
 
     """    
-    
     logger.info(f"Starting test_login_web with user={user}")
     hpApp.login(user, pwd)
     # hpApp.start_enrollment()

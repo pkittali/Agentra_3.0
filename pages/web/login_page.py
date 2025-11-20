@@ -8,7 +8,8 @@ from resources.locators.web_locators import LoginPageLocators
 from core.logger import get_logger
 
 class LoginPage(BasePage):
-    def __init__(self, driver):
+    def __init__(self, driver, config):
+        super().__init__(driver, config)
         self.driver = driver
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
@@ -16,7 +17,8 @@ class LoginPage(BasePage):
     def open(self):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Launch HP Portal"):
-            self.driver.get("https://practicetestautomation.com/practice-test-login/")
+            url = self.config.get_url("login")
+            self.driver.get(url)  # Replace with actual login URL
 
     def enter_username(self, username):
         self.logger.info("Entering username into input field")        

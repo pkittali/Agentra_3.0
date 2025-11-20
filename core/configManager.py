@@ -1,24 +1,23 @@
-import yaml
 import os
+import yaml
+
 
 class ConfigManager:
+    def __init__(self):
+        base_path = os.path.join(os.path.dirname(__file__), "..", "config")
+        config_file = os.path.join(base_path, "config.yaml")
 
-    def __init__(self, env="dev"):
-        base_path = "config"
-
-        # Load base config
-        with open(f"{base_path}/config.yaml", "r") as f:
-            self.base = yaml.safe_load(f)
-
-        # Override with environment file
-        with open(f"{base_path}/env_{env}.yaml", "r") as f:
-            self.env = yaml.safe_load(f)
+        with open(config_file, "r") as f:
+            self.config = yaml.safe_load(f)
 
     def get_url(self, key):
-        return self.env["urls"][key]
+        return self.config["urls"][key]
 
     def get_credential(self, key):
-        return self.env["credentials"][key]
+        return self.config["credentials"][key]
 
-    def get_base(self, key):
-        return self.base.get(key)
+    def get_timeout(self, key):
+        return self.config["timeouts"][key]
+
+    def get(self, key):
+        return self.config[key]  # generic getter

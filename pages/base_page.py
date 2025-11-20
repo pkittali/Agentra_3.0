@@ -64,8 +64,9 @@ class BasePage:
     )    
     RETRIES = 2
 
-    def __init__(self, driver):
+    def __init__(self, driver, config=None):
         self.driver = driver
+        self.config = config
         self.logger = get_logger(self.__class__.__name__)
 
     def _safe_action(self, action_name, func, *args, **kwargs):

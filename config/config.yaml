@@ -1,9 +1,14 @@
-default_env: "dev"
+urls:
+  login: "https://practicetestautomation.com/practice-test-login/"
+  dashboard: "https://practicetestautomation.com/dashboard/"
 
-browser: "chrome"
-implicit_wait: 5
-explicit_wait: 20
+credentials:
+  user: "student"
+  password: "Password123"
 
-applications:
-  web_portal: "https://practicetestautomation.com"
-  hp_smart: "app-specific-url-if-needed"
+timeouts:
+  implicit: 5
+  explicit: 20
+
+app:
+  name: "Agentra Automation"
