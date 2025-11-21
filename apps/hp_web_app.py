@@ -7,7 +7,7 @@ from pages.web.login_page import LoginPage
 from pages.web.createaccount_page import CreateAccountPage
 
 class HPAppWeb:
-    def __init__(self, driver):
+    def __init__(self, driver, config):
         self.driver = driver
         self.login_page = LoginPage(driver)
         self.create_account_page = CreateAccountPage(driver)

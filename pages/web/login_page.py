@@ -8,11 +8,31 @@ from resources.locators.web_locators import LoginPageLocators
 from core.logger import get_logger
 
 class LoginPage(BasePage):
-    def __init__(self, driver):
+    def __init__(self, driver, config):
+        super().__init__(driver, config)
         self.driver = driver
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
+<<<<<<< HEAD
+=======
+    def open(self):
+        self.logger.info("Navigating to HP Portal Login URL")
+        with allure.step("Launch HP Portal"):
+            url = self.config.get_url("login")
+            self.driver.get(url)  # Replace with actual login URL
+
+    def enter_username(self, username):
+        self.logger.info("Entering username into input field")        
+        with allure.step("Enter username"):
+            self.enter_text(*LoginPageLocators.USERNAME_INPUT, username)
+
+    def enter_password(self, password):
+        self.logger.info("Entering password into input field")
+        with allure.step("Enter password"):
+            self.enter_text(*LoginPageLocators.PASSWORD_INPUT, password)
+
+>>>>>>> 824352e915fb2814294b748fa689958889012cf3
     def click_login(self):
         self.logger.info("Clicking Login button")
         with allure.step("Clicked Login button"):

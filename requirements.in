@@ -6,3 +6,6 @@ requests
 pandas
 allure-pytest
 pywinauto
+pyautogui
+psutil
+PyYAML

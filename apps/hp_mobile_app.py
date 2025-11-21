@@ -1,10 +1,11 @@
 # apps/hp_app_mobile.py
-from pages.mobile import *
+from pages.mobile.login_page import LoginPage
 
 class HPAppMobile:
-    def __init__(self, driver):
+    def __init__(self, driver, config):
         self.driver = driver
-        self.login_page = MobileLoginPage(driver)
+        self.config = config
+        self.login_page = LoginPage(driver, config)
         self.permissions_page = PermissionsPage(driver)
         self.enroll_page = MobileEnrollPage(driver)
     

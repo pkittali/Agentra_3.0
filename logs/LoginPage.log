@@ -156,6 +156,7 @@
 2025-11-19 09:20:30 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 2
 2025-11-19 09:20:40 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 2/2...
 2025-11-19 09:20:40 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 3
+<<<<<<< HEAD
 2025-11-19 14:35:29 | INFO | LoginPage | Navigating to HP Portal Login URL
 2025-11-19 14:35:34 | INFO | LoginPage | Entering username into input field
 2025-11-19 14:35:34 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
@@ -281,3 +282,96 @@
 2025-11-19 13:13:28 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
 2025-11-19 13:13:33 | INFO | LoginPage | Navigating to HP Portal Login URL
 2025-11-19 13:13:33 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+=======
+2025-11-19 10:58:46 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 10:58:50 | INFO | LoginPage | Entering username into input field
+2025-11-19 10:58:50 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 10:58:50 | INFO | LoginPage | Entering password into input field
+2025-11-19 10:58:50 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 10:58:50 | INFO | LoginPage | Clicking Login button
+2025-11-19 10:58:50 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 10:58:51 | INFO | LoginPage | Checking if login was successful
+2025-11-19 17:33:55 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:33:59 | INFO | LoginPage | Entering username into input field
+2025-11-19 17:33:59 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 17:33:59 | INFO | LoginPage | Entering password into input field
+2025-11-19 17:33:59 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 17:33:59 | INFO | LoginPage | Clicking Login button
+2025-11-19 17:33:59 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 17:34:00 | INFO | LoginPage | Checking if login was successful
+2025-11-19 17:34:50 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:34:54 | INFO | LoginPage | Entering username into input field
+2025-11-19 17:34:54 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 17:34:54 | INFO | LoginPage | Entering password into input field
+2025-11-19 17:34:54 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 17:34:54 | INFO | LoginPage | Clicking Login button
+2025-11-19 17:34:54 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 17:34:55 | INFO | LoginPage | Checking if login was successful
+2025-11-19 17:37:24 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:37:28 | INFO | LoginPage | Entering username into input field
+2025-11-19 17:37:28 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 17:37:28 | INFO | LoginPage | Entering password into input field
+2025-11-19 17:37:28 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 17:37:28 | INFO | LoginPage | Clicking Login button
+2025-11-19 17:37:28 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 17:37:30 | INFO | LoginPage | Checking if login was successful
+2025-11-19 17:44:50 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:44:54 | INFO | LoginPage | Entering username into input field
+2025-11-19 17:44:54 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 17:44:54 | INFO | LoginPage | Entering password into input field
+2025-11-19 17:44:54 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 17:44:54 | INFO | LoginPage | Clicking Login button
+2025-11-19 17:44:54 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 17:44:55 | INFO | LoginPage | Checking if login was successful
+2025-11-19 17:55:59 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:56:03 | INFO | LoginPage | Entering username into input field
+2025-11-19 17:56:03 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 17:56:03 | INFO | LoginPage | Entering password into input field
+2025-11-19 17:56:03 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 17:56:03 | INFO | LoginPage | Clicking Login button
+2025-11-19 17:56:03 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 17:56:04 | INFO | LoginPage | Checking if login was successful
+2025-11-19 18:05:02 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 18:05:05 | INFO | LoginPage | Entering username into input field
+2025-11-19 18:05:05 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 18:05:05 | INFO | LoginPage | Entering password into input field
+2025-11-19 18:05:05 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 18:05:05 | INFO | LoginPage | Clicking Login button
+2025-11-19 18:05:05 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 18:05:07 | INFO | LoginPage | Checking if login was successful
+2025-11-19 18:07:51 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 18:07:54 | INFO | LoginPage | Entering username into input field
+2025-11-19 18:07:54 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 18:07:54 | INFO | LoginPage | Entering password into input field
+2025-11-19 18:07:54 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 18:07:54 | INFO | LoginPage | Clicking Login button
+2025-11-19 18:07:54 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 18:07:55 | INFO | LoginPage | Checking if login was successful
+2025-11-19 18:12:48 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 18:12:52 | INFO | LoginPage | Entering username into input field
+2025-11-19 18:12:52 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 18:12:52 | INFO | LoginPage | Entering password into input field
+2025-11-19 18:12:52 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 18:12:52 | INFO | LoginPage | Clicking Login button
+2025-11-19 18:12:52 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 18:12:54 | INFO | LoginPage | Checking if login was successful
+2025-11-19 18:53:46 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 19:02:20 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 19:03:28 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 19:10:30 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 19:10:34 | INFO | LoginPage | Entering username into input field
+2025-11-19 19:10:34 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 19:10:34 | INFO | LoginPage | Entering password into input field
+2025-11-19 19:10:34 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 19:10:35 | INFO | LoginPage | Clicking Login button
+2025-11-19 19:10:35 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 19:10:36 | INFO | LoginPage | Checking if login was successful
+2025-11-20 08:50:22 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-20 08:50:26 | INFO | LoginPage | Entering username into input field
+2025-11-20 08:50:26 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-20 08:50:26 | INFO | LoginPage | Entering password into input field
+2025-11-20 08:50:26 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-20 08:50:26 | INFO | LoginPage | Clicking Login button
+2025-11-20 08:50:26 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-20 08:50:27 | INFO | LoginPage | Checking if login was successful
+>>>>>>> 824352e915fb2814294b748fa689958889012cf3
