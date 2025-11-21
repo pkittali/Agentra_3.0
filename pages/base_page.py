@@ -27,8 +27,9 @@ Design Principles
 import time
 import traceback
 import allure
-
-# Selenium exceptions
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import (
     NoSuchElementException,
     TimeoutException,
@@ -108,7 +109,7 @@ class BasePage:
     def _fail(self, action_name, title, exception_obj):
         """Capture logs, screenshot, and raise failures cleanly."""
 
-        error_msg = f"❌ {title} during: {action_name}\n{str(exception_obj)}"
+        error_msg = f" {title} during: {action_name}\n{str(exception_obj)}"
         self.logger.error(error_msg)
         self.logger.debug(traceback.format_exc())
 
@@ -178,3 +179,31 @@ class BasePage:
     def _get_text(self, locator_type, locator_value):
         el = self.driver.find_element(locator_type, locator_value)
         return el.text if el else None
+    
+    def select_custom_dropdown_by_text(self, value, timeout=15):
+        driver = self.driver.driver
+        option_xpath = f"//li[@role='option']//span[contains(normalize-space(text()), '{value}')]"
+        with allure.step(f"Select dropdown value: {value}"):
+            self.logger.info(f"Selecting dropdown option: {value}")
+            try:
+                # Wait for listbox
+                listbox = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.XPATH, "//ul[@role='listbox']")))
+                driver.execute_script("arguments[0].scrollIntoView({block:'center'});", listbox)
+
+                # Wait for option
+                option = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.XPATH, option_xpath)))
+                driver.execute_script("arguments[0].scrollIntoView({block:'center'});", option)
+                try:
+                    self.click(By.XPATH, option_xpath)
+                    self.logger.info(f"Selected '{value}' using normal click")
+                    return
+                except Exception as e:
+                    self.logger.warning(f"Normal click failed, trying JS click: {e}")
+                # JS click fallback
+                driver.execute_script("arguments[0].click();", option)
+                self.logger.info(f"Selected '{value}' using JS click")
+
+            except Exception as e:
+                msg = f"Failed to select dropdown option '{value}': {e}"
+                self.logger.error(msg)
+                raise Exception(msg)

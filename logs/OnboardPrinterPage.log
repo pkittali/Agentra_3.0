@@ -1,0 +1,22 @@
+2025-11-21 07:27:49 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-21 07:28:10 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-21 07:28:10 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-21 07:28:10 | INFO | OnboardPrinterPage | Entering claim code into input field
+2025-11-21 07:28:10 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-21 07:28:20 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 1/2...
+2025-11-21 07:28:21 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 2
+2025-11-21 07:28:31 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 2/2...
+2025-11-21 07:28:31 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 3
+2025-11-21 14:04:11 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-21 14:04:33 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-21 14:04:34 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-21 14:04:34 | INFO | OnboardPrinterPage | Entering claim code into input field
+2025-11-21 14:04:34 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-21 14:04:50 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 1/2...
+2025-11-21 14:04:50 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 2
+2025-11-21 14:05:00 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 2/2...
+2025-11-21 14:05:01 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 3
+2025-11-21 14:21:36 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-21 14:21:58 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-21 14:21:59 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-21 14:21:59 | INFO | OnboardPrinterPage | Entering claim code into input field

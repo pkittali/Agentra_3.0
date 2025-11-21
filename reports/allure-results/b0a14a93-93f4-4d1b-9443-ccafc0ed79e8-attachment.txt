@@ -1,1 +1,0 @@
-Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1

@@ -2,16 +2,25 @@
 import random
 import string
 from pages.web import *
+from pages.web.hpcheckout_page import HPCheckoutPage
 from pages.web.launchlanding_page import LaunchLandingPage
 from pages.web.login_page import LoginPage
 from pages.web.createaccount_page import CreateAccountPage
+from pages.web.onboard_printer_page import OnboardPrinterPage
+from pages.web.plan_selection_page import PlanSelectionPage
+from pages.web.printer_select_page import PrinterSelectionPage
 
 class HPAppWeb:
     def __init__(self, driver, config):
         self.driver = driver
-        self.login_page = LoginPage(driver)
+        self.config = config
+        self.login_page = LoginPage(driver, config)
         self.create_account_page = CreateAccountPage(driver)
         self.landing_page=LaunchLandingPage(driver)
+        self.onboard_printer_page=OnboardPrinterPage(driver)
+        self.printer_select_page=PrinterSelectionPage(driver)
+        self.plan_select_page=PlanSelectionPage(driver)
+        self.hp_checkout_page=HPCheckoutPage(driver)
         #self.enroll_page = WebEnrollPage(driver)
 
     def login(self, username, password):
@@ -40,6 +49,19 @@ class HPAppWeb:
         self.create_account_page.click_submit_create_account()
         self.create_account_page.fetch_and_enter_otp(test_email)
 
+    def onboard_printer(self):
+        # "link_printer_url": "https://www.hpsmartstage.com/us/en/newprinter"
+        url="https://www.hpsmartstage.com/us/en/newprinter"
+        claim_code="ABCDEFGH"
+        self.onboard_printer_page.open_printer_url(url)
+        self.onboard_printer_page.enter_claim_code(claim_code)
+        self.onboard_printer_page.click_add_printer()
+
+    def checkout_upto_shipping_billing(self):
+        self.printer_select_page.printer_selection()
+        self.plan_select_page.plan_selection()
+        self.hp_checkout_page.click_hp_checkout()
+        
     def start_enrollment(self):
         self.login_page.open()
         self.login_page.login()

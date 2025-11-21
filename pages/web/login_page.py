@@ -14,8 +14,6 @@ class LoginPage(BasePage):
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
-<<<<<<< HEAD
-=======
     def open(self):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Launch HP Portal"):
@@ -32,14 +30,12 @@ class LoginPage(BasePage):
         with allure.step("Enter password"):
             self.enter_text(*LoginPageLocators.PASSWORD_INPUT, password)
 
->>>>>>> 824352e915fb2814294b748fa689958889012cf3
     def click_login(self):
         self.logger.info("Clicking Login button")
-        with allure.step("Clicked Login button"):
+        with allure.step("Click Login button"):
             self.click(*LoginPageLocators.LOGIN_BUTTON)
 
     def is_login_successful(self):
         self.logger.info("Checking if login was successful")
         with allure.step("Check if login was successful"):
             return self.driver.find_element(*LoginPageLocators.SUCCESS_MESSAGE).is_displayed()
-

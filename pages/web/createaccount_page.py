@@ -55,50 +55,63 @@ class CreateAccountPage(BasePage):
         with allure.step("Clicked Submit Create Account button"):
             self.click(*CreateAccountPageLocators.SUBMIT_CREATE_ACCOUNT)
 
-    def fetch_and_enter_otp(self,test_email):
+    def enter_verification_code(self,otp):
+        self.logger.info("Entering verification code")
+        with allure.step("Entered Verification code"):
+            self.enter_text(*CreateAccountPageLocators.VERIFICATION_CODE_INPUT,otp)
+    
+    def click_verify(self):
+        self.logger.info("Clicking Verify button")
+        with allure.step("Clicked Verify button"):
+            self.click(*CreateAccountPageLocators.VERIFY_BUTTON)
+
+    def fetch_and_enter_otp(self, test_email):
         self.logger.info("Opening email to fetch verification code")
+
         with allure.step("Opened Email"):
             inbox_url = f"https://mailsac.com/inbox/{test_email}"
+
             # Open a new tab for Mailsac
-            self.driver.execute_script("window.open('');")
-            self.driver.switch_to.window(self.driver.window_handles[-1])
-            self.driver.get(inbox_url)
-            wait = WebDriverWait(self.driver, 15)
-            # Poll for email for up to 90 seconds
+            self.driver.driver.execute_script("window.open('');")
+            self.driver.driver.switch_to.window(self.driver.driver.window_handles[-1])
+
+            self.driver.driver.get(inbox_url)
+
+            wait = WebDriverWait(self.driver.driver, 15)
+
+            # Poll for email for up to 120 seconds
             email_found = False
             start_time = time.time()
+
             while time.time() - start_time < 120:
                 try:
-                    messages = self.driver.find_elements(By.CSS_SELECTOR, "tr.ng-scope")
+                    messages = self.driver.driver.find_elements(By.CSS_SELECTOR, "tr.ng-scope")
                     if messages:
                         email_found = True
                         break
                 except:
                     pass
+
                 print("[DEBUG] No email yet, refreshing inbox...")
-                self.driver.refresh()
+                self.driver.driver.refresh()
                 time.sleep(5)
+
             if not email_found:
-                raise TimeoutError(f"No OTP email received at {test_email} within 90 seconds.")
+                raise TimeoutError(f"No OTP email received at {test_email} within 120 seconds.")
+
+            # Open latest email
             messages[0].click()
-            try:
-                wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-                email_body = self.driver.find_element(By.TAG_NAME, "body").text
-            except:
-                raise TimeoutError("Email body did not load in time.")
-            # Extract OTP from email body
+
+            wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            email_body = self.driver.driver.find_element(By.TAG_NAME, "body").text
+
+            # Extract OTP (6 digits)
             otp_match = re.search(r'\b(\d{6})\b', email_body)
             assert otp_match, f"No OTP found in email body: {email_body}"
+
             otp = otp_match.group(1)
             print(f"[DEBUG] OTP Found: {otp}")
-            # Switch back to the original application tab
-            self.driver.switch_to.window(self.driver.window_handles[0])
-
-
-
-
-
-    
-
-   
-
+            # Switch back to main tab
+            self.driver.driver.switch_to.window(self.driver.driver.window_handles[0])
+            self.enter_verification_code(otp)
+            self.click_verify()
