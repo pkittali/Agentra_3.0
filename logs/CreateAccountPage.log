@@ -1,0 +1,157 @@
+2025-11-19 12:49:23 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-19 12:49:23 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 12:49:32 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-19 12:49:32 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 12:49:43 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 12:49:43 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 12:49:53 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 2/2...
+2025-11-19 12:49:53 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 3
+2025-11-19 13:09:17 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-19 13:09:17 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 13:09:23 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-19 13:09:23 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 13:09:38 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 13:09:38 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 13:09:39 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-19 13:09:39 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 13:09:39 | INFO | CreateAccountPage | Entering email into input field
+2025-11-19 13:09:39 | INFO | CreateAccountPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 13:09:40 | INFO | CreateAccountPage | Entering password into input field
+2025-11-19 13:09:40 | INFO | CreateAccountPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 13:09:40 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-19 13:09:40 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 13:13:47 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-19 13:13:47 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 13:13:53 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-19 13:13:53 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 13:14:06 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 13:14:06 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 13:14:08 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-19 13:14:08 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 13:14:09 | INFO | CreateAccountPage | Entering email into input field
+2025-11-19 13:14:09 | INFO | CreateAccountPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 13:14:11 | INFO | CreateAccountPage | Entering password into input field
+2025-11-19 13:14:11 | INFO | CreateAccountPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 13:14:12 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-19 13:14:12 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 13:24:53 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-19 13:24:53 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 13:25:01 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-19 13:25:01 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 13:25:11 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 13:25:12 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 13:25:26 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-19 13:25:26 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 13:25:30 | INFO | CreateAccountPage | Entering email into input field
+2025-11-19 13:25:30 | INFO | CreateAccountPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 13:25:31 | INFO | CreateAccountPage | Entering password into input field
+2025-11-19 13:25:31 | INFO | CreateAccountPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 13:25:31 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-19 13:25:31 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 13:34:35 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-19 13:34:35 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 13:34:56 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-19 13:34:56 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 13:35:07 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 13:35:07 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 13:35:08 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-19 13:35:08 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 13:35:09 | INFO | CreateAccountPage | Entering email into input field
+2025-11-19 13:35:09 | INFO | CreateAccountPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 13:35:11 | INFO | CreateAccountPage | Entering password into input field
+2025-11-19 13:35:11 | INFO | CreateAccountPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 13:35:12 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-19 13:35:12 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 13:43:39 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-19 13:43:39 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 13:43:49 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-19 13:43:49 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 13:44:00 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 13:44:00 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 13:44:01 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-19 13:44:01 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 13:44:02 | INFO | CreateAccountPage | Entering email into input field
+2025-11-19 13:44:02 | INFO | CreateAccountPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 13:44:03 | INFO | CreateAccountPage | Entering password into input field
+2025-11-19 13:44:03 | INFO | CreateAccountPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 13:44:04 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-19 13:44:04 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 13:46:46 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-19 13:46:46 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 13:47:07 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-19 13:47:07 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 13:47:18 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-19 13:47:18 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 13:47:19 | INFO | CreateAccountPage | Entering email into input field
+2025-11-19 13:47:19 | INFO | CreateAccountPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 13:47:19 | INFO | CreateAccountPage | Entering password into input field
+2025-11-19 13:47:19 | INFO | CreateAccountPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 13:47:20 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-19 13:47:20 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) - Attempt 1
+2025-11-19 13:47:30 | WARNING | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 13:47:30 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) - Attempt 2
+2025-11-19 13:47:41 | WARNING | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) failed with TimeoutException. Retrying 2/2...
+2025-11-19 13:47:41 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) - Attempt 3
+2025-11-20 11:21:33 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-20 11:21:33 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-20 11:21:40 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-20 11:21:40 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-20 11:21:52 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-20 11:21:52 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-20 11:21:55 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-20 11:21:55 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-20 11:37:28 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-20 11:37:28 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-20 11:37:47 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-20 11:37:47 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-20 11:37:57 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-20 11:37:57 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-20 11:37:59 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-20 11:37:59 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-20 11:37:59 | INFO | CreateAccountPage | Entering email into input field
+2025-11-20 11:37:59 | INFO | CreateAccountPage | Entering 'GSuvvafqnm7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-20 11:38:00 | INFO | CreateAccountPage | Entering password into input field
+2025-11-20 11:38:00 | INFO | CreateAccountPage | Entering 'GSGSuvvafqnm7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-20 11:38:00 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-20 11:38:00 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) - Attempt 1
+2025-11-20 11:38:10 | WARNING | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) failed with TimeoutException. Retrying 1/2...
+2025-11-20 11:38:11 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) - Attempt 2
+2025-11-20 11:38:21 | WARNING | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) failed with TimeoutException. Retrying 2/2...
+2025-11-20 11:38:21 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submitmm']) - Attempt 3
+2025-11-20 11:41:40 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-20 11:41:40 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-20 11:41:53 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-20 11:41:53 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-20 11:42:03 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-20 11:42:04 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-20 11:42:06 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-20 11:42:06 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-20 11:42:06 | INFO | CreateAccountPage | Entering email into input field
+2025-11-20 11:42:06 | INFO | CreateAccountPage | Entering 'GSnzadgssi7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-20 11:42:07 | INFO | CreateAccountPage | Entering password into input field
+2025-11-20 11:42:07 | INFO | CreateAccountPage | Entering 'GSGSnzadgssi7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-20 11:42:08 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-20 11:42:08 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-20 11:44:28 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-20 11:44:28 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-20 11:44:35 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-20 11:44:35 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-20 11:44:49 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-20 11:44:49 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-20 11:44:52 | INFO | CreateAccountPage | Entering last name into input field
+2025-11-20 11:44:52 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-20 11:44:52 | INFO | CreateAccountPage | Entering email into input field
+2025-11-20 11:44:52 | INFO | CreateAccountPage | Entering 'GSgzeneaus7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-20 11:44:52 | INFO | CreateAccountPage | Entering password into input field
+2025-11-20 11:44:52 | INFO | CreateAccountPage | Entering 'GSGSgzeneaus7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-20 11:44:53 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-11-20 11:44:53 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-20 11:44:54 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-11-21 10:36:50 | INFO | CreateAccountPage | Navigating to create account page
+2025-11-21 10:36:50 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-21 10:36:56 | INFO | CreateAccountPage | Entering first name into input field
+2025-11-21 10:36:56 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-21 10:37:20 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-21 10:37:21 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-21 10:37:31 | WARNING | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 2/2...
+2025-11-21 10:37:32 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 3

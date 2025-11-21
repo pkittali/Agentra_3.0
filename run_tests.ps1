@@ -1,3 +1,3 @@
 #!/bin/bash
-pytest --platform desktop --alluredir=reports/allure-results --clean-alluredir
+pytest --platform web --clean-alluredir --alluredir=reports/allure-results
 allure serve reports/allure-results
