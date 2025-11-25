@@ -12,6 +12,15 @@
 __pycache__/
 */__pycache__/
 **/__pycache__/
+utils/__pycache__/
+tests/__pycache__/
+resources/locators/__pycache__/
+pages/web/__pycache__/
+pages/mobile/__pycache__/
+pages/desktop/__pycache__/
+pages/__pycache__
+core/__pycache__/
+apps/__pycache__/
 
 # Ignore compiled python files
 *.pyc
