@@ -1,6 +1,6 @@
 import allure
 import pytest
-from core.testdata_Manager import TestDataManager
+from core.testdataManager import TestDataManager
 from pages.web import login_page
 from core.logger import get_logger
 

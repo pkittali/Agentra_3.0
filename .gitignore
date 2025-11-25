@@ -8,8 +8,12 @@
 
 # ================================
 
-**pycache**/
-**/**pycache**/
+# Ignore Python cache folders at ALL levels
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+
+# Ignore compiled python files
 *.pyc
 *.pyo
 *.pyd
