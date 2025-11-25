@@ -1,0 +1,152 @@
+# Agentra Framework - Optimized .gitignore
+
+# Compatible with Python + Pytest + Browser Automation + Hardware Automation + CI/CD
+
+# ================================
+
+# Python Bytecode & Cache
+
+# ================================
+
+**pycache**/
+**/**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# ================================
+
+# Log Files
+
+# ================================
+
+*.log
+logs/
+
+# ================================
+
+# Allure Reports & Results
+
+# ================================
+
+reports/allure-results/
+**/allure-results/
+allure-report/
+
+# ================================
+
+# Dependency Files (Ignored as requested)
+
+# ================================
+
+requirements.txt
+requirements.in
+
+# ================================
+
+# Virtual Environments
+
+# ================================
+
+venv/
+.venv/
+env/
+.env/
+
+# ================================
+
+# Pytest Cache
+
+# ================================
+
+.pytest_cache/
+
+# ================================
+
+# Coverage Reports
+
+# ================================
+
+.coverage
+htmlcov/
+coverage.xml
+
+# ================================
+
+# Build & Distribution
+
+# ================================
+
+dist/
+build/
+*.egg-info/
+
+# ================================
+
+# IDE / Editor Configurations
+
+# ================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ================================
+
+# OS Generated Files
+
+# ================================
+
+Thumbs.db
+.DS_Store
+
+# ================================
+
+# Temporary Files
+
+# ================================
+
+*.tmp
+*.bak
+*.old
+
+# ================================
+
+# CI/CD Artifacts
+
+# ================================
+
+reports/
+output/
+test-results/
+
+# ================================
+
+# Printer Automation Artifacts
+
+# ================================
+
+hardware_logs/
+device_dumps/
+firmware_temp/
+
+# ================================
+
+# Custom Local Configurations
+
+# ================================
+
+local_settings.py
+secrets.yaml
+config.local.yaml
+
+# ================================
+
+# Node / Frontend (if present)
+
+# ================================
+
+node_modules/
+package-lock.json
+yarn.lock

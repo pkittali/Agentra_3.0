@@ -1,5 +1,6 @@
 import allure
 import pytest
+from core.testdata_Manager import TestDataManager
 from pages.web import login_page
 from core.logger import get_logger
 
@@ -7,7 +8,6 @@ logger = get_logger(__name__)
 
 @pytest.mark.flaky(reruns=2, reruns_delay=5)
 @pytest.mark.parametrize('user,pwd', [('student','Password123')])
-
 @allure.title("Test Login Functionality on Web Platform")
 @allure.description("""
 This test validates the login functionality on the web platform using valid user credentials.
@@ -19,6 +19,9 @@ It ensures that:
 """)
 
 def test_login_web(hpApp, user, pwd):
+
+    user = TestDataManager.get("login", "valid", "username")
+    pwd = TestDataManager.get("login", "valid", "password")
 
     """
     <Short Test Title>
