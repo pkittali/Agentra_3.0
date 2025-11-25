@@ -18,8 +18,8 @@ class LoginPage(BasePage):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Launch HP Portal"):
             url = self.config.get_url("login")
-            self.driver.get(url)  # Replace with actual login URL
-
+            self.driver.get(url)
+            
     def enter_username(self, username):
         self.logger.info("Entering username into input field")        
         with allure.step("Enter username"):
@@ -39,4 +39,3 @@ class LoginPage(BasePage):
         self.logger.info("Checking if login was successful")
         with allure.step("Check if login was successful"):
             return self.driver.find_element(*LoginPageLocators.SUCCESS_MESSAGE).is_displayed()
-

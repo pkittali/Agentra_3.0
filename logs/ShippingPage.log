@@ -1,0 +1,82 @@
+2025-11-24 10:36:17 | INFO | ShippingPage | Entering Street1
+2025-11-24 10:36:17 | INFO | ShippingPage | Entering 'ABCD Street' into (xpath, //input[@id='street1']) - Attempt 1
+2025-11-24 10:36:24 | INFO | ShippingPage | Entering City
+2025-11-24 10:36:24 | INFO | ShippingPage | Entering 'Bangalore' into (xpath, //input[@id='city']) - Attempt 1
+2025-11-24 10:36:27 | INFO | ShippingPage | Selecting State
+2025-11-24 10:36:27 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-11-24 10:36:28 | INFO | ShippingPage | Selecting dropdown option: Karnataka
+2025-11-24 10:37:24 | ERROR | ShippingPage | Failed to select dropdown option 'Karnataka': Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff66142a235
+	0x7ff661182630
+	0x7ff660f116dd
+	0x7ff660f6a27e
+	0x7ff660f6a58c
+	0x7ff660fbed77
+	0x7ff660fbbaba
+	0x7ff660f5b0ed
+	0x7ff660f5bf63
+	0x7ff661455d60
+	0x7ff66144fe8a
+	0x7ff661471005
+	0x7ff66119d71e
+	0x7ff6611a4e1f
+	0x7ff66118b7c4
+	0x7ff66118b97f
+	0x7ff6611718e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 17:13:17 | INFO | ShippingPage | Entering Street1
+2025-11-24 17:13:17 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-11-24 17:13:33 | INFO | ShippingPage | Entering City
+2025-11-24 17:13:33 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-11-24 17:13:38 | INFO | ShippingPage | Selecting State
+2025-11-24 17:13:38 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-11-24 17:13:40 | INFO | ShippingPage | Selecting dropdown option: California
+2025-11-24 17:13:41 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-11-24 17:13:43 | INFO | ShippingPage | Selected 'California' using normal click
+2025-11-24 17:13:43 | INFO | ShippingPage | Entering Zipcode
+2025-11-24 17:13:43 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-11-24 17:13:46 | INFO | ShippingPage | Entering Mobile Number
+2025-11-24 17:13:46 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-11-24 17:13:49 | INFO | ShippingPage | Checking Text Message Option
+2025-11-24 17:13:49 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-11-24 17:13:54 | INFO | ShippingPage | Clicking Save Shipping button
+2025-11-24 17:13:54 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-11-24 17:14:08 | INFO | ShippingPage | Clicking Save Shipping button
+2025-11-24 17:14:08 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-11-24 17:14:13 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-11-24 17:14:13 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-11-24 17:14:21 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-11-24 17:14:21 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-11-24 17:14:25 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff65ba9a235
+	0x7ff65b7f2630
+	0x7ff65b5816dd
+	0x7ff65b5e24c9
+	0x7ff65b5dfe4e
+	0x7ff65b5dcd71
+	0x7ff65b5dbc10
+	0x7ff65b5cd3a8
+	0x7ff65b602b0a
+	0x7ff65b5ccc36
+	0x7ff65b62baba
+	0x7ff65b5cb0ed
+	0x7ff65b5cbf63
+	0x7ff65bac5d60
+	0x7ff65babfe8a
+	0x7ff65bae1005
+	0x7ff65b80d71e
+	0x7ff65b814e1f
+	0x7ff65b7fb7c4
+	0x7ff65b7fb97f
+	0x7ff65b7e18e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+

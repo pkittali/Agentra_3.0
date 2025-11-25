@@ -7,6 +7,7 @@ class HPAppDesktop:
         self.driver = driver
         self.config = config
         self.login_page = LoginPage(driver, config)
+        
         # self.enroll_page = WebEnrollPage(driver)
 
     def login(self, username, password):

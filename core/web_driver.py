@@ -59,7 +59,7 @@ class WebDriverManager(BaseDriver):
         el.clear()
         el.send_keys(text)
 
-    def wait_for_element(self, locator_type, locator_value, timeout=10):
+    def wait_for_element(self, locator_type, locator_value, timeout=240):
         WebDriverWait(self.driver, timeout).until(
             EC.presence_of_element_located((getattr(By, locator_type.upper()), locator_value))
         )

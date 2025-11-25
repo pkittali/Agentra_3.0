@@ -19,6 +19,7 @@ class LoginPage(BasePage):
         with allure.step("Launch HP Smart Desktop App"):
             self.driver.get("https://practicetestautomation.com/practice-test-login/")
 
+
     def enter_username(self, username):
         self.logger.info("Entering username into input field")        
         with allure.step("Enter username"):

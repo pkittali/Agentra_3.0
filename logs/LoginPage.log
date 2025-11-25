@@ -156,6 +156,133 @@
 2025-11-19 09:20:30 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 2
 2025-11-19 09:20:40 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 2/2...
 2025-11-19 09:20:40 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 3
+<<<<<<< HEAD
+2025-11-19 14:35:29 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 14:35:34 | INFO | LoginPage | Entering username into input field
+2025-11-19 14:35:34 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 14:35:35 | INFO | LoginPage | Entering password into input field
+2025-11-19 14:35:35 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 14:35:35 | INFO | LoginPage | Clicking Login button
+2025-11-19 14:35:35 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 1
+2025-11-19 14:35:46 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 14:35:46 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 2
+2025-11-19 14:36:08 | WARNING | LoginPage | Clicking element (xpath, //button[@id='submit2']) failed with TimeoutException. Retrying 2/2...
+2025-11-19 14:36:09 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit2']) - Attempt 3
+2025-11-19 14:37:57 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 14:38:02 | INFO | LoginPage | Entering username into input field
+2025-11-19 14:38:02 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 14:38:02 | INFO | LoginPage | Entering password into input field
+2025-11-19 14:38:02 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 14:38:02 | INFO | LoginPage | Clicking Login button
+2025-11-19 14:38:02 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 14:38:04 | INFO | LoginPage | Checking if login was successful
+2025-11-19 14:38:39 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 14:38:43 | INFO | LoginPage | Entering username into input field
+2025-11-19 14:38:43 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 14:38:44 | INFO | LoginPage | Entering password into input field
+2025-11-19 14:38:44 | INFO | LoginPage | Entering 'Password123' into (id, password) - Attempt 1
+2025-11-19 14:38:44 | INFO | LoginPage | Clicking Login button
+2025-11-19 14:38:44 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
+2025-11-19 14:38:45 | INFO | LoginPage | Checking if login was successful
+2025-11-19 15:01:45 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 15:02:08 | INFO | LoginPage | Entering username into input field
+2025-11-19 15:02:08 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
+2025-11-19 15:02:22 | WARNING | LoginPage | Entering 'student' into (id, username) failed with TimeoutException. Retrying 1/2...
+2025-11-19 15:02:23 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 2
+2025-11-19 15:02:33 | WARNING | LoginPage | Entering 'student' into (id, username) failed with TimeoutException. Retrying 2/2...
+2025-11-19 15:02:34 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 3
+2025-11-19 17:09:34 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:09:35 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:10:54 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:10:54 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 17:10:55 | WARNING | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) failed with ElementNotInteractableException. Retrying 1/2...
+2025-11-19 17:10:55 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 2
+2025-11-19 17:10:55 | WARNING | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) failed with ElementNotInteractableException. Retrying 2/2...
+2025-11-19 17:10:55 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 3
+2025-11-19 17:11:04 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:11:46 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:12:53 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:12:53 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 17:13:04 | WARNING | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 17:13:04 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 2
+2025-11-19 17:13:33 | WARNING | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) failed with TimeoutException. Retrying 2/2...
+2025-11-19 17:13:33 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 3
+2025-11-19 17:13:52 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:14:45 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:15:10 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:15:10 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 17:15:11 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:15:11 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-11-19 17:15:27 | INFO | LoginPage | Navigating to create account page
+2025-11-19 17:15:27 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 17:15:45 | INFO | LoginPage | Entering first name into input field
+2025-11-19 17:15:45 | INFO | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 17:15:58 | WARNING | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 17:15:58 | INFO | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 17:16:01 | INFO | LoginPage | Entering last name into input field
+2025-11-19 17:16:01 | INFO | LoginPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 17:16:01 | INFO | LoginPage | Entering email into input field
+2025-11-19 17:16:01 | INFO | LoginPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 17:16:02 | INFO | LoginPage | Entering password into input field
+2025-11-19 17:16:02 | INFO | LoginPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 17:16:02 | INFO | LoginPage | Clicking Submit Create Account button
+2025-11-19 17:16:02 | INFO | LoginPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 17:23:49 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:24:09 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:24:09 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 17:24:16 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 17:24:16 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-11-19 17:24:31 | INFO | LoginPage | Navigating to create account page
+2025-11-19 17:24:31 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 17:24:43 | INFO | LoginPage | Entering first name into input field
+2025-11-19 17:24:43 | INFO | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 17:24:54 | WARNING | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 17:24:54 | INFO | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 17:24:55 | INFO | LoginPage | Entering last name into input field
+2025-11-19 17:24:55 | INFO | LoginPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 17:24:56 | INFO | LoginPage | Entering email into input field
+2025-11-19 17:24:56 | INFO | LoginPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 17:24:57 | INFO | LoginPage | Entering password into input field
+2025-11-19 17:24:57 | INFO | LoginPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 17:24:57 | INFO | LoginPage | Clicking Submit Create Account button
+2025-11-19 17:24:57 | INFO | LoginPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 12:18:05 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 12:18:29 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 12:18:29 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 12:18:31 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 12:18:31 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-11-19 12:18:43 | INFO | LoginPage | Navigating to create account page
+2025-11-19 12:18:43 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-11-19 12:18:51 | INFO | LoginPage | Entering first name into input field
+2025-11-19 12:18:51 | INFO | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-11-19 12:19:03 | WARNING | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 12:19:03 | INFO | LoginPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 2
+2025-11-19 12:19:04 | INFO | LoginPage | Entering last name into input field
+2025-11-19 12:19:04 | INFO | LoginPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-11-19 12:19:06 | INFO | LoginPage | Entering email into input field
+2025-11-19 12:19:06 | INFO | LoginPage | Entering 'abcd1234@gmail.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-11-19 12:19:07 | INFO | LoginPage | Entering password into input field
+2025-11-19 12:19:07 | INFO | LoginPage | Entering 'Password123' into (xpath, //input[@id='password']) - Attempt 1
+2025-11-19 12:19:09 | INFO | LoginPage | Clicking Submit Create Account button
+2025-11-19 12:19:09 | INFO | LoginPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-11-19 12:48:37 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 12:49:03 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 12:49:03 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 12:49:06 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 12:49:06 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-11-19 13:08:38 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 13:08:39 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 13:08:39 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 13:09:01 | WARNING | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) failed with TimeoutException. Retrying 1/2...
+2025-11-19 13:09:02 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 2
+2025-11-19 13:09:03 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 13:09:03 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-11-19 13:13:08 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 13:13:28 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 13:13:28 | INFO | LoginPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-11-19 13:13:33 | INFO | LoginPage | Navigating to HP Portal Login URL
+2025-11-19 13:13:33 | INFO | LoginPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+=======
 2025-11-19 10:58:46 | INFO | LoginPage | Navigating to HP Portal Login URL
 2025-11-19 10:58:50 | INFO | LoginPage | Entering username into input field
 2025-11-19 10:58:50 | INFO | LoginPage | Entering 'student' into (id, username) - Attempt 1
@@ -247,3 +374,4 @@
 2025-11-20 08:50:26 | INFO | LoginPage | Clicking Login button
 2025-11-20 08:50:26 | INFO | LoginPage | Clicking element (xpath, //button[@id='submit']) - Attempt 1
 2025-11-20 08:50:27 | INFO | LoginPage | Checking if login was successful
+>>>>>>> 824352e915fb2814294b748fa689958889012cf3

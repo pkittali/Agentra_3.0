@@ -1,0 +1,4 @@
+2025-11-24 10:36:10 | INFO | ShippingBillingPage | Clicking Add Shipping button
+2025-11-24 10:36:10 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
+2025-11-24 17:13:08 | INFO | ShippingBillingPage | Clicking Add Shipping button
+2025-11-24 17:13:08 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
