@@ -74,9 +74,7 @@ class CreateAccountPage(BasePage):
             # Open a new tab for Mailsac
             self.driver.driver.execute_script("window.open('');")
             self.driver.driver.switch_to.window(self.driver.driver.window_handles[-1])
-
             self.driver.driver.get(inbox_url)
-
             wait = WebDriverWait(self.driver.driver, 15)
 
             # Poll for email for up to 120 seconds

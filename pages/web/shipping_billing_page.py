@@ -24,11 +24,23 @@ class ShippingBillingPage(BasePage):
         with allure.step("Check if Add Billing button is visible"):
             return self.is_element_visible(*ShippingBillingPageLocators.ADD_BILLING_BUTTON)
         
+    def click_add_shipping(self):
+        self.logger.info("Clicking Add Shipping button")
+        with allure.step("Click Add Shipping button"):
+            self.click(*ShippingBillingPageLocators.ADD_SHIPPING_BUTTON)
+
+    def click_add_billing(self):
+        self.logger.info("Clicking Add Billing button")
+        with allure.step("Click Add Billing button"):
+            self.click(*ShippingBillingPageLocators.ADD_BILLING_BUTTON)
+
+    def click_apply_promotion(self):
+        self.logger.info("Clicking Apply Promotion link")
+        with allure.step("Click Apply Promotion link"):
+            self.click(*ShippingBillingPageLocators.APPLY_PROMOTION_BUTTON)
+        
     
 
 
 
-    def is_login_successful(self):
-        self.logger.info("Checking if login was successful")
-        with allure.step("Check if login was successful"):
-            return self.driver.find_element(*LoginPageLocators.SUCCESS_MESSAGE).is_displayed()
+    

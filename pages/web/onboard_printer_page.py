@@ -15,53 +15,92 @@ class OnboardPrinterPage(BasePage):
         self.wait = WaitUtils(driver)
         self.logger = get_logger(self.__class__.__name__)
 
-    # --------------------------------------------------------------
-    # OPEN PRINTER URL (Correct driver usage)
-    # --------------------------------------------------------------
     def open_printer_url(self, printer_url):
 
-        driver = self.driver.driver  
+        driver = self.driver.driver
+        logger = self.logger
 
-        self.logger.info(f"Opening printer onboarding URL: {printer_url}")
+        logger.info(f"Opening printer onboarding URL: {printer_url}")
 
         try:
-            # New tab
-            with allure.step("Open URL in new tab"):
+            with allure.step("Verify user is logged in"):
+                current_url = driver.current_url
+                logger.info(f"Current URL: {current_url}")
+
+                # If user is on login page → wait until logged in
+                if "login" in current_url or "sign" in current_url:
+                    logger.info("User appears to be on login page — waiting for login to complete")
+
+                    WebDriverWait(driver, 60).until(
+                        lambda d: "login" not in d.current_url and "sign" not in d.current_url
+                    )
+
+                    logger.info("Login completed successfully")
+
+            # ---------- OPEN NEW TAB ----------
+            with allure.step("Open new tab for printer onboarding"):
                 driver.execute_script("window.open('');")
-                printer_tab = driver.window_handles[-1]
+                all_tabs = driver.window_handles
+                printer_tab = all_tabs[-1]
+
                 driver.switch_to.window(printer_tab)
+                logger.info(f"Switched to new printer tab: {printer_tab}")
+
                 driver.get(printer_url)
+                logger.info(f"Navigated to printer URL: {printer_url}")
+
                 time.sleep(2)
 
-            # Login check
-            with allure.step("Check login status"):
+            # ---------- CHECK LOGIN STATUS ----------
+            with allure.step("Validate login status on printer page"):
                 if "user_not_logged" in driver.current_url:
-                    self.logger.warning("Detected 'user_not_logged' — retrying")
+                    logger.warning("Page indicates user is NOT logged in — retrying once")
                     driver.get(printer_url)
                     time.sleep(2)
 
-            # Accept cookies
-            with allure.step("Accept cookies popup if present"):
+            # ---------- ACCEPT COOKIES ----------
+            with allure.step("Handle cookie acceptance popup"):
                 try:
                     WebDriverWait(driver, 5).until(
                         EC.visibility_of_element_located(OnboardPrinterPageLocators.ACCEPT_BUTTON)
                     )
                     self.click(*OnboardPrinterPageLocators.ACCEPT_BUTTON)
-                    self.logger.info("Clicked 'Accept Cookies'")
+                    logger.info("Clicked Accept Cookies button")
                 except TimeoutException:
-                    self.logger.info("No cookie popup found")
+                    logger.info("No cookie popup found")
 
-            # Close old tabs
-            with allure.step("Close old tabs"):
-                while len(driver.window_handles) > 1:
-                    driver.switch_to.window(driver.window_handles[0])
+            # ---------- CLOSE PREVIOUS TAB ----------
+            with allure.step("Close previous tab after URL stabilizes"):
+                all_tabs = driver.window_handles
+
+                if len(all_tabs) > 1:
+                    old_tab = all_tabs[0]
+                    logger.info(f"Closing old tab: {old_tab}")
+
+                    driver.switch_to.window(old_tab)
                     driver.close()
-                driver.switch_to.window(printer_tab)
 
-            self.logger.info("Printer onboarding URL opened successfully")
+                    driver.switch_to.window(printer_tab)
+                    logger.info("Switched back to printer tab")
+
+            logger.info("Printer onboarding URL opened successfully")
 
         except Exception as e:
-            self.logger.error(f"open_printer_url failed: {e}")
+            logger.error(f"open_printer_url failed: {e}")
+
+            # Attach screenshot in Allure
+            try:
+                allure.attach(
+                    driver.get_screenshot_as_png(),
+                    name="open_printer_url_failure",
+                    attachment_type=allure.attachment_type.PNG
+                )
+            except:
+                pass
+
+            allure.attach(str(e), "Exception Details", allure.attachment_type.TEXT)
+            raise e
+
 
     # --------------------------------------------------------------
     # ENTER CLAIM CODE

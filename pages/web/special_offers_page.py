@@ -35,7 +35,15 @@ class SpecialOffersPage(BasePage):
         with allure.step("Fetched 'Verify Months' text for Enrollment Key"):
             return self.get_text(*SpecialOffersPageLocators.ENROLLMENT_KEY_MONTHS_TEXT)
         
-    
+    def enter_promo_code(self, promo_code):
+        self.logger.info("Entering promo code")
+        with allure.step("Entered promo code"):
+            self.enter_text(*SpecialOffersPageLocators.SPECIAL_OFFERS_ENTRY_BOX, promo_code)
+
+    def click_apply_promo(self):
+        self.logger.info("Clicking Apply Promo button")
+        with allure.step("Clicked Apply Promo button"):
+            self.click(*SpecialOffersPageLocators.SPECIAL_OFFERS_APPLY_BUTTON)
 
     
 

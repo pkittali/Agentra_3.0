@@ -3,6 +3,7 @@ import pytest
 from pages.web import login_page
 from core.logger import get_logger
 from pages.web.special_offers_page import SpecialOffersPage
+from apps import hp_app
 
 logger = get_logger(__name__)
 
@@ -21,11 +22,13 @@ def test_01_validate_promo(hpApp):
     logger.info(f"Starting test_01_validate_promo")
     hpApp.launch_web()
     hpApp.create_account()
-    hpApp.onboard_printer()
+    # hpApp.onboard_printer()
     hpApp.checkout_upto_shipping_billing()
     hpApp.enter_shipping_details()
     hpApp.enter_billing_details()
-    
+    hpApp.apply_promo_code()
+
+
     special_offers = SpecialOffersPage(hpApp.driver)
     required_billing_message = special_offers.get_require_billing_message_text().lower()
     code_name = special_offers.get_enrollment_key_label().lower()

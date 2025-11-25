@@ -1,0 +1,196 @@
+2025-11-24 12:50:18 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 12:50:18 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 12:50:18 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 12:50:29 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 12:50:29 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 2
+2025-11-24 12:50:40 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 12:50:40 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 3
+2025-11-24 12:50:50 | ERROR | PlanSelectionPage |  Failed after 2 retries (TimeoutException) during: Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff79430a235
+	0x7ff794062630
+	0x7ff793df16dd
+	0x7ff793e4a27e
+	0x7ff793e4a58c
+	0x7ff793e9ed77
+	0x7ff793e9baba
+	0x7ff793e3b0ed
+	0x7ff793e3bf63
+	0x7ff794335d60
+	0x7ff79432fe8a
+	0x7ff794351005
+	0x7ff79407d71e
+	0x7ff794084e1f
+	0x7ff79406b7c4
+	0x7ff79406b97f
+	0x7ff7940518e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 13:09:00 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 13:09:00 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 13:09:00 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 13:09:50 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 13:09:51 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 2
+2025-11-24 13:10:41 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 13:10:42 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 3
+2025-11-24 13:11:32 | ERROR | PlanSelectionPage |  Failed after 2 retries (TimeoutException) during: Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff79430a235
+	0x7ff794062630
+	0x7ff793df16dd
+	0x7ff793e4a27e
+	0x7ff793e4a58c
+	0x7ff793e9ed77
+	0x7ff793e9baba
+	0x7ff793e3b0ed
+	0x7ff793e3bf63
+	0x7ff794335d60
+	0x7ff79432fe8a
+	0x7ff794351005
+	0x7ff79407d71e
+	0x7ff794084e1f
+	0x7ff79406b7c4
+	0x7ff79406b97f
+	0x7ff7940518e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 14:12:38 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 14:12:38 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 14:12:38 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 14:13:28 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 14:13:28 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 2
+2025-11-24 14:14:18 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 14:14:18 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 3
+2025-11-24 14:15:09 | ERROR | PlanSelectionPage |  Failed after 2 retries (TimeoutException) during: Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff746bba235
+	0x7ff746912630
+	0x7ff7466a16dd
+	0x7ff7466fa27e
+	0x7ff7466fa58c
+	0x7ff74674ed77
+	0x7ff74674baba
+	0x7ff7466eb0ed
+	0x7ff7466ebf63
+	0x7ff746be5d60
+	0x7ff746bdfe8a
+	0x7ff746c01005
+	0x7ff74692d71e
+	0x7ff746934e1f
+	0x7ff74691b7c4
+	0x7ff74691b97f
+	0x7ff7469018e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 14:21:18 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 14:21:18 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 14:21:18 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 14:23:15 | INFO | PlanSelectionPage | Clicking Continue button
+2025-11-24 14:23:15 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='consumer-plans-select-plans']) - Attempt 1
+2025-11-24 14:27:15 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='consumer-plans-select-plans']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 14:27:16 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='consumer-plans-select-plans']) - Attempt 2
+2025-11-24 10:14:25 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 10:14:25 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 10:14:25 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-11-24 10:17:36 | INFO | PlanSelectionPage | Clicking Continue button
+2025-11-24 10:17:36 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='consumer-plans-select-plans']) - Attempt 1
+2025-11-24 10:24:17 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 10:24:17 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-11-24 10:24:17 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-11-24 10:26:39 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 10:26:39 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 10:34:38 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 10:34:38 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 10:34:38 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 10:36:10 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-11-24 10:36:10 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-11-24 10:53:06 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 10:53:06 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 10:53:06 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 10:57:06 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 10:57:06 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 2
+2025-11-24 11:01:07 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 11:01:07 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 3
+2025-11-24 11:05:08 | ERROR | PlanSelectionPage |  Failed after 2 retries (TimeoutException) during: Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff66142a235
+	0x7ff661182630
+	0x7ff660f116dd
+	0x7ff660f6a27e
+	0x7ff660f6a58c
+	0x7ff660fbed77
+	0x7ff660fbbaba
+	0x7ff660f5b0ed
+	0x7ff660f5bf63
+	0x7ff661455d60
+	0x7ff66144fe8a
+	0x7ff661471005
+	0x7ff66119d71e
+	0x7ff6611a4e1f
+	0x7ff66118b7c4
+	0x7ff66118b97f
+	0x7ff6611718e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 17:07:55 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 17:07:55 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 17:07:55 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 17:11:00 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-11-24 17:11:00 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-11-24 17:25:05 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 17:25:05 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 17:25:05 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 17:28:43 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-11-24 17:28:43 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-11-24 17:32:43 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 17:32:44 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 2
+2025-11-24 17:36:44 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 17:36:44 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 3
+2025-11-24 17:42:45 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-24 17:42:45 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-24 17:42:45 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-24 17:46:45 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 17:46:45 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 2
+2025-11-25 09:54:57 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-11-25 09:54:57 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-11-25 09:54:57 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-11-25 09:58:57 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 1/2...
+2025-11-25 09:58:57 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 2
+2025-11-25 10:02:57 | WARNING | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) failed with TimeoutException. Retrying 2/2...
+2025-11-25 10:02:58 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 3
+2025-11-25 10:06:58 | ERROR | PlanSelectionPage |  Failed after 2 retries (TimeoutException) during: Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff792d3a235
+	0x7ff792a92630
+	0x7ff7928216dd
+	0x7ff79287a27e
+	0x7ff79287a58c
+	0x7ff7928ced77
+	0x7ff7928cbaba
+	0x7ff79286b0ed
+	0x7ff79286bf63
+	0x7ff792d65d60
+	0x7ff792d5fe8a
+	0x7ff792d81005
+	0x7ff792aad71e
+	0x7ff792ab4e1f
+	0x7ff792a9b7c4
+	0x7ff792a9b97f
+	0x7ff792a818e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+

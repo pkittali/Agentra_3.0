@@ -42,6 +42,11 @@ class PlanSelectionPage(BasePage):
         with allure.step("Clicked Monthly plan button"):
             self.click(*PlanSelectionPageLocators.MONTHLY_PLAN_SELECT_BUTTON)
 
+    def click_ink_and_paper_plan(self):
+        self.logger.info("Clicking Ink and Paper plan button")
+        with allure.step("Clicked Ink and Paper plan button"):
+            self.click(*PlanSelectionPageLocators.INK_AND_PAPER_PLAN_SELECT_BUTTON)
+
     def click_yearly_paln(self):
         self.logger.info("Clicking Yearly plan button")
         with allure.step("Clicked Yearly plan button"):
@@ -153,12 +158,12 @@ class PlanSelectionPage(BasePage):
         self.select_custom_dropdown_by_text(monthly_plan_value)
         
 
-
     def plan_selection(self):
         self.logger.info("Selecting plan on Plan Selection Page")
         with allure.step("Selected plan on Plan Selection Page"):
             self.click_monthly_plan()
-            self.click_continue()
+            self.click_ink_and_paper_plan()
+            # self.click_continue()
             
     
         

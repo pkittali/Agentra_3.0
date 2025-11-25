@@ -20,3 +20,154 @@
 2025-11-21 14:21:58 | INFO | OnboardPrinterPage | No cookie popup found
 2025-11-21 14:21:59 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
 2025-11-21 14:21:59 | INFO | OnboardPrinterPage | Entering claim code into input field
+2025-11-24 10:39:05 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 10:39:24 | WARNING | OnboardPrinterPage | Detected 'user_not_logged' — retrying
+2025-11-24 10:39:41 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-24 10:39:41 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-24 10:39:41 | INFO | OnboardPrinterPage | Entering claim code: ABCDEFGH
+2025-11-24 10:39:41 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-24 10:39:52 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 10:39:52 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 2
+2025-11-24 10:40:02 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 10:40:03 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 3
+2025-11-24 10:40:13 | ERROR | OnboardPrinterPage |  Failed after 2 retries (TimeoutException) during: Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7e866a235
+	0x7ff7e83c2630
+	0x7ff7e81516dd
+	0x7ff7e81aa27e
+	0x7ff7e81aa58c
+	0x7ff7e81fed77
+	0x7ff7e81fbaba
+	0x7ff7e819b0ed
+	0x7ff7e819bf63
+	0x7ff7e8695d60
+	0x7ff7e868fe8a
+	0x7ff7e86b1005
+	0x7ff7e83dd71e
+	0x7ff7e83e4e1f
+	0x7ff7e83cb7c4
+	0x7ff7e83cb97f
+	0x7ff7e83b18e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 11:01:36 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 11:01:36 | INFO | OnboardPrinterPage | User is on login page — waiting for login completion
+2025-11-24 11:02:11 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-24 11:02:11 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-24 11:02:11 | INFO | OnboardPrinterPage | Entering claim code: ABCDEFGH
+2025-11-24 11:02:11 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-24 11:02:23 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 11:02:23 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 2
+2025-11-24 11:02:34 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 11:02:34 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 3
+2025-11-24 11:02:44 | ERROR | OnboardPrinterPage |  Failed after 2 retries (TimeoutException) during: Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7e866a235
+	0x7ff7e83c2630
+	0x7ff7e81516dd
+	0x7ff7e81aa27e
+	0x7ff7e81aa58c
+	0x7ff7e81fed77
+	0x7ff7e81fbaba
+	0x7ff7e819b0ed
+	0x7ff7e819bf63
+	0x7ff7e8695d60
+	0x7ff7e868fe8a
+	0x7ff7e86b1005
+	0x7ff7e83dd71e
+	0x7ff7e83e4e1f
+	0x7ff7e83cb7c4
+	0x7ff7e83cb97f
+	0x7ff7e83b18e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 12:37:44 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 12:37:44 | INFO | OnboardPrinterPage | Current URL: https://login3.stg.cd.id.hp.com/login3/email-verification
+2025-11-24 12:37:44 | INFO | OnboardPrinterPage | User appears to be on login page — waiting for login to complete
+2025-11-24 12:37:59 | INFO | OnboardPrinterPage | Login completed successfully
+2025-11-24 12:37:59 | INFO | OnboardPrinterPage | Switched to new printer tab: 754A5998910AB966412F36CA7C154D99
+2025-11-24 12:38:14 | INFO | OnboardPrinterPage | Navigated to printer URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | Closing old tab: F0338C633E7154CA5EA222D8C8DD8E46
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | Switched back to printer tab
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | Entering claim code: ABCDEFGH
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | Clicking Add Printer button
+2025-11-24 12:38:22 | INFO | OnboardPrinterPage | Clicking element (xpath, //a[@id='AddPrinter-add-btn' and contains(@class, 'button')]) - Attempt 1
+2025-11-24 12:49:10 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 12:49:10 | INFO | OnboardPrinterPage | Current URL: https://login3.stg.cd.id.hp.com/login3/email-verification
+2025-11-24 12:49:10 | INFO | OnboardPrinterPage | User appears to be on login page — waiting for login to complete
+2025-11-24 12:49:24 | INFO | OnboardPrinterPage | Login completed successfully
+2025-11-24 12:49:24 | INFO | OnboardPrinterPage | Switched to new printer tab: F351F190CD48B0630DC854E50AC67201
+2025-11-24 12:49:36 | INFO | OnboardPrinterPage | Navigated to printer URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 12:49:45 | WARNING | OnboardPrinterPage | Page indicates user is NOT logged in — retrying once
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | Closing old tab: C801BB8EF3D669A8A77775774C192C33
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | Switched back to printer tab
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | Entering claim code: ABCDEFGH
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | Clicking Add Printer button
+2025-11-24 12:49:54 | INFO | OnboardPrinterPage | Clicking element (xpath, //a[@id='AddPrinter-add-btn' and contains(@class, 'button')]) - Attempt 1
+2025-11-24 13:00:58 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 13:00:58 | INFO | OnboardPrinterPage | Current URL: https://login3.stg.cd.id.hp.com/login3/email-verification
+2025-11-24 13:00:58 | INFO | OnboardPrinterPage | User appears to be on login page — waiting for login to complete
+2025-11-24 13:01:13 | INFO | OnboardPrinterPage | Login completed successfully
+2025-11-24 13:01:13 | INFO | OnboardPrinterPage | Switched to new printer tab: 15A44467C102D91EF7BB28A1C6BF0E99
+2025-11-24 13:01:20 | INFO | OnboardPrinterPage | Navigated to printer URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 13:01:31 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-24 13:01:31 | INFO | OnboardPrinterPage | Closing old tab: A1F3A24AB196421FEF5A4FFB0F69CDB1
+2025-11-24 13:01:31 | INFO | OnboardPrinterPage | Switched back to printer tab
+2025-11-24 13:01:31 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-24 13:01:31 | INFO | OnboardPrinterPage | Entering claim code: ABCDEFGH
+2025-11-24 13:01:31 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-24 13:01:43 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 1/2...
+2025-11-24 13:01:43 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 2
+2025-11-24 13:01:57 | WARNING | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) failed with TimeoutException. Retrying 2/2...
+2025-11-24 13:01:57 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 3
+2025-11-24 13:02:08 | ERROR | OnboardPrinterPage |  Failed after 2 retries (TimeoutException) during: Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text'])
+Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff79430a235
+	0x7ff794062630
+	0x7ff793df16dd
+	0x7ff793e4a27e
+	0x7ff793e4a58c
+	0x7ff793e9ed77
+	0x7ff793e9baba
+	0x7ff793e3b0ed
+	0x7ff793e3bf63
+	0x7ff794335d60
+	0x7ff79432fe8a
+	0x7ff794351005
+	0x7ff79407d71e
+	0x7ff794084e1f
+	0x7ff79406b7c4
+	0x7ff79406b97f
+	0x7ff7940518e8
+	0x7ffea8ede8d7
+	0x7ffea926c53c
+
+2025-11-24 13:08:02 | INFO | OnboardPrinterPage | Opening printer onboarding URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 13:08:02 | INFO | OnboardPrinterPage | Current URL: https://login3.stg.cd.id.hp.com/login3/email-verification
+2025-11-24 13:08:02 | INFO | OnboardPrinterPage | User appears to be on login page — waiting for login to complete
+2025-11-24 13:08:15 | INFO | OnboardPrinterPage | Login completed successfully
+2025-11-24 13:08:15 | INFO | OnboardPrinterPage | Switched to new printer tab: 789EA282705472F043EA66E1DD5E0733
+2025-11-24 13:08:29 | INFO | OnboardPrinterPage | Navigated to printer URL: https://www.hpsmartstage.com/us/en/newprinter
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | No cookie popup found
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | Closing old tab: 6681892C43FA9B3DD7E979F49D676704
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | Switched back to printer tab
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | Printer onboarding URL opened successfully
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | Entering claim code: ABCDEFGH
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | Entering 'ABCDEFGH' into (xpath, //input[@id='claim-code-input' and @type='text']) - Attempt 1
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | Clicking Add Printer button
+2025-11-24 13:08:36 | INFO | OnboardPrinterPage | Clicking element (xpath, //a[@id='AddPrinter-add-btn' and contains(@class, 'button')]) - Attempt 1

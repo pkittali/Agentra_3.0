@@ -17,7 +17,7 @@ class LaunchLandingPage(BasePage):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Launch HP Portal"):
             self.driver.get("https://instantink-stage1.hpconnectedstage.com/us/en/l/v2")
-            # self.driver.maximize_window()
+            self.driver.driver.maximize_window()
 
     def click_accept(self):
         self.logger.info("Navigating to HP Portal Login URL")

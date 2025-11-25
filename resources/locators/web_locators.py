@@ -329,3 +329,118 @@ class ShippingBillingPageLocators:
     CONTINUE_TO_ENROLL_BTN= (By.XPATH,"//*[@data-testid='preenroll-continue-button']")
     TOTAL_AFTER_TRIAL_PRICE = (By.XPATH, "//p[contains(@class,'TotalAfterTrialPrice')]")
     TOTAL_NOW_PRICE = (By.XPATH, "//p[contains(@class,'TotalNowPrice')]")
+
+
+class AddShippingPageLocators:
+    SHIPPING_CONTENT_CONTAINER = (By.XPATH, "//form[@id='shipping-content-container']")
+    ADD_SHIPPING_ADDRESS_HEADING = (By.XPATH, "//h4[normalize-space()='Add Shipping Address']")
+
+    FIRST_NAME_INPUT = (By.XPATH, "//input[@id='first-name']")
+    LAST_NAME_INPUT = (By.XPATH, "//input[@id='last-name']")
+    COMPANY_INPUT = (By.XPATH, "//input[@id='company']")
+    MOBILE_NUMBER_INPUT = (By.XPATH, "//input[@id='phoneNumberSmall']")
+
+    STREET1_INPUT = (By.XPATH, "//input[@id='street1']")
+    STREET2_INPUT = (By.XPATH, "//input[@id='street2']")
+    CITY_INPUT = (By.XPATH, "//input[@id='city']")
+
+    STATE_COMBOBOX = (By.XPATH, "//div[@data-testid='state']")
+    STATE_COMBOBOX_OPEN = (By.XPATH, "//div[@data-testid='state']//div[@aria-label='Open']")
+
+    ZIP_CODE_INPUT = (By.XPATH, "//input[@id='zip-code']")
+    COUNTRY_INPUT = (By.XPATH, "//input[@id='country']")
+
+    TEXT_MESSAGE_OPTION_CHECKBOX = (By.XPATH, "//span[contains(@class,'vn-checkbox__span')]")
+
+    CANCEL_BUTTON = (By.XPATH, "//button[@data-testid='cancel-button']")
+    SAVE_BUTTON = (By.XPATH, "//button[@data-testid='save-button']")
+    EDIT_SHIPPING_BUTTON = (By.XPATH, "//button[@data-testid='edit-shipping']")
+    SHIP_TO_THIS_ADDRESS_BUTTON= (By.XPATH, "//button[contains(normalize-space(text()), 'Ship to this address')]")
+
+
+    @staticmethod
+    def STATE_BY_TEXT(state_name):
+        return (By.XPATH, f"//ul[@id='state-listbox']/li[normalize-space()='{state_name}']")
+
+class BillingInformationPageLocators:
+    BILLING_TITLE = (By.XPATH, "//h2[normalize-space()='Billing']")
+    STEP_INDICATOR = (By.XPATH, "//span[contains(@class,'StyledStepNumber')]")
+    STEP_TITLE = (By.XPATH, "//span[contains(@class,'StyledStepTitle')]")
+    CONSUMER_RADIO_BUTTON = (By.XPATH, "//input[@data-testid='consumer-radio-button']/following::span")
+    BUSINESS_RADIO_BUTTON = (By.XPATH, "//input[@data-testid='business-radio-button']/following::span")
+    CREDIT_CARD_RADIO_BUTTON = (By.XPATH, "//input[@data-testid='credit-card-radio-button']/following::span")
+    CREDIT_CARD_ICON = (By.XPATH, "//svg[@data-testid='credit-card-icon']")
+    GPAY_ICON = (By.XPATH, "//svg[@data-testid='gpay-icon']")
+    PAYPAL_ICON = (By.XPATH, "//img[@data-testid='paypal-icon']")
+    USE_SHIPPING_ADDRESS_CHECKBOX = (By.XPATH, "(//input[@id='use-shipping-address']/following-sibling::span[contains(@class,'checkbox')])[1]")
+    USE_SHIPPING_ADDRESS_LABEL = (By.XPATH, "//label[@for='use-shipping-address']//span[contains(text(),'Same as shipping address')]")
+    ADDRESS_PREVIEW_CARD = (By.XPATH, "//div[@data-testid='address-preview-card']")
+    ADDRESS_PREVIEW_FULL_NAME = (By.XPATH, "//p[contains(@class,'StyledFullName')]")
+    ADDRESS_PREVIEW_DETAIL = (By.XPATH, "//p[contains(@class,'StyledShippingCardDetail')]")
+    CANCEL_BUTTON = (By.XPATH, "//button[@data-testid='cancel-button']")
+    CONTINUE_BUTTON = (By.XPATH, "//button[@data-testid='continue-button']")
+
+    # Payment Options & Iframes
+    BACK_BUTTON_PAYMENT = (By.XPATH, "//button[@data-testid='previous-screen-button']")
+    GPAY_BUTTON = (By.XPATH, "//div[@data-testid='gpay-button']")
+    GPAY_IFRAME = (By.XPATH, "//iframe[@id='pgs-gpay-iframe']")
+    PAYPAL_BUTTON = (By.XPATH, "//div[@data-testid='paypal-button']")
+    PAYPAL_WEB_BUTTON_FRAME = (By.XPATH, "//div[@data-testid='web-paypal-express']")
+    PAYPAL_IFRAME = (By.XPATH, "//iframe[contains(@class,'zoid-component-frame')]")
+    OR_SECTION_SEPARATOR = (By.XPATH, "//div[contains(@class,'OrSection')]//span[normalize-space()='or']")
+    PGS_FORM_SECTION = (By.XPATH, "//div[contains(@class,'PgsFormSection')]")
+    PGS_IFRAME = (By.XPATH, "//iframe[@id='pgs-iframe']")
+
+class BillingPageLocators:
+    # Step and Title
+    STEP_NUMBER = (By.XPATH, "//span[contains(@class,'StyledStepNumber') and contains(text(),'Step 2 of 2')]")
+    STEP_TITLE = (By.XPATH, "//span[contains(@class,'StyledStepTitle') and contains(text(),'Complete your payment.')]")
+
+    # Google Pay
+    GPAY_BUTTON_CONTAINER = (By.XPATH, "//div[@data-testid='gpay-button']")
+    GPAY_IFRAME = (By.XPATH, "//iframe[@id='pgs-gpay-iframe']")
+
+    # PayPal
+    PAYPAL_BUTTON_CONTAINER = (By.XPATH, "//*[@data-testid='paypal-button']")
+    PAYPAL_WEB_BUTTON_FRAME = (By.XPATH, "//div[@data-testid='web-paypal-express']")
+    PAYPAL_IFRAME = (By.XPATH, "//iframe[contains(@class,'zoid-component-frame')]")
+
+    # Or Section
+    OR_SECTION = (By.XPATH, "//div[contains(@class,'OrSection')]//span[normalize-space()='or']")
+
+    # PGS Form Section
+    PGS_FORM_SECTION = (By.XPATH, "//div[contains(@class,'PgsFormSection')]")
+    PGS_IFRAME = (By.XPATH, "//iframe[@id='pgs-iframe']")
+
+    # Card Number
+    CARD_NUMBER_INPUT = (By.XPATH, "//input[@id='txtCardNumber']")
+    CARD_NUMBER_LABEL = (By.XPATH, "//label[@for='txtCardNumber']")
+    CARD_NUMBER_WARNING = (By.ID, "errormsg_BinCheck")
+
+    # Card Type Images
+    VISA_IMG = (By.ID, "imgVI")
+    MASTERCARD_IMG = (By.ID, "imgMC")
+    AMEX_IMG = (By.ID, "imgAX")
+    DISCOVER_IMG = (By.ID, "imgDI")
+
+    # Expiration
+    EXP_MONTH_SELECT = (By.XPATH, "//select[@id='drpExpMonth']")
+    EXP_MONTH_LABEL = (By.XPATH, "//label[@for='drpExpMonth']")
+    EXP_YEAR_SELECT = (By.XPATH, "//select[@id='drpExpYear']")
+    EXP_YEAR_LABEL = (By.XPATH, "//label[@for='drpExpYear']")
+
+    # CVV
+    CVV_INPUT = (By.XPATH, "//input[@id='txtCVV']")
+    CVV_LABEL = (By.XPATH, "//label[@for='txtCVV']")
+    CVV_INDICATOR_IMG = (By.XPATH, "//img[contains(@class,'cvv-indicator')]")
+
+    # Error Message
+    BILLING_ERROR_MESSAGE = (By.ID, "mp-message")
+
+    # Next Button
+    NEXT_BUTTON = (By.ID, "btn_pgs_card_add")
+
+    # Overlay/Loading
+    OVERLAY_DIV = (By.ID, "divOverLay")
+    BILLING_ERROR_TEXT = (By.XPATH, "//div[@id='mp-message']//p[@class='text-danger']")
+    BILLING_ERROR_SUB_MSG = (By.ID, "mp-sub-msg")
