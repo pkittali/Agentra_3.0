@@ -2,13 +2,16 @@
 from pages.desktop import *
 from pages.desktop.login_page import LoginPage
 from core.configManager import ConfigManager
-
+from pywinauto.application import Application
+from pages.desktop.launchapp_page import LaunchAppPage
 
 class HPAppDesktop:
-    def __init__(self, driver, config):
-        self.driver = driver
-        self.config = config
-        self.login_page = LoginPage(driver, config)
+    def __init__(self, main_window):
+        app = Application(backend="uia").connect(title="HP Smart")
+        self.main_window =app.window(title_re="HP Smart")
+        # self.login_page = LoginPage(main_window)
+        self.launchapp_page = LaunchAppPage(main_window)
+
         # self.enroll_page = WebEnrollPage(driver)
 
     def login(self, username, password):
@@ -27,3 +30,6 @@ class HPAppDesktop:
     
     def verify_confirmation_screen(self):
         self.enroll_page.verify_success_message()
+    
+    def launch_app(self):
+        self.launchapp_page.launchapp()
