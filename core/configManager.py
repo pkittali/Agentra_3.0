@@ -1,23 +1,44 @@
 import os
 import yaml
+from threading import Lock
 
 
 class ConfigManager:
-    def __init__(self):
-        base_path = os.path.join(os.path.dirname(__file__), "..", "config")
-        config_file = os.path.join(base_path, "config.yaml")
+    _config = None
+    _lock = Lock()
 
-        with open(config_file, "r") as f:
-            self.config = yaml.safe_load(f)
+    @classmethod
+    def load(cls):
+        if cls._config is None:
+            with cls._lock:
+                if cls._config is None:
+                    base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "config"))
+                    config_file = os.path.join(base_path, "config.yaml")
 
-    def get_url(self, key):
-        return self.config["urls"][key]
+                    with open(config_file, "r") as file:
+                        cls._config = yaml.safe_load(file)
 
-    def get_credential(self, key):
-        return self.config["credentials"][key]
+    @classmethod
+    def get_url(cls, key):
+        return cls._config["urls"].get(key)
 
-    def get_timeout(self, key):
-        return self.config["timeouts"][key]
+    @classmethod
+    def get_credential(cls, key):
+        return cls._config["credentials"].get(key)
 
-    def get(self, key):
-        return self.config[key]  # generic getter
+    @classmethod
+    def get_timeout(cls, key):
+        return cls._config["timeouts"].get(key)
+
+    @classmethod
+    def get_retry_count(cls, key):
+        return cls._config["retries"].get(key)
+
+    @classmethod
+    def get(cls, *keys):
+        data = cls._config
+        for key in keys:
+            if data is None:
+                return None
+            data = data.get(key)
+        return data

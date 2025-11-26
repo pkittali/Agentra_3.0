@@ -21,6 +21,7 @@ pages/desktop/__pycache__/
 pages/__pycache__
 core/__pycache__/
 apps/__pycache__/
+resources/locators/__pycache__/
 
 # Ignore compiled python files
 *.pyc

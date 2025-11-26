@@ -50,6 +50,7 @@ try:
 except Exception:
     ElementNotFoundError = Exception  # fallback for non-desktop envs
 
+from core.configManager import ConfigManager
 from core.logger import get_logger, log_allure
 
 
@@ -62,11 +63,10 @@ class BasePage:
         TimeoutException,
         ElementNotInteractableException
     )    
-    RETRIES = 2
 
-    def __init__(self, driver, config=None):
+    def __init__(self, driver):
         self.driver = driver
-        self.config = config
+        self.RETRIES = ConfigManager.get_retry_count("step_retry")
         self.logger = get_logger(self.__class__.__name__)
 
     def _safe_action(self, action_name, func, *args, **kwargs):
@@ -75,7 +75,7 @@ class BasePage:
         Only fails after all retries have been exhausted.
         """
 
-        for attempt in range(1, self.RETRIES + 2):  # RETRIES + initial attempt
+        for attempt in range(1, self.RETRIES+2):  # RETRIES + initial attempt
 
             try:
                 with allure.step(f"{action_name} (Attempt {attempt})"):
@@ -108,30 +108,53 @@ class BasePage:
     def _fail(self, action_name, title, exception_obj):
         """Capture logs, screenshot, and raise failures cleanly."""
 
-        error_msg = f"❌ {title} during: {action_name}\n{str(exception_obj)}"
+        error_msg = f"{title} during: {action_name}\n{str(exception_obj)}"
         self.logger.error(error_msg)
         self.logger.debug(traceback.format_exc())
 
         # Screenshot attachment
         try:
+            # Case 1: driver is a wrapper (WebDriverManager / MobileDriverManager)
             if hasattr(self.driver, "driver") and hasattr(self.driver.driver, "get_screenshot_as_png"):
-                screenshot = self.driver.driver.get_screenshot_as_png()
+                real_driver = self.driver.driver
+
+            # Case 2: driver is already a raw selenium/appium driver
+            elif hasattr(self.driver, "get_screenshot_as_png"):
+                real_driver = self.driver
+
+            else:
+                real_driver = None
+
+            if real_driver:
+                screenshot = real_driver.get_screenshot_as_png()
                 allure.attach(
                     screenshot,
                     name="Failure Screenshot",
                     attachment_type=allure.attachment_type.PNG
                 )
-        except Exception:
-            pass  # Don't mask the original error
+            else:
+                self.logger.warning("No valid driver found for screenshot capture")
 
-        # Text stack trace
+        except Exception as e:
+            # Don't break the test because screenshot failed
+            self.logger.warning(f"Screenshot capture failed: {e}")
+
+        # Attach simplified error instead of full Selenium stack
         allure.attach(
-            traceback.format_exc(),
-            name="Error Trace",
+            f"{type(exception_obj).__name__}: {str(exception_obj)}",
+            name="Clean Error",
             attachment_type=allure.attachment_type.TEXT
         )
 
-        raise exception_obj  # important: propagate failure to test
+        # ✅ RAISE CLEAN EXCEPTION (NO SELENIUM INTERNAL TRACE)
+        if isinstance(exception_obj, TimeoutException):
+            raise AssertionError(
+                f"{title} during: {action_name} - Element was not found within timeout"
+            )
+
+        raise AssertionError(
+            f"{title} during: {action_name} - {str(exception_obj)}"
+        )
 
     # ----------------------------------------------------------------------
     # PUBLIC INTERACTION WRAPPERS

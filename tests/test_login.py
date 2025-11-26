@@ -6,7 +6,7 @@ from core.logger import get_logger
 
 logger = get_logger(__name__)
 
-@pytest.mark.flaky(reruns=2, reruns_delay=5)
+@pytest.mark.flaky(reruns=2, reruns_delay=3)
 @pytest.mark.parametrize('user,pwd', [('student','Password123')])
 @allure.title("Test Login Functionality on Web Platform")
 @allure.description("""

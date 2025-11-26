@@ -1,6 +1,8 @@
-# apps/hp_app_web.py
+# apps/hp_app_desktop.py
 from pages.desktop import *
 from pages.desktop.login_page import LoginPage
+from core.configManager import ConfigManager
+
 
 class HPAppDesktop:
     def __init__(self, driver, config):

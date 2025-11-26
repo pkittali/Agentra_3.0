@@ -1,5 +1,6 @@
 # apps/hp_app_mobile.py
 from pages.mobile.login_page import LoginPage
+from core.configManager import ConfigManager
 
 class HPAppMobile:
     def __init__(self, driver, config):

@@ -8,7 +8,11 @@ credentials:
 
 timeouts:
   implicit: 5
-  explicit: 20
+  explicit: 60
+
+retries:
+  step_retry: 3
+  test_retry: 2
 
 app:
   name: "Agentra Automation"

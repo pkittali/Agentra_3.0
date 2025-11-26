@@ -1,13 +1,13 @@
 # apps/hp_app_web.py
-from conftest import config
+from core.configManager import ConfigManager
 from pages.web import *
 from pages.web.login_page import LoginPage
 
+
 class HPAppWeb:
-    def __init__(self, driver, config):
+    def __init__(self, driver):
         self.driver = driver
-        self.config = config
-        self.login_page = LoginPage(driver, config)
+        self.login_page = LoginPage(driver)
         #self.enroll_page = WebEnrollPage(driver)
 
     def login(self, username, password):

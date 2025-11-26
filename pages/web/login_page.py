@@ -6,18 +6,19 @@ from utils.waits import WaitUtils
 from selenium.webdriver.common.by import By
 from resources.locators.web_locators import LoginPageLocators
 from core.logger import get_logger
+from core.configManager import ConfigManager
+
 
 class LoginPage(BasePage):
-    def __init__(self, driver, config):
-        super().__init__(driver, config)
-        self.driver = driver
+    def __init__(self, driver):
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
     def open(self):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Launch HP Portal"):
-            url = self.config.get_url("login")
+            url = ConfigManager.get_url("login")
             self.driver.get(url)  # Replace with actual login URL
 
     def enter_username(self, username):
