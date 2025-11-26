@@ -45,3 +45,10 @@ class LoginPageLocators:
     LOGIN_BUTTON = {"title": "Sign in", "control_type": "Button"}
     SUCCESS_MESSAGE = {"title": "Login Successful", "control_type": "Text"}
     ERROR_MESSAGE = {"title": "Invalid credentials", "control_type": "Text"}
+    USER_PROFILE = {"auto_id": "HpcSignedOutIcon", "control_type": "Button"}    
+    SIGN_IN_BUTTON = {"auto_id": "HpcSignOutFlyout_SignInBtn", "control_type": "Button"}
+    WEB_USERNAME_INPUT = {"auto_id": "username", "control_type": "Edit"}
+    USE_PASSWORD_BUTTON = {"title": "Use password", "control_type": "Button"}
+    WEB_PASSWORD_INPUT = {"auto_id": "password", "control_type": "Edit"}
+    WEB_SUBMIT_BUTTON = {"auto_id": "sign-in", "control_type": "Button"}
+    OPEN_HP_SMART_BUTTON = {"title": "Open HP Smart", "control_type": "Button"}

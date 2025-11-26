@@ -69,5 +69,6 @@ def test_launchapp(hpApp):
     # hpApp.start_enrollment()
     # hpApp.enter_shipping_details()
     # hpApp.confirm_enrollment()
- 
+    hpApp.login("prodstack15@yopmail.com", "Password@123")
+    
  

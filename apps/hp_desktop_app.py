@@ -9,14 +9,14 @@ class HPAppDesktop:
     def __init__(self, main_window):
         app = Application(backend="uia").connect(title="HP Smart")
         self.main_window =app.window(title_re="HP Smart")
-        # self.login_page = LoginPage(main_window)
+        self.login_page = LoginPage(main_window)
         self.launchapp_page = LaunchAppPage(main_window)
 
         # self.enroll_page = WebEnrollPage(driver)
 
-    def login(self, username, password):
-        self.login_page.open()
-        self.login_page.login()
+    def login(self, email, password):
+        self.login_page.open_user_profile()
+        self.login_page.sign_in(email,password)
     
     def start_enrollment(self):
         self.login_page.open()
