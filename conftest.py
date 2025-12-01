@@ -88,7 +88,8 @@ def hpApp(request, driver):
 
     if platform == "web":
         from apps.hp_web_app import HPAppWeb
-        return HPAppWeb(driver)
+        config = ConfigManager()                         
+        return HPAppWeb(driver, config)  
 
     elif platform == "mobile":
         from apps.hp_mobile_app import HPAppMobile
@@ -100,3 +101,6 @@ def hpApp(request, driver):
 
     else:
         raise ValueError(f"Unknown platform: {platform}")
+    
+
+
