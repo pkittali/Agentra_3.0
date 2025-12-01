@@ -17,5 +17,17 @@
     "invalidCodes": [
       { "code": "XYZ123" }
     ]
-  }
+  },
+"printerName":{
+    "printer_name": "HP LaserJet Pro M15w"
+   
+},
+"shipping":{
+  "address": "2137-2101 Hilton Ave",
+  "city": "Fairbanks",
+  "state": "Alaska",
+  "zip": "99701-4026",
+  "phone": "9999955555"
+}
+
 }
