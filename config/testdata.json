@@ -28,6 +28,11 @@
   "state": "Alaska",
   "zip": "99701-4026",
   "phone": "9999955555"
-}
-
+},
+"billing": {
+    "card_number": "4111111111111111",
+    "exp_month": "01",
+    "exp_year": "2025",
+    "cvv": "123"
+  }
 }

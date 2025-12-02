@@ -17,6 +17,10 @@ def test_launchapp(hpApp):
     state = TestDataManager.get("shipping","state") 
     zip_code = TestDataManager.get("shipping","zip")
     phone = TestDataManager.get("shipping","phone")
+    card_number = TestDataManager.get("billing","card_number")
+    exp_month = TestDataManager.get("billing","exp_month")
+    exp_year = TestDataManager.get("billing","exp_year")
+    cvv = TestDataManager.get("billing","cvv")
 
 
     """
@@ -79,6 +83,7 @@ def test_launchapp(hpApp):
     hpApp.printer_privacy()
     hpApp.value_prop()
     hpApp.shipping(address, city, state, zip_code, phone)
+    hpApp.billing(card_number, exp_month, exp_year, cvv)
     # hpApp.start_enrollment()
     # hpApp.enter_shipping_details()
     # hpApp.confirm_enrollment()

@@ -129,7 +129,25 @@ class ShippingLocators:
     PHONE_BOX = {"auto_id": "phoneNumberSmall", "control_type": "Edit"}
 
     SAVE_BTN = {"title": "Save", "control_type": "Button"}
-    
+
+class BillingLocators:
+    """
+    Desktop (pywinauto) locators for HP Smart Billing Page.
+    """
+    ADD_BILLING_BTN = {"title": "Add Billing", "control_type": "Button"}
+    CARD_NUMBER_FIELD = {"auto_id": "txtCardNumber", "control_type": "Edit"}
+    EXP_MONTH_DROPDOWN = {"auto_id": "drpExpMonth", "control_type": "ComboBox"}
+    EXP_YEAR_DROPDOWN = {"auto_id": "drpExpYear", "control_type": "ComboBox"}
+    CVV_FIELD = {"auto_id": "txtCVV", "control_type": "Edit"}
+    BILLINGNEXT_BTN = {"auto_id": "btn_pgs_card_add", "control_type": "Button"}
+
+class SobLocators:
+    """
+    Desktop (pywinauto) locators for HP Smart SOB Page.
+    """
+    PROMO_BTN = {'title': "Enter promo or PIN code", 'control_type': "Button"}
+    PROMO_INPUT = {'auto_id': "code-entry", 'control_type': "Edit"}
+    APPLY_BTN = {'title': "Apply", 'control_type': "Button"}
 
 
 

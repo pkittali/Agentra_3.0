@@ -1,5 +1,6 @@
 # apps/hp_app_web.py
 from pages.desktop import *
+from pages.desktop.billing_page import BillingPage
 from pages.desktop.login_page import LoginPage
 from pages.desktop.createaccount_page import CreateAccountPage
 from pages.desktop.launchapp_page import LaunchAppPage
@@ -23,6 +24,7 @@ class HPAppDesktop:
         self.printer_privacy_page = PrinterPrivacyPage(main_window)
         self.value_prop_page = ValuePropPage(main_window)
         self.shipping_page = ShippingPage(main_window)
+        self.billing_page = BillingPage(main_window)
         # self.enroll_page = WebEnrollPage(driver)
 
     def login(self, username, password):
@@ -67,6 +69,10 @@ class HPAppDesktop:
     def shipping(self, address, city, state, zip_code, phone):
         self.shipping_page.click_add_shipping()
         self.shipping_page.fill_shipping_details(address, city, state, zip_code, phone)
+
+    def billing(self, card_number, exp_month, exp_year, cvv):
+        self.billing_page.click_add_billing()
+        self.billing_page.fill_billing_details(card_number, exp_month, exp_year, cvv)
 
     
 
