@@ -54,13 +54,13 @@ class DesktopDriverManager:
 
         try:
             # Attach to running window
-            self.app = Application(backend="uia").connect(title_re=".*HP Smart.*")
+            self.app = Application(backend="uia").connect(title="HP Smart")
             self.main_window = self.app.window(title_re=".*HP Smart.*")
             self.main_window.wait("visible", timeout=20)
-            print("✅ Connected to HP Smart window successfully.")
+            print(" Connected to HP Smart window successfully.")
             return self.main_window
         except ElementNotFoundError:
-            raise Exception("⚠️ HP Smart window not found after launch.")
+            raise Exception(" HP Smart window not found after launch.")
 
     def quit(self):
         """Close HP Smart app gracefully."""

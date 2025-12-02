@@ -201,3 +201,21 @@ class BasePage:
     def _get_text(self, locator_type, locator_value):
         el = self.driver.find_element(locator_type, locator_value)
         return el.text if el else None
+    
+
+
+    def desktop_click(self, locator_type, locator_value):
+        """Safely click an element."""
+        action_name = f"Clicking element ({locator_type}, {locator_value})"
+        print("desktop_click called......")
+        return self._safe_action(
+            action_name,
+            self._desktop_click,
+            locator_type,
+            locator_value
+        )
+
+    def _desktop_click(self, locator_type, locator_value):
+        self.driver.wait_for_element(locator_type, locator_value)
+        print("_desktop_click called")
+        self.click_input(locator_type, locator_value)
