@@ -2,31 +2,36 @@
 BasePage Module
 ===============
 
-This module defines the BasePage class, which acts as the foundation for all
-Page Object classes in the Agentra automation framework. It provides an
-abstraction layer over platform- or tool-specific drivers (Web, Mobile, Desktop),
-ensuring consistent, reusable, and tool-agnostic interactions.
+This module defines the BasePage class, acting as the foundation for all
+Page Object classes in the Agentra automation framework.
 
-Key Responsibilities
---------------------
-1. Driver Abstraction
-2. Common Interactions (click, enter_text, get_text)
-3. Unified Wait Handling
-4. Logging Integration
-5. Allure Reporting
-6. Centralized Error Handling via safe_action()
+It provides:
+- Tool-agnostic interaction APIs
+- Centralized retry & failure handling
+- Heuristic self-healing at step level
+- Unified logging and Allure reporting
+
+Core Responsibilities
+---------------------
+1. Driver abstraction (Web / Mobile / Desktop)
+2. Safe UI interactions (click, enter_text, get_text)
+3. Retry + self-healing mechanism
+4. Failure capture with diagnostics
+5. Reporting & logging consistency
 
 Design Principles
 -----------------
-- Tool-Agnostic API
-- Single Source of Truth for interaction logic
-- Extensible for platform-specific enhancements
-- Consistent logging + reporting behavior
+- Single interaction authority
+- Runtime resilience via self-healing
+- Predictable error behavior
+- Extensible for platform specialization
 """
 
 import time
 import traceback
 import allure
+
+from utils.self_healing import SelfHealingEngine
 
 # Selenium exceptions
 from selenium.common.exceptions import (
@@ -37,8 +42,7 @@ from selenium.common.exceptions import (
     WebDriverException
 )
 
-#test
-# Appium exceptions
+# Appium exceptions fallback
 try:
     from appium.webdriver.common.exceptions import WebDriverException as AppiumDriverException
 except Exception:
@@ -48,156 +52,223 @@ except Exception:
 try:
     from pywinauto.findwindows import ElementNotFoundError
 except Exception:
-    ElementNotFoundError = Exception  # fallback for non-desktop envs
+    ElementNotFoundError = Exception
 
 from core.configManager import ConfigManager
 from core.logger import get_logger, log_allure
 
 
 class BasePage:
-    """Base class for all Page Objects providing safe UI interactions."""
+    """Base class for all Page Objects providing safe & intelligent UI interactions."""
 
     RETRY_EXCEPTIONS = (
-        StaleElementReferenceException,
-        NoSuchElementException,
-        TimeoutException,
-        ElementNotInteractableException
-    )    
+        # StaleElementReferenceException,
+        # NoSuchElementException,
+        # TimeoutException,
+        # ElementNotInteractableException
+    )
 
     def __init__(self, driver):
         self.driver = driver
         self.RETRIES = ConfigManager.get_retry_count("step_retry")
         self.logger = get_logger(self.__class__.__name__)
+        self.healer = SelfHealingEngine(driver)
 
-    def _safe_action(self, action_name, func, *args, **kwargs):
+    # ------------------------------------------------------------------
+    # SAFE ACTION EXECUTOR WITH SELF-HEALING + DEBUG TRACE
+    # ------------------------------------------------------------------
+    def _safe_action(self, action_name, func, locator, *args):
         """
-        Retries ANY exception up to RETRIES times.
-        Only fails after all retries have been exhausted.
+        Executes an action safely with:
+        - Retry logic
+        - Screenshot capture
+        - Self-healing on locator failure
+        - Allure step tracking
         """
 
-        for attempt in range(1, self.RETRIES+2):  # RETRIES + initial attempt
+        healed_locator = None
+        healing_applied = False
+
+        for attempt in range(1, self.RETRIES + 2):
 
             try:
                 with allure.step(f"{action_name} (Attempt {attempt})"):
                     self.logger.info(f"{action_name} - Attempt {attempt}")
-                    log_allure(f"{action_name} - Attempt {attempt}")
-                    return func(*args, **kwargs)   # SUCCESS → exit immediately
+
+                    active_locator = healed_locator if healed_locator else locator
+                    return func(active_locator, *args)
 
             except Exception as e:
 
-                # RETRY if attempts still available
+                self.logger.error(
+                    f"[Attempt {attempt}] {action_name} failed with {type(e).__name__}: {str(e)}"
+                )
+
+                # 📸 Screenshot on every failed attempt
+                self._attach_screenshot(f"{action_name}_Attempt_{attempt}_Failure")
+
+                # 🧠 Self-healing trigger (once per action)
+                if not healing_applied and self._is_locator_failure(e):
+
+                    self.logger.warning(f"Triggering self-healing for {locator}")
+                    healed_locator = self.healer.self_heal_locator(locator)
+
+                    if healed_locator:
+                        healing_applied = True
+                        self.logger.info(
+                            f"✅ Self-healed locator applied: {locator} → {healed_locator}"
+                        )
+
+                        allure.attach(
+                            f"Healed from {locator} to {healed_locator}",
+                            name="Self-Healing Triggered",
+                            attachment_type=allure.attachment_type.TEXT
+                        )
+
+                        continue  # retry using healed locator
+
+                # Retry logic
                 if attempt <= self.RETRIES:
                     self.logger.warning(
-                        f"{action_name} failed with {type(e).__name__}. "
-                        f"Retrying {attempt}/{self.RETRIES}..."
+                        f"Retrying {attempt}/{self.RETRIES} after failure..."
                     )
                     time.sleep(0.3)
-                    continue  # <-- RETRY HERE
+                    continue
 
-                # ALL RETRIES EXHAUSTED → FAIL
+                # ❌ Final failure
                 return self._fail(
                     action_name,
                     f"Failed after {self.RETRIES} retries ({type(e).__name__})",
                     e
                 )
 
+    def _is_locator_failure(self, exception):
+        # primary: by type
+        if isinstance(exception, self.RETRY_EXCEPTIONS):
+            return True
 
-    # ----------------------------------------------------------------------
+        # fallback: by class name (handles selenium/appium/wrapper TimeoutException etc.)
+        return exception.__class__.__name__ in (
+            "TimeoutException",
+            "NoSuchElementException",
+            "StaleElementReferenceException",
+            "ElementNotInteractableException"
+        )
+
+
+    # ------------------------------------------------------------------
+    # SCREENSHOT HELPER
+    # ------------------------------------------------------------------
+    def _attach_screenshot(self, name):
+        """Attach screenshot safely to Allure report."""
+        try:
+            if hasattr(self.driver, "driver"):
+                real_driver = self.driver.driver
+            else:
+                real_driver = self.driver
+
+            if hasattr(real_driver, "get_screenshot_as_png"):
+                allure.attach(
+                    real_driver.get_screenshot_as_png(),
+                    name=name,
+                    attachment_type=allure.attachment_type.PNG
+                )
+        except Exception as e:
+            self.logger.warning(f"Screenshot capture failed: {e}")
+
+    # ------------------------------------------------------------------
     # FAILURE HANDLER
-    # ----------------------------------------------------------------------
+    # ------------------------------------------------------------------
     def _fail(self, action_name, title, exception_obj):
-        """Capture logs, screenshot, and raise failures cleanly."""
+        """Logs detailed failure and raises a clean assertion."""
 
         error_msg = f"{title} during: {action_name}\n{str(exception_obj)}"
         self.logger.error(error_msg)
         self.logger.debug(traceback.format_exc())
 
-        # Screenshot attachment
-        try:
-            # Case 1: driver is a wrapper (WebDriverManager / MobileDriverManager)
-            if hasattr(self.driver, "driver") and hasattr(self.driver.driver, "get_screenshot_as_png"):
-                real_driver = self.driver.driver
-
-            # Case 2: driver is already a raw selenium/appium driver
-            elif hasattr(self.driver, "get_screenshot_as_png"):
-                real_driver = self.driver
-
-            else:
-                real_driver = None
-
-            if real_driver:
-                screenshot = real_driver.get_screenshot_as_png()
-                allure.attach(
-                    screenshot,
-                    name="Failure Screenshot",
-                    attachment_type=allure.attachment_type.PNG
-                )
-            else:
-                self.logger.warning("No valid driver found for screenshot capture")
-
-        except Exception as e:
-            # Don't break the test because screenshot failed
-            self.logger.warning(f"Screenshot capture failed: {e}")
-
-        # Attach simplified error instead of full Selenium stack
         allure.attach(
             f"{type(exception_obj).__name__}: {str(exception_obj)}",
-            name="Clean Error",
+            name="Failure Reason",
             attachment_type=allure.attachment_type.TEXT
         )
 
-        # ✅ RAISE CLEAN EXCEPTION (NO SELENIUM INTERNAL TRACE)
-        if isinstance(exception_obj, TimeoutException):
-            raise AssertionError(
-                f"{title} during: {action_name} - Element was not found within timeout"
-            )
+        raise AssertionError(f"{title} during: {action_name}")
 
-        raise AssertionError(
-            f"{title} during: {action_name} - {str(exception_obj)}"
-        )
-
-    # ----------------------------------------------------------------------
+    # ------------------------------------------------------------------
     # PUBLIC INTERACTION WRAPPERS
-    # ----------------------------------------------------------------------
+    # ------------------------------------------------------------------
+
     def click(self, locator_type, locator_value):
-        """Safely click an element."""
-        action_name = f"Clicking element ({locator_type}, {locator_value})"
+        locator = (locator_type, locator_value)
+        action_name = f"Clicking element {locator}"
+
         return self._safe_action(
             action_name,
             self._click,
-            locator_type,
-            locator_value
+            locator
         )
 
-    def _click(self, locator_type, locator_value):
-        self.driver.wait_for_element(locator_type, locator_value)
-        self.driver.click(locator_type, locator_value)
+    def _click(self, locator):
+        self.driver.wait_for_element(*locator)
+        self.driver.click(*locator)
+
 
     def enter_text(self, locator_type, locator_value, text):
-        """Safely enter text into an input field."""
-        action_name = f"Entering '{text}' into ({locator_type}, {locator_value})"
+        locator = (locator_type, locator_value)
+        action_name = f"Entering text into {locator}"
+
         return self._safe_action(
             action_name,
             self._enter_text,
-            locator_type,
-            locator_value,
+            locator,
             text
         )
 
-    def _enter_text(self, locator_type, locator_value, text):
-        self.driver.wait_for_element(locator_type, locator_value)
-        self.driver.send_keys(locator_type, locator_value, text)
+    def _enter_text(self, locator, text):
+        self.driver.wait_for_element(*locator)
+        self.driver.send_keys(*locator, text)
 
     def get_text(self, locator_type, locator_value):
-        """Safely fetch visible text from an element."""
-        action_name = f"Fetching text from ({locator_type}, {locator_value})"
+        locator = (locator_type, locator_value)
+        action_name = f"Fetching text from {locator}"
+
         return self._safe_action(
             action_name,
             self._get_text,
-            locator_type,
-            locator_value
+            locator
         )
 
-    def _get_text(self, locator_type, locator_value):
-        el = self.driver.find_element(locator_type, locator_value)
+    def _get_text(self, locator):
+        el = self.driver.find_element(*locator)
         return el.text if el else None
+    
+
+    def desktop_click(self, locator_dict):
+        """
+        Safe click for Desktop UI elements (pywinauto).
+        locator_dict is a dictionary of UIA properties:
+            {"title": "OK", "control_type": "Button"}
+        """
+        action_name = f"Desktop click {locator_dict}"
+        return self._safe_action(
+            action_name,
+            self._desktop_click,
+            locator_dict
+        )
+
+
+    def _desktop_click(self, locator_dict):
+        """
+        Actual click logic for Desktop.
+        """
+        # get main window from driver (DesktopDriverManager exposes main_window)
+        window = self.driver.main_window
+
+        # locate child element
+        element = window.child_window(**locator_dict)
+
+        # wait for element to exist & be ready
+        element.wait("exists ready", timeout=4)
+
+        # perform click
+        element.click_input()    

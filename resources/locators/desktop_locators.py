@@ -45,3 +45,4 @@ class LoginPageLocators:
     LOGIN_BUTTON = {"title": "Sign in", "control_type": "Button"}
     SUCCESS_MESSAGE = {"title": "Login Successful", "control_type": "Text"}
     ERROR_MESSAGE = {"title": "Invalid credentials", "control_type": "Text"}
+    MANAGE_HP_ACCOUNT_BTN = {"title": "Manage HP Account","control_type": "Button"}

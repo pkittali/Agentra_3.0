@@ -1,23 +1,31 @@
 # apps/hp_app_desktop.py
-from pages.desktop import *
 from pages.desktop.login_page import LoginPage
 from core.configManager import ConfigManager
 
 
 class HPAppDesktop:
-    def __init__(self, driver, config):
+    def __init__(self, driver):
         self.driver = driver
-        self.config = config
-        self.login_page = LoginPage(driver, config)
+        self.main_window = driver.main_window
+        self.login_page = LoginPage(self.driver, self.main_window)
         # self.enroll_page = WebEnrollPage(driver)
 
-    def login(self, username, password):
+    def launchApp(self):
+        self.main_window = self.driver.launch_app()
+
+        # give main_window to pages
+        from pages.desktop.login_page import LoginPage
+        self.login_page = LoginPage(self.driver, self.main_window)
+
+        return self   
+
+    def login(self):
         self.login_page.open()
-        self.login_page.login()
+        # self.login_page.login()
     
     def start_enrollment(self):
         self.login_page.open()
-        self.login_page.login()
+        # self.login_page.login()
     
     def enter_shipping_details(self):
         self.enroll_page.fill_shipping()

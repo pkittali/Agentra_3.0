@@ -29,3 +29,6 @@ class HPAppWeb:
     
     def verify_confirmation_screen(self):
         self.enroll_page.verify_success_message()
+
+    def validateOnboarding(self):
+        self.enroll_page.verify_success_message()

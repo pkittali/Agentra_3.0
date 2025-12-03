@@ -95,8 +95,12 @@ def hpApp(request, driver):
         return HPAppMobile(driver)
 
     elif platform == "desktop":
+        from core.desktop_driver import DesktopDriverManager
         from apps.hp_desktop_app import HPAppDesktop
-        return HPAppDesktop(driver)
+
+        driver_manager = DesktopDriverManager()
+        return HPAppDesktop(driver_manager)
+
 
     else:
         raise ValueError(f"Unknown platform: {platform}")

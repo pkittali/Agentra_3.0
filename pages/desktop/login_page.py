@@ -9,15 +9,20 @@ from resources.locators.desktop_locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self, driver, main_window):
+        super().__init__(driver)
+        self.main_window = main_window
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
     def open(self):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Launch HP Smart Desktop App"):
-            self.driver.get("https://practicetestautomation.com/practice-test-login/")
+            self.main_window.set_focus()
+            self.main_window.wait("exists ready visible", timeout=30)      
+            self.desktop_click(LoginPageLocators.MANAGE_HP_ACCOUNT_BTN)
+            self.desktop_click(LoginPageLocators.LOGIN_BUTTON)
+
 
     def enter_username(self, username):
         self.logger.info("Entering username into input field")        
