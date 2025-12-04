@@ -1,6 +1,7 @@
 import pytest
 import apps
 from core.configManager import ConfigManager
+from core.driver_orchestrator import DriverOrchestrator
 
 
 # =========================================================
@@ -51,6 +52,13 @@ def driver(request):
     """
     platform = request.config.getoption("--platform")
 
+    # ----------------------------
+    # HYBRID MODE → Skip driver creation
+    # ----------------------------
+    if platform == "hybrid":
+        yield None
+        return
+
     if platform == "web":
         from core.web_driver import WebDriverManager
         drv = WebDriverManager().get_driver()
@@ -61,8 +69,7 @@ def driver(request):
 
     elif platform == "desktop":
         from core.desktop_driver import DesktopDriverManager
-        drv = DesktopDriverManager().get_driver()
-
+        drv = DesktopDriverManager().get_driver()        
     else:
         raise ValueError(f"Unknown platform: {platform}")
 
@@ -97,10 +104,15 @@ def hpApp(request, driver):
     elif platform == "desktop":
         from core.desktop_driver import DesktopDriverManager
         from apps.hp_desktop_app import HPAppDesktop
-
         driver_manager = DesktopDriverManager()
         return HPAppDesktop(driver_manager)
-
-
+    elif platform == "hybrid":
+        return orchestrator     
     else:
         raise ValueError(f"Unknown platform: {platform}")
+
+@pytest.fixture(scope='session')
+def orchestrator():
+    orch = DriverOrchestrator()
+    yield orch
+    orch.cleanup()

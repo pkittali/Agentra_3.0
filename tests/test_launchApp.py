@@ -8,8 +8,11 @@ from pywinauto.application import Application
 logger = get_logger(__name__)
  
 @pytest.mark.flaky(reruns=2, reruns_delay=5)
-@pytest.mark.desktop
+#@pytest.mark.desktop
 def test_launchapp(hpApp):
+
+    print("hpApp =", hpApp, "TYPE =", type(hpApp))
+
  
     # printer_name= TestDataManager.get("printerName", "printer_name")
     # address = TestDataManager.get("shipping","address")
@@ -73,7 +76,7 @@ def test_launchapp(hpApp):
     logger.info(f"Launching the HP Smart Desktop App")
  
     hpApp.launchApp()
-    hpApp.login()
+    # hpApp.login()
     # hpApp.create_account()
     # hpApp.printer_setup(printer_name)
     # hpApp.printer_privacy()

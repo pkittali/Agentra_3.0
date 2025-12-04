@@ -40,7 +40,7 @@ from selenium.webdriver.common.by import By
 class LoginPageLocators:
     USERNAME_INPUT = (By.ID, "username")
     PASSWORD_INPUT = (By.ID, "password")
-    LOGIN_BUTTON = (By.XPATH, "//button[@id='submit1']")
+    LOGIN_BUTTON = (By.XPATH, "//button[@id='submittt']")
     SUCCESS_MESSAGE = (By.XPATH, "//*[text()='Logged In Successfully']")
     ERROR_MESSAGE = (By.CSS_SELECTOR, ".error-message")
 

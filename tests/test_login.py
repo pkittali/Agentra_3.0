@@ -7,6 +7,7 @@ from core.logger import get_logger
 logger = get_logger(__name__)
 
 @pytest.mark.flaky(reruns=2, reruns_delay=3)
+@pytest.mark.web
 @pytest.mark.parametrize('user,pwd', [('student','Password123')])
 @allure.title("Test Login Functionality on Web Platform")
 @allure.description("""
@@ -20,8 +21,8 @@ It ensures that:
 
 def test_login_web(hpApp, user, pwd):
 
-    # user = TestDataManager.get("login", "valid", "username")
-    # pwd = TestDataManager.get("login", "valid", "password")
+    user = TestDataManager.get("login", "valid", "username")
+    pwd = TestDataManager.get("login", "valid", "password")
 
     """
     <Short Test Title>
@@ -74,8 +75,9 @@ def test_login_web(hpApp, user, pwd):
 
     """    
     logger.info(f"Starting test_login_web with user={user}")
-    hpApp.launch_app()
-    hpApp.login()
+    # hpApp.launch_app()
+    hpApp.login(user, pwd)
+    # hpApp.enter_shipping_details()
     # hpApp.start_enrollment()
     # hpApp.enter_shipping_details()
     # hpApp.confirm_enrollment()
