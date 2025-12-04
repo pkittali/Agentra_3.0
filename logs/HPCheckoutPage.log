@@ -1,0 +1,19 @@
+2025-12-02 07:06:28 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 07:06:45 | INFO | HPCheckoutPage | Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1
+2025-12-02 07:32:26 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 07:38:17 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 07:38:34 | INFO | HPCheckoutPage | Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1
+2025-12-02 14:46:01 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 14:46:23 | INFO | HPCheckoutPage | Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1
+2025-12-02 15:49:43 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 15:49:59 | INFO | HPCheckoutPage | Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1
+2025-12-02 17:10:44 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 17:17:28 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 17:27:28 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-02 17:28:08 | WARNING | HPCheckoutPage | HP Checkout button not visible — continuing flow
+2025-12-03 07:14:19 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-03 07:20:06 | INFO | HPCheckoutPage | Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1
+2025-12-03 14:13:04 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-03 14:13:44 | WARNING | HPCheckoutPage | HP Checkout button not visible — continuing flow
+2025-12-03 15:06:13 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-03 15:06:29 | INFO | HPCheckoutPage | Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1

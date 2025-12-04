@@ -207,3 +207,23 @@ class BasePage:
                 msg = f"Failed to select dropdown option '{value}': {e}"
                 self.logger.error(msg)
                 raise Exception(msg)
+            
+    def scroll(self, locator_type, locator_value):
+        """Safely scroll to an element."""
+        action_name = f"Scrolling to element ({locator_type}, {locator_value})"
+        return self._safe_action(
+            action_name,
+            self._scroll,
+            locator_type,
+            locator_value
+        )
+
+    def _scroll(self, locator_type, locator_value):
+        element = self.driver.wait_for_element(locator_type, locator_value)
+
+        # Scroll element into view
+        self.driver.execute_script(
+            "arguments[0].scrollIntoView({block: 'center'});", element
+        )
+
+

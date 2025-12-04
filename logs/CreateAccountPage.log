@@ -617,3 +617,312 @@
 2025-11-25 09:54:55 | INFO | CreateAccountPage | Entering '590838' into (xpath, //input[@id='code']) - Attempt 1
 2025-11-25 09:54:56 | INFO | CreateAccountPage | Clicking Verify button
 2025-11-25 09:54:56 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-01 10:25:02 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-01 10:25:02 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-01 10:25:08 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-01 10:25:08 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-01 10:25:25 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-01 10:25:25 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-01 10:25:26 | INFO | CreateAccountPage | Entering email into input field
+2025-12-01 10:25:26 | INFO | CreateAccountPage | Entering 'GSsauarval7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-01 10:25:26 | INFO | CreateAccountPage | Entering password into input field
+2025-12-01 10:25:26 | INFO | CreateAccountPage | Entering 'GSGSsauarval7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-01 10:25:27 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-01 10:25:27 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-01 10:25:27 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-01 10:25:54 | INFO | CreateAccountPage | Entering verification code
+2025-12-01 10:25:54 | INFO | CreateAccountPage | Entering '997163' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-01 10:25:54 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-01 10:25:54 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-01 18:38:55 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-01 18:38:55 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-01 18:39:17 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-01 18:39:17 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-01 18:39:31 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-01 18:39:31 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-01 18:39:32 | INFO | CreateAccountPage | Entering email into input field
+2025-12-01 18:39:32 | INFO | CreateAccountPage | Entering 'GSamronecj7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-01 18:39:32 | INFO | CreateAccountPage | Entering password into input field
+2025-12-01 18:39:32 | INFO | CreateAccountPage | Entering 'GSGSamronecj7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-01 18:39:33 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-01 18:39:33 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-01 18:39:34 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-01 18:40:12 | INFO | CreateAccountPage | Entering verification code
+2025-12-01 18:40:12 | INFO | CreateAccountPage | Entering '695344' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-01 18:40:12 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-01 18:40:12 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 11:27:31 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 11:27:31 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 11:27:54 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 11:27:54 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 11:28:05 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 11:28:05 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 11:28:07 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 11:28:07 | INFO | CreateAccountPage | Entering 'GSpgjigkef7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 11:28:10 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 11:28:10 | INFO | CreateAccountPage | Entering 'GSGSpgjigkef7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 11:28:11 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 11:28:11 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 11:28:11 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 11:28:32 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 11:28:32 | INFO | CreateAccountPage | Entering '437932' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 11:28:32 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 11:28:32 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 06:40:21 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 06:40:21 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 06:40:37 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 06:40:37 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 06:40:48 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 06:40:48 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 06:40:48 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 06:40:48 | INFO | CreateAccountPage | Entering 'GSausahqif7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 06:40:49 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 06:40:49 | INFO | CreateAccountPage | Entering 'GSGSausahqif7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 06:40:50 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 06:40:50 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 06:40:51 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 06:41:29 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 06:41:29 | INFO | CreateAccountPage | Entering '915690' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 06:41:29 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 06:41:29 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 07:04:25 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 07:04:25 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 07:04:41 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 07:04:41 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 07:04:53 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 07:04:53 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 07:04:53 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 07:04:53 | INFO | CreateAccountPage | Entering 'GSrnlumbqn7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 07:04:54 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 07:04:54 | INFO | CreateAccountPage | Entering 'GSGSrnlumbqn7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 07:04:54 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 07:04:54 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 07:04:55 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 07:05:14 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 07:05:14 | INFO | CreateAccountPage | Entering '073354' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 07:05:15 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 07:05:15 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 07:29:31 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 07:29:31 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 07:29:43 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 07:29:43 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 07:30:06 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 07:30:06 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 07:30:12 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 07:30:12 | INFO | CreateAccountPage | Entering 'GSedijwwia7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 07:30:14 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 07:30:14 | INFO | CreateAccountPage | Entering 'GSGSedijwwia7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 07:30:14 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 07:30:14 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 07:30:15 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 07:31:16 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 07:31:16 | INFO | CreateAccountPage | Entering '132169' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 07:31:16 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 07:31:16 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 07:35:50 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 07:35:50 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 07:36:15 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 07:36:15 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 07:36:30 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 07:36:30 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 07:36:33 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 07:36:33 | INFO | CreateAccountPage | Entering 'GSyhfwrbsw7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 07:36:33 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 07:36:33 | INFO | CreateAccountPage | Entering 'GSGSyhfwrbsw7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 07:36:34 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 07:36:34 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 07:36:34 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 07:36:55 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 07:36:55 | INFO | CreateAccountPage | Entering '995917' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 07:36:55 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 07:36:55 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 14:43:37 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 14:43:37 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 14:44:13 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 14:44:13 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 14:44:24 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 14:44:24 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 14:44:24 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 14:44:24 | INFO | CreateAccountPage | Entering 'GSslflawfc7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 14:44:24 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 14:44:24 | INFO | CreateAccountPage | Entering 'GSGSslflawfc7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 14:44:25 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 14:44:25 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 14:44:26 | WARNING | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-02 14:44:26 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 2
+2025-12-02 14:44:26 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 14:44:47 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 14:44:47 | INFO | CreateAccountPage | Entering '662863' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 14:44:47 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 14:44:47 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 15:47:49 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 15:47:49 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 15:47:58 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 15:47:58 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 15:48:13 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 15:48:13 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 15:48:13 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 15:48:13 | INFO | CreateAccountPage | Entering 'GSsxecelxt7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 15:48:14 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 15:48:14 | INFO | CreateAccountPage | Entering 'GSGSsxecelxt7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 15:48:15 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 15:48:15 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 15:48:15 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 15:48:36 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 15:48:36 | INFO | CreateAccountPage | Entering '740218' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 15:48:36 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 15:48:36 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 17:08:47 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 17:08:47 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 17:09:06 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 17:09:06 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 17:09:18 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 17:09:18 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 17:09:18 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 17:09:18 | INFO | CreateAccountPage | Entering 'GSieprnrti7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 17:09:19 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 17:09:19 | INFO | CreateAccountPage | Entering 'GSGSieprnrti7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 17:09:19 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 17:09:19 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 17:09:20 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 17:09:38 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 17:09:38 | INFO | CreateAccountPage | Entering '894993' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 17:09:39 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 17:09:39 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 17:15:29 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 17:15:29 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 17:15:35 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 17:15:35 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 17:15:52 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 17:15:52 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 17:15:52 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 17:15:52 | INFO | CreateAccountPage | Entering 'GSekjatlqv7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 17:15:53 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 17:15:53 | INFO | CreateAccountPage | Entering 'GSGSekjatlqv7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 17:15:53 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 17:15:53 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 17:15:54 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 17:16:19 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 17:16:19 | INFO | CreateAccountPage | Entering '468221' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 17:16:19 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 17:16:19 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-02 17:25:23 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-02 17:25:23 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-02 17:25:30 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-02 17:25:30 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-02 17:25:47 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-02 17:25:47 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-02 17:25:49 | INFO | CreateAccountPage | Entering email into input field
+2025-12-02 17:25:49 | INFO | CreateAccountPage | Entering 'GSapskpodo7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-02 17:25:51 | INFO | CreateAccountPage | Entering password into input field
+2025-12-02 17:25:51 | INFO | CreateAccountPage | Entering 'GSGSapskpodo7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-02 17:25:53 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-02 17:25:53 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-02 17:25:54 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-02 17:26:17 | INFO | CreateAccountPage | Entering verification code
+2025-12-02 17:26:17 | INFO | CreateAccountPage | Entering '193726' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-02 17:26:18 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-02 17:26:18 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-03 07:10:47 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-03 07:10:47 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-03 07:10:59 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-03 07:10:59 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-03 07:11:10 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-03 07:11:10 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-03 07:11:11 | INFO | CreateAccountPage | Entering email into input field
+2025-12-03 07:11:11 | INFO | CreateAccountPage | Entering 'GSdigslcgq7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-03 07:11:11 | INFO | CreateAccountPage | Entering password into input field
+2025-12-03 07:11:11 | INFO | CreateAccountPage | Entering 'GSGSdigslcgq7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-03 07:11:11 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-03 07:11:11 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-03 07:11:12 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-03 07:11:44 | INFO | CreateAccountPage | Entering verification code
+2025-12-03 07:11:44 | INFO | CreateAccountPage | Entering '256163' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-03 07:11:44 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-03 07:11:44 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-03 14:09:12 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-03 14:09:12 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-03 14:09:23 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-03 14:09:23 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-03 14:09:36 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-03 14:09:36 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-03 14:09:38 | INFO | CreateAccountPage | Entering email into input field
+2025-12-03 14:09:38 | INFO | CreateAccountPage | Entering 'GSjjgeeqbs7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-03 14:09:39 | INFO | CreateAccountPage | Entering password into input field
+2025-12-03 14:09:39 | INFO | CreateAccountPage | Entering 'GSGSjjgeeqbs7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-03 14:09:40 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-03 14:09:40 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-03 14:09:41 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-03 14:11:12 | INFO | CreateAccountPage | Entering verification code
+2025-12-03 14:11:12 | INFO | CreateAccountPage | Entering '166532' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-03 14:11:13 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-03 14:11:13 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-03 14:33:20 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-03 14:33:20 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-03 14:33:31 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-03 14:33:31 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-03 14:33:46 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-03 14:33:46 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-03 14:33:46 | INFO | CreateAccountPage | Entering email into input field
+2025-12-03 14:33:46 | INFO | CreateAccountPage | Entering 'GSrqgwpfmk7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-03 14:33:47 | INFO | CreateAccountPage | Entering password into input field
+2025-12-03 14:33:47 | INFO | CreateAccountPage | Entering 'GSGSrqgwpfmk7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-03 14:33:48 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-03 14:33:48 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-03 14:33:49 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-03 14:36:05 | INFO | CreateAccountPage | Entering verification code
+2025-12-03 14:36:05 | INFO | CreateAccountPage | Entering '494095' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-03 14:36:15 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-03 14:36:15 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-03 15:04:11 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-03 15:04:11 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-03 15:04:22 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-03 15:04:22 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-03 15:04:33 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-03 15:04:33 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-03 15:04:34 | INFO | CreateAccountPage | Entering email into input field
+2025-12-03 15:04:34 | INFO | CreateAccountPage | Entering 'GSxeeiudmg7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-03 15:04:34 | INFO | CreateAccountPage | Entering password into input field
+2025-12-03 15:04:34 | INFO | CreateAccountPage | Entering 'GSGSxeeiudmg7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-03 15:04:35 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-03 15:04:35 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-03 15:04:35 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-03 15:05:09 | INFO | CreateAccountPage | Entering verification code
+2025-12-03 15:05:09 | INFO | CreateAccountPage | Entering '131671' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-03 15:05:09 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-03 15:05:09 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-03 17:50:57 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-03 17:50:57 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-03 17:51:19 | WARNING | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-03 17:51:19 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 2
+2025-12-03 17:51:24 | WARNING | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-03 17:51:24 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 3
+2025-12-03 17:51:25 | ERROR | CreateAccountPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='create-account-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="button" data-testid="create-account-button" data-linkid="ii_hpid_value_prop" class="button__Button-@jarvis/react-smb-instant-ink-signup__sc-1rafmna-0 jaljsF css-1k51f1o">...</button> is not clickable at point (1250, 422). Other element would receive the click: <div class="banner-actions-container">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff603bea235
+	0x7ff603942630
+	0x7ff6036d16dd
+	0x7ff6037324c9
+	0x7ff60372fe4e
+	0x7ff60372cd71
+	0x7ff60372bc10
+	0x7ff60371d3a8
+	0x7ff603752b0a
+	0x7ff60371cc36
+	0x7ff60377baba
+	0x7ff60371b0ed
+	0x7ff60371bf63
+	0x7ff603c15d60
+	0x7ff603c0fe8a
+	0x7ff603c31005
+	0x7ff60395d71e
+	0x7ff603964e1f
+	0x7ff60394b7c4
+	0x7ff60394b97f
+	0x7ff6039318e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+

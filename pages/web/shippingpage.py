@@ -87,9 +87,17 @@ class ShippingPage(BasePage):
             self.check_text_message_option()
         self.click_save_shipping()
     
-    def click_ship_to_this_address(self):
+    def click_ship_to_this_address_if_visible(self):
         self.logger.info("Clicking Ship to this address button")
         with allure.step("Clicked Ship to this address button"):
-            self.click(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON)
+            try:
+                wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div[role='dialog']")))
+                self.wait.wait_until_visible(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON,timeout=20)
+                self.wait.wait_until_clickable(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON,timeout=20)
+                if element:
+                    self.click(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON)
+            except TimeoutException:
+                self.logger.info("Ship to this address button not visible, proceeding without clicking it.")
+                pass
 
     

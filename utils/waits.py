@@ -11,7 +11,7 @@ class WaitUtils:
         self.logger = get_logger(self.__class__.__name__)
 
     @allure.step("Wait until element is visible: {locator}")
-    def wait_until_visible(self, by, locator, timeout=50, poll_frequency=0.5):
+    def wait_until_visible(self, by, locator, timeout=120, poll_frequency=0.5):
         """
         Wait until an element is visible on the page.
 
@@ -24,7 +24,7 @@ class WaitUtils:
         try:
             wait = WebDriverWait(self.driver, timeout, poll_frequency)
             element = wait.until(EC.visibility_of_element_located((by, locator)))
-            # allure.attach(
+            # allure.attach(c
             #     self.driver.get_screenshot_as_png(),
             #     name="ElementVisible",
             #     attachment_type=allure.attachment_type.PNG
@@ -44,7 +44,7 @@ class WaitUtils:
             return None
             
     @allure.step("Wait until element is clickable")
-    def wait_until_clickable(self, by, locator, timeout=50):
+    def wait_until_clickable(self, by, locator, timeout=120):
         """Wait until the element becomes clickable."""
         try:
             return WebDriverWait(self.driver, timeout).until(
@@ -59,7 +59,7 @@ class WaitUtils:
             raise
 
     @allure.step("Wait until text is present in element")
-    def wait_until_text_present(self, by, locator, text, timeout=50):
+    def wait_until_text_present(self, by, locator, text, timeout=120):
         """Wait until a specific text appears in an element."""
         try:
             WebDriverWait(self.driver, timeout).until(

@@ -80,3 +80,506 @@ Symbols not available. Dumping unresolved backtrace:
 	0x7ffea8ede8d7
 	0x7ffea926c53c
 
+2025-12-01 10:27:06 | INFO | ShippingPage | Entering Street1
+2025-12-01 10:27:06 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-01 10:27:14 | INFO | ShippingPage | Entering City
+2025-12-01 10:27:14 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-01 10:27:18 | INFO | ShippingPage | Selecting State
+2025-12-01 10:27:18 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-01 10:27:20 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-01 10:27:20 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-01 10:27:22 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-01 10:27:22 | INFO | ShippingPage | Entering Zipcode
+2025-12-01 10:27:22 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-01 10:27:23 | INFO | ShippingPage | Entering Mobile Number
+2025-12-01 10:27:23 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-01 10:27:24 | INFO | ShippingPage | Checking Text Message Option
+2025-12-01 10:27:24 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-01 10:27:25 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-01 10:27:25 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-01 10:27:28 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-01 10:27:28 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-01 10:27:31 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-01 10:27:32 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-01 10:27:33 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-01 10:27:33 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-01 10:27:35 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff67115a235
+	0x7ff670eb2630
+	0x7ff670c416dd
+	0x7ff670ca24c9
+	0x7ff670c9fe4e
+	0x7ff670c9cd71
+	0x7ff670c9bc10
+	0x7ff670c8d3a8
+	0x7ff670cc2b0a
+	0x7ff670c8cc36
+	0x7ff670cebaba
+	0x7ff670c8b0ed
+	0x7ff670c8bf63
+	0x7ff671185d60
+	0x7ff67117fe8a
+	0x7ff6711a1005
+	0x7ff670ecd71e
+	0x7ff670ed4e1f
+	0x7ff670ebb7c4
+	0x7ff670ebb97f
+	0x7ff670ea18e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-01 18:41:36 | INFO | ShippingPage | Entering Street1
+2025-12-01 18:41:36 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-01 18:41:43 | INFO | ShippingPage | Entering City
+2025-12-01 18:41:43 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-01 18:41:47 | INFO | ShippingPage | Selecting State
+2025-12-01 18:41:47 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-01 18:41:48 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-01 18:41:48 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-01 18:41:49 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-01 18:41:49 | INFO | ShippingPage | Entering Zipcode
+2025-12-01 18:41:49 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-01 18:41:50 | INFO | ShippingPage | Entering Mobile Number
+2025-12-01 18:41:50 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-01 18:41:52 | INFO | ShippingPage | Checking Text Message Option
+2025-12-01 18:41:52 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-01 18:41:54 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-01 18:41:54 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-01 18:42:03 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-01 18:42:03 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-01 18:46:03 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with TimeoutException. Retrying 1/2...
+2025-12-01 18:46:04 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-01 18:50:04 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with TimeoutException. Retrying 2/2...
+2025-12-01 18:50:04 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-02 11:32:30 | INFO | ShippingPage | Entering Street1
+2025-12-02 11:32:30 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-02 11:32:42 | INFO | ShippingPage | Entering City
+2025-12-02 11:32:42 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-02 11:32:49 | INFO | ShippingPage | Selecting State
+2025-12-02 11:32:49 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-02 11:33:35 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-02 11:33:38 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-02 11:33:44 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-02 11:33:44 | INFO | ShippingPage | Entering Zipcode
+2025-12-02 11:33:44 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-02 11:33:50 | INFO | ShippingPage | Entering Mobile Number
+2025-12-02 11:33:50 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-02 11:33:56 | INFO | ShippingPage | Checking Text Message Option
+2025-12-02 11:33:56 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-02 11:33:59 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 11:33:59 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 11:34:06 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 11:34:06 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 11:34:26 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-02 11:34:26 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-02 11:34:29 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-02 11:34:29 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-02 11:34:31 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff75581a235
+	0x7ff755572630
+	0x7ff7553016dd
+	0x7ff7553624c9
+	0x7ff75535fe4e
+	0x7ff75535cd71
+	0x7ff75535bc10
+	0x7ff75534d3a8
+	0x7ff755382b0a
+	0x7ff75534cc36
+	0x7ff7553ababa
+	0x7ff75534b0ed
+	0x7ff75534bf63
+	0x7ff755845d60
+	0x7ff75583fe8a
+	0x7ff755861005
+	0x7ff75558d71e
+	0x7ff755594e1f
+	0x7ff75557b7c4
+	0x7ff75557b97f
+	0x7ff7555618e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-02 06:42:59 | INFO | ShippingPage | Entering Street1
+2025-12-02 06:42:59 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-02 06:43:11 | INFO | ShippingPage | Entering City
+2025-12-02 06:43:11 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-02 06:43:14 | INFO | ShippingPage | Selecting State
+2025-12-02 06:43:14 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-02 06:43:15 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-02 06:43:16 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-02 06:43:17 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-02 06:43:17 | INFO | ShippingPage | Entering Zipcode
+2025-12-02 06:43:17 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-02 06:43:18 | INFO | ShippingPage | Entering Mobile Number
+2025-12-02 06:43:18 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-02 06:43:20 | INFO | ShippingPage | Checking Text Message Option
+2025-12-02 06:43:20 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-02 06:43:21 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 06:43:21 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 06:43:25 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 06:43:25 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 06:43:30 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-02 06:43:31 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-02 06:43:36 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-02 06:43:36 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-02 06:43:42 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff75581a235
+	0x7ff755572630
+	0x7ff7553016dd
+	0x7ff7553624c9
+	0x7ff75535fe4e
+	0x7ff75535cd71
+	0x7ff75535bc10
+	0x7ff75534d3a8
+	0x7ff755382b0a
+	0x7ff75534cc36
+	0x7ff7553ababa
+	0x7ff75534b0ed
+	0x7ff75534bf63
+	0x7ff755845d60
+	0x7ff75583fe8a
+	0x7ff755861005
+	0x7ff75558d71e
+	0x7ff755594e1f
+	0x7ff75557b7c4
+	0x7ff75557b97f
+	0x7ff7555618e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-02 07:06:53 | INFO | ShippingPage | Entering Street1
+2025-12-02 07:06:53 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-02 07:07:04 | INFO | ShippingPage | Entering City
+2025-12-02 07:07:04 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-02 07:07:08 | INFO | ShippingPage | Selecting State
+2025-12-02 07:07:08 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-02 07:07:16 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-02 07:07:47 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-02 07:07:50 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-02 07:07:50 | INFO | ShippingPage | Entering Zipcode
+2025-12-02 07:07:50 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-02 07:08:01 | INFO | ShippingPage | Entering Mobile Number
+2025-12-02 07:08:01 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-02 07:08:10 | INFO | ShippingPage | Checking Text Message Option
+2025-12-02 07:08:10 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-02 07:08:16 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 07:08:16 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 07:08:43 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 07:08:43 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 07:08:51 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-02 07:08:51 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-02 07:08:55 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-02 07:08:56 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-02 07:09:00 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff75581a235
+	0x7ff755572630
+	0x7ff7553016dd
+	0x7ff7553624c9
+	0x7ff75535fe4e
+	0x7ff75535cd71
+	0x7ff75535bc10
+	0x7ff75534d3a8
+	0x7ff755382b0a
+	0x7ff75534cc36
+	0x7ff7553ababa
+	0x7ff75534b0ed
+	0x7ff75534bf63
+	0x7ff755845d60
+	0x7ff75583fe8a
+	0x7ff755861005
+	0x7ff75558d71e
+	0x7ff755594e1f
+	0x7ff75557b7c4
+	0x7ff75557b97f
+	0x7ff7555618e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-02 07:38:38 | INFO | ShippingPage | Entering Street1
+2025-12-02 07:38:38 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-02 07:38:59 | INFO | ShippingPage | Entering City
+2025-12-02 07:38:59 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-02 07:39:05 | INFO | ShippingPage | Selecting State
+2025-12-02 07:39:05 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-02 07:39:28 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-02 07:39:28 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-02 07:40:17 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-02 07:40:17 | INFO | ShippingPage | Entering Zipcode
+2025-12-02 07:40:17 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-02 07:40:18 | INFO | ShippingPage | Entering Mobile Number
+2025-12-02 07:40:18 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-02 07:40:21 | INFO | ShippingPage | Checking Text Message Option
+2025-12-02 07:40:21 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-02 07:40:23 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 07:40:23 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 07:40:26 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 07:40:26 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 07:40:32 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-02 07:40:32 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-02 07:40:35 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-02 07:40:35 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-02 07:40:38 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff75581a235
+	0x7ff755572630
+	0x7ff7553016dd
+	0x7ff7553624c9
+	0x7ff75535fe4e
+	0x7ff75535cd71
+	0x7ff75535bc10
+	0x7ff75534d3a8
+	0x7ff755382b0a
+	0x7ff75534cc36
+	0x7ff7553ababa
+	0x7ff75534b0ed
+	0x7ff75534bf63
+	0x7ff755845d60
+	0x7ff75583fe8a
+	0x7ff755861005
+	0x7ff75558d71e
+	0x7ff755594e1f
+	0x7ff75557b7c4
+	0x7ff75557b97f
+	0x7ff7555618e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-02 14:46:47 | INFO | ShippingPage | Entering Street1
+2025-12-02 14:46:47 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-02 14:46:59 | INFO | ShippingPage | Entering City
+2025-12-02 14:46:59 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-02 14:47:02 | INFO | ShippingPage | Selecting State
+2025-12-02 14:47:02 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-02 14:47:03 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-02 14:47:04 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-02 14:47:06 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-02 14:47:06 | INFO | ShippingPage | Entering Zipcode
+2025-12-02 14:47:06 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-02 14:47:09 | INFO | ShippingPage | Entering Mobile Number
+2025-12-02 14:47:09 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-02 14:47:26 | INFO | ShippingPage | Checking Text Message Option
+2025-12-02 14:47:26 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-02 14:47:55 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 14:47:55 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 15:50:02 | INFO | ShippingPage | Entering Street1
+2025-12-02 15:50:02 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-02 15:50:20 | INFO | ShippingPage | Entering City
+2025-12-02 15:50:20 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-02 15:50:24 | INFO | ShippingPage | Selecting State
+2025-12-02 15:50:24 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-02 15:50:26 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-02 15:50:27 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-02 15:50:28 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-02 15:50:28 | INFO | ShippingPage | Entering Zipcode
+2025-12-02 15:50:28 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-02 15:50:30 | INFO | ShippingPage | Entering Mobile Number
+2025-12-02 15:50:30 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-02 15:50:32 | INFO | ShippingPage | Checking Text Message Option
+2025-12-02 15:50:32 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-02 15:50:34 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 15:50:34 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 15:50:54 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 15:50:54 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 15:51:00 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-02 15:51:00 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-02 15:51:04 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-02 15:51:04 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-02 15:53:05 | ERROR | ShippingPage |  Failed after 2 retries (ReadTimeoutError) during: Clicking element (xpath, //button[@data-testid='save-button'])
+HTTPConnectionPool(host='localhost', port=54208): Read timed out. (read timeout=120)
+2025-12-02 17:28:13 | INFO | ShippingPage | Entering Street1
+2025-12-02 17:28:13 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-02 17:28:54 | INFO | ShippingPage | Entering City
+2025-12-02 17:28:54 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-02 17:28:59 | INFO | ShippingPage | Selecting State
+2025-12-02 17:28:59 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-02 17:29:03 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-02 17:29:04 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-02 17:29:05 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-02 17:29:05 | INFO | ShippingPage | Entering Zipcode
+2025-12-02 17:29:05 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-02 17:29:06 | INFO | ShippingPage | Entering Mobile Number
+2025-12-02 17:29:06 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-02 17:29:08 | INFO | ShippingPage | Checking Text Message Option
+2025-12-02 17:29:08 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-02 17:29:09 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 17:29:09 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 17:29:13 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-02 17:29:13 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-02 17:29:20 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-02 17:29:21 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-02 17:29:25 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-02 17:29:26 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-02 17:29:30 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e6a8a235
+	0x7ff6e67e2630
+	0x7ff6e65716dd
+	0x7ff6e65d24c9
+	0x7ff6e65cfe4e
+	0x7ff6e65ccd71
+	0x7ff6e65cbc10
+	0x7ff6e65bd3a8
+	0x7ff6e65f2b0a
+	0x7ff6e65bcc36
+	0x7ff6e661baba
+	0x7ff6e65bb0ed
+	0x7ff6e65bbf63
+	0x7ff6e6ab5d60
+	0x7ff6e6aafe8a
+	0x7ff6e6ad1005
+	0x7ff6e67fd71e
+	0x7ff6e6804e1f
+	0x7ff6e67eb7c4
+	0x7ff6e67eb97f
+	0x7ff6e67d18e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-03 07:20:07 | INFO | ShippingPage | Entering Street1
+2025-12-03 07:20:07 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-03 07:20:26 | INFO | ShippingPage | Entering City
+2025-12-03 07:20:26 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-03 07:20:34 | INFO | ShippingPage | Selecting State
+2025-12-03 07:20:34 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-03 07:20:37 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-03 07:20:37 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-03 07:20:40 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-03 07:20:40 | INFO | ShippingPage | Entering Zipcode
+2025-12-03 07:20:40 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-03 07:20:42 | INFO | ShippingPage | Entering Mobile Number
+2025-12-03 07:20:42 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-03 07:20:45 | INFO | ShippingPage | Checking Text Message Option
+2025-12-03 07:20:45 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-03 07:20:48 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-03 07:20:48 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-03 07:21:18 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-03 07:21:18 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-03 07:21:32 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-03 07:21:32 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-03 07:21:37 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-03 07:21:37 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-03 07:21:46 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7cc28a235
+	0x7ff7cbfe2630
+	0x7ff7cbd716dd
+	0x7ff7cbdd24c9
+	0x7ff7cbdcfe4e
+	0x7ff7cbdccd71
+	0x7ff7cbdcbc10
+	0x7ff7cbdbd3a8
+	0x7ff7cbdf2b0a
+	0x7ff7cbdbcc36
+	0x7ff7cbe1baba
+	0x7ff7cbdbb0ed
+	0x7ff7cbdbbf63
+	0x7ff7cc2b5d60
+	0x7ff7cc2afe8a
+	0x7ff7cc2d1005
+	0x7ff7cbffd71e
+	0x7ff7cc004e1f
+	0x7ff7cbfeb7c4
+	0x7ff7cbfeb97f
+	0x7ff7cbfd18e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-03 14:13:49 | INFO | ShippingPage | Entering Street1
+2025-12-03 14:13:49 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-03 14:14:33 | INFO | ShippingPage | Entering City
+2025-12-03 14:14:33 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-03 14:14:40 | INFO | ShippingPage | Selecting State
+2025-12-03 14:14:40 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-03 14:14:41 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-03 14:14:42 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-03 14:14:43 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-03 14:14:43 | INFO | ShippingPage | Entering Zipcode
+2025-12-03 14:14:43 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-03 14:14:45 | INFO | ShippingPage | Entering Mobile Number
+2025-12-03 14:14:45 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-03 14:14:46 | INFO | ShippingPage | Checking Text Message Option
+2025-12-03 14:14:46 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-03 14:14:49 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-03 14:14:49 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-03 14:14:57 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-03 14:14:57 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-03 14:15:04 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-03 14:15:04 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-03 14:15:06 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-03 14:15:07 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-03 14:15:22 | ERROR | ShippingPage |  Failed after 2 retries (ElementClickInterceptedException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: element click intercepted: Element <button aria-disabled="false" type="submit" data-analyticsid="SaveButton" data-testid="save-button" class="styles__CodeButton-@jarvis/react-shipping__sc-pqya1v-15 gVBdgG css-nyn3zr">...</button> is not clickable at point (1308, 590). Other element would receive the click: <div class="vn-modal--dialog css-1wc6jix" role="presentation">...</div>
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff60adba235
+	0x7ff60ab12630
+	0x7ff60a8a16dd
+	0x7ff60a9024c9
+	0x7ff60a8ffe4e
+	0x7ff60a8fcd71
+	0x7ff60a8fbc10
+	0x7ff60a8ed3a8
+	0x7ff60a922b0a
+	0x7ff60a8ecc36
+	0x7ff60a94baba
+	0x7ff60a8eb0ed
+	0x7ff60a8ebf63
+	0x7ff60ade5d60
+	0x7ff60addfe8a
+	0x7ff60ae01005
+	0x7ff60ab2d71e
+	0x7ff60ab34e1f
+	0x7ff60ab1b7c4
+	0x7ff60ab1b97f
+	0x7ff60ab018e8
+	0x7ff85577e8d7
+	0x7ff8577ac53c
+
+2025-12-03 15:06:31 | INFO | ShippingPage | Entering Street1
+2025-12-03 15:06:31 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-03 15:06:39 | INFO | ShippingPage | Entering City
+2025-12-03 15:06:39 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-03 15:06:45 | INFO | ShippingPage | Selecting State
+2025-12-03 15:06:45 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-03 15:06:49 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-03 15:06:51 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-03 15:06:54 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-03 15:06:54 | INFO | ShippingPage | Entering Zipcode
+2025-12-03 15:06:54 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-03 15:07:00 | INFO | ShippingPage | Entering Mobile Number
+2025-12-03 15:07:00 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-03 15:07:03 | INFO | ShippingPage | Checking Text Message Option
+2025-12-03 15:07:03 | INFO | ShippingPage | Clicking element (xpath, //span[contains(@class,'vn-checkbox__span')]) - Attempt 1
+2025-12-03 15:07:06 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-03 15:07:06 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-03 15:08:03 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-03 15:08:03 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-03 15:12:14 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with TimeoutException. Retrying 1/2...
+2025-12-03 15:12:14 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-03 15:16:16 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ProtocolError. Retrying 2/2...

@@ -2,6 +2,7 @@
 import random
 import string
 from pages.web import *
+from pages.web.automatic_renewal_page import ARNPage
 from pages.web.billing_page import BillingPage
 from pages.web.billinginformation_page import BillingInformationPage
 from pages.web.hpcheckout_page import HPCheckoutPage
@@ -14,6 +15,8 @@ from pages.web.printer_select_page import PrinterSelectionPage
 from pages.web.shipping_billing_page import ShippingBillingPage
 from pages.web.shippingpage import ShippingPage
 from pages.web.special_offers_page import SpecialOffersPage
+from pages.web.subscription_page import SubscriptionPage
+from pages.web.thank_you_page import ThankYouPage
 
 class HPAppWeb:
     def __init__(self, driver, config):
@@ -31,6 +34,9 @@ class HPAppWeb:
         self.billinginformation_page=BillingInformationPage(driver)
         self.billing_page=BillingPage(driver)
         self.special_offers_page=SpecialOffersPage(driver)
+        self.arn_page=ARNPage(driver)
+        self.thank_you_page=ThankYouPage(driver)
+        self.subscription_page=SubscriptionPage(driver)
         
 
     def login(self, username, password):
@@ -71,17 +77,18 @@ class HPAppWeb:
         # self.landing_page.click_signup_now()
         # self.printer_select_page.printer_selection()
         self.plan_select_page.plan_selection()
-        # self.hp_checkout_page.click_hp_checkout()
+        self.hp_checkout_page.click_hp_checkout()
         
     def start_enrollment(self):
         self.login_page.open()
         self.login_page.login()
+       
     
     def enter_shipping_details(self):
         self.shipping_billing_page.click_add_shipping()
         self.shippingpage.fill_shipping("9898989898","1234 Sunset Blvd","Los Angeles","California","90026","False")
         self.shippingpage.click_save_shipping()
-        self.shippingpage.click_ship_to_this_address()
+        self.shippingpage.click_ship_to_this_address_if_visible()
 
     def enter_billing_details(self):
         self.shipping_billing_page.click_add_billing()
@@ -93,6 +100,34 @@ class HPAppWeb:
         self.shipping_billing_page.click_apply_promotion()
         self.special_offers_page.enter_promo_code("PROMO123")
         self.special_offers_page.click_apply_promo()
+
+    def validate_breakdown_of_credits_section(self):
+        self.special_offers_page.validate_require_billing_message_text()
+        self.special_offers_page.validate_enrollment_key_label()
+        self.special_offers_page.validate_enrollment_key_verifymonths_text()
+
+    def apply_and_validate_multiple_codes(self):
+        multiple_codes = ["EKCODE456", "PROMO123", "PREPAID789", "RAF101"]
+        self.special_offers_page.validate_multiple_codes(multiple_codes)
+
+    def validate_and_checkout_till_subscription(self):
+        self.shipping_billing_page.click_continue_button()
+        self.arn_page.validate_and_click_arn_checkbox_1()
+        self.arn_page.click_enroll_button()
+        self.thank_you_page.validate_confirmation_text()
+        self.thank_you_page.click_continue()
+        self.thank_you_page.click_full_screen_continue_button()
+
+    def navigate_to_subscription_and_validate_plan(self):
+        self.subscription_page.click_pop_up_continue_button()
+        self.subscription_page.click_accept_all_button()
+        self.subscription_page.click_skip_button()
+        self.subscription_page.click_close_modal_if_present()
+        self.subscription_page.validate_subscription_plan_details()
+
+
+
+     
 
     
     

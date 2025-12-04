@@ -262,3 +262,88 @@ Symbols not available. Dumping unresolved backtrace:
 2025-11-25 09:53:38 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
 2025-11-25 09:53:48 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
 2025-11-25 09:53:48 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-01 10:24:27 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-01 10:24:51 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-01 10:24:51 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-01 10:24:51 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-01 10:24:51 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-01 18:38:14 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-01 18:38:35 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-01 18:38:35 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-01 18:38:42 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-01 18:38:42 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 11:26:55 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 11:27:17 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 11:27:17 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 11:27:19 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 11:27:19 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 06:39:43 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 06:40:04 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 06:40:04 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 06:40:08 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 06:40:08 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 07:03:47 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:04:07 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:04:07 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 07:04:13 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:04:13 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 07:28:50 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:29:11 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:29:11 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 07:29:17 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:29:17 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 07:35:12 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:35:34 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:35:34 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 07:35:38 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 07:35:38 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 14:42:51 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 14:43:21 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 14:43:21 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 14:43:25 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 14:43:25 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 15:47:07 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 15:47:32 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 15:47:33 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 15:47:37 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 15:47:37 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 17:08:00 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:08:29 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:08:29 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 17:08:36 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:08:36 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 17:14:46 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:15:16 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:15:16 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 17:15:17 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:15:17 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-02 17:24:46 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:25:05 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:25:05 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-02 17:25:12 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-02 17:25:12 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-03 07:10:03 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 07:10:31 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 07:10:31 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-03 07:10:35 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 07:10:35 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-03 14:08:17 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 14:09:00 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 14:09:00 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-03 14:09:01 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 14:09:01 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-03 14:32:36 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 14:33:01 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 14:33:01 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-03 14:33:06 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 14:33:06 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-03 15:03:13 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 15:03:54 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 15:03:54 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-03 15:04:00 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 15:04:00 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-03 17:48:26 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 17:49:53 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 17:49:53 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-03 17:50:03 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-03 17:50:03 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1

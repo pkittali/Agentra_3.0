@@ -227,7 +227,7 @@ class SpecialOffersPageLocators:
     PROMOTION_ICON = (By.CSS_SELECTOR, "div[class*='IconMessage'] svg")
     PROMOTION_TEXT = (By.XPATH, "//div[contains(@class, 'styles__IconMessage')]//p[text()='Promotion Applied.']")
     REQUIRED_BILLING_TEXT = (By.XPATH,"//p[contains(@class, 'styles__RequireBilling') and contains(text(), 'A payment method is needed on file')]")
-    PROMOTION_TEXT = (By.CSS_SELECTOR, "div[class*='IconMessage'] p")
+    PROMOTION_ICON = (By.CSS_SELECTOR, "div[class*='IconMessage'] p")
     SPECIAL_OFFERS_ENTER_PROMOCODE = (By.XPATH,"//*[contains(text(),'Enter promo or PIN code')]")
     MULTI_PROMOTION_TEXT = (By.XPATH, "//div[contains(@class, 'styles__IconMessage')]//p[text()='Multiple Promotions Applied.']")
     SPECIAL_PURL_OFFER_FREE_MONTHS_LANDING_PAGE = (By.XPATH,"//*[starts-with(text(), 'Congratulations! You have')]")
@@ -355,8 +355,8 @@ class AddShippingPageLocators:
     CANCEL_BUTTON = (By.XPATH, "//button[@data-testid='cancel-button']")
     SAVE_BUTTON = (By.XPATH, "//button[@data-testid='save-button']")
     EDIT_SHIPPING_BUTTON = (By.XPATH, "//button[@data-testid='edit-shipping']")
-    SHIP_TO_THIS_ADDRESS_BUTTON= (By.XPATH, "//button[contains(normalize-space(text()), 'Ship to this address')]")
-
+    SHIP_TO_THIS_ADDRESS_BUTTON= (By.XPATH, "//button[@data-testid='ship-to-address-button']")
+# <button aria-disabled="false" type="button" data-testid="ship-to-address-button" class="styles__ConfirmButton-@jarvis/react-shipping__sc-1e999wf-4 LIuzj css-nyn3zr"><span class="css-1q5f153">Ship to this address</span></button>
 
     @staticmethod
     def STATE_BY_TEXT(state_name):
@@ -444,3 +444,106 @@ class BillingPageLocators:
     OVERLAY_DIV = (By.ID, "divOverLay")
     BILLING_ERROR_TEXT = (By.XPATH, "//div[@id='mp-message']//p[@class='text-danger']")
     BILLING_ERROR_SUB_MSG = (By.ID, "mp-sub-msg")
+
+class ARNPageLocators:
+    ARN_CHECK_BOX_1 =(By.XPATH,"(//span[@class='vn-checkbox__span css-pq8vvd-base-base-Checkbox'])[1]")
+    ARN_CHECK_BOX_2= (By.XPATH,"(//span[@class='vn-checkbox__span css-pq8vvd-base-base-Checkbox'])[1]")
+    ARN_ENROLL_BUTTON =(By.XPATH,"//button[@data-testid='redeem-button']")
+        
+    # Terms of Service checkbox and label
+    TERMS_OF_SERVICE_CHECKBOX = (By.XPATH, "//input[@data-testid='terms-agreement']/following-sibling::span[contains(@class,'base-Checkbox')]")
+    TERMS_OF_SERVICE_LABEL = (By.XPATH, "//label[contains(@class,'TOSCheckbox')]")
+    TERMS_OF_SERVICE_LINK = (By.XPATH, "//a[@data-analyticsid='InstantInkTosLink']")
+    TERMS_OF_SERVICE_LABEL_TEXT =(By.XPATH, "//a[@data-analyticsid='InstantInkTosLink']/parent::p")
+    CLOSE_MODAL = (By.XPATH, "//button[@aria-label='Close modal' and not(ancestor::*[@aria-hidden='true'])]")
+    #(Use this below Xpath for checkbok if prepaid is applied.)
+    PREPAID_INFO_TEXT = (By.XPATH, "//span[contains(@class, 'vn-checkbox__span--text')]//p[contains(text(), 'if there are no funds in my prepaid account')]")
+
+class ThankYouPageLocators:
+    SUCCESS_CONTAINER =(By.XPATH, "//div[contains(@class, 'InfoCardTitleSubtitleContainer')]") 
+    SUCCESS_TITLE = (By.XPATH, "//h4[contains(text(), 'Success!')]")
+    SIGNED_UP_TEXT = (By.XPATH, "//h5[contains(text(), 'You're signed up.')]")
+    TRIAL_INFO = (By.XPATH, "//p[contains(text(), 'trial')]")
+    EMAIL_LABEL = (By.XPATH, "//span[contains(text(), 'We’ll send a confirmation email to')]")
+    EMAIL_VALUE = (By.XPATH, "//span[contains(@class, 'styles__Email')]")
+    INFO_INSTRUCTION = (By.XPATH, "//span[contains(text(), 'Manage your Instant Ink plan')]")
+    CONTINUE_BUTTON = (By.XPATH, "//button[@data-testid='continue-button']")
+    FULL_SCREEN_CONTINUE_BUTTON = (By.XPATH, "//*[@id='full-screen-consent-form-footer-button-continue']")
+
+class SubscriptionPageLocators:
+    #Skip
+    SKIP_BUTTON = (By.XPATH, "//button[.//span[text()='Skip']]")
+    #Close initial pop up
+    CLOSE_BUTTON = (By.XPATH, "//button[@aria-label='Close modal' and not(ancestor::*[@aria-hidden='true'])]")
+    # Header and Logo
+    PAGE_TITLE = (By.XPATH, "//div[@data-testid='page-title']")
+    PAGE_HEADER_SUBTITLE = (By.XPATH, "//div[@data-testid='page-header-subtitle']")
+    BRAND_LOGO = (By.ID, "new-header-parity-brand-logo")
+    # Printer Selector
+    PRINTER_SELECTOR_COLLAPSED = (By.XPATH, "//div[@data-testid='selector-collapsed']")
+    PRINTER_SELECTOR = (By.XPATH, "//div[@data-testid='printer-selector']")
+    SELECT_PRINTER_LABEL = (By.XPATH, "//p[contains(@class,'selector-label')]")
+    SELECTED_PRINTER_NAME = (By.XPATH, "//p[@data-testid='selected-printer-name']")
+    PRINTER_SELECTOR_CHEVRON = (By.XPATH, "//svg[@data-testid='selector-chevron-icon']")
+    # Printer Option (in dropdown)
+    PRINTER_OPTION = (By.XPATH, "//div[@data-testid='selectable-printer']")
+    PRINTER_OPTION_NAME = (By.XPATH, "//div[@data-testid='selectable-printer']//p[contains(@class,'printer-name')]")
+    PRINTER_OPTION_SERIAL = (By.XPATH, "//div[@data-testid='selectable-printer']//p[contains(@class,'printer-serial-number')]")
+    # Enroll or Replace Printer
+    ENROLL_ADDITIONAL_PRINTER_LINK = (By.XPATH, "//a[@data-testid='enroll-another-printer-link-here']")
+    ENROLL_OR_REPLACE_PRINTER_LINK = (By.XPATH, "//a[@data-testid='enroll-printer-link']")
+    # Status Card
+    STATUS_CARD = (By.XPATH, "//div[@data-testid='status-card']")
+    STATUS_CARD_TITLE = (By.XPATH, "//h5[@data-testid='status-card-title']")
+    PRINTER_NAME_DESKTOP = (By.XPATH, "//h2[@data-testid='printer-name']")
+    PRINTER_NAME_MOBILE = (By.XPATH, "//h6[@data-testid='printer-name']")
+    PRINTER_DETAILS_LINK = (By.XPATH, "//a[@data-testid='printer-details-link']")
+    PRINTER_STATUS_TEXT = (By.XPATH, "//div[contains(@class,'statusCardHeader__free-mobile')]//div[contains(@class,'printerStatus__printer-status')]/p")
+    # Monthly Summary
+    MONTHLY_SUMMARY_TITLE = (By.XPATH, "//h6[@data-testid='summary-title']")
+    MONTHLY_SUMMARY_ICON = (By.XPATH, "//img[contains(@class,'ink-cartridge-icon')]")
+    MONTHLY_SUMMARY_DESCRIPTION = (By.XPATH, "//p[@data-testid='subscribed-no-pens-description']")
+    # Inline Notification
+    INLINE_NOTIFICATION = (By.XPATH, "//div[@data-testid='inline-notification']")
+    INLINE_NOTIFICATION_ICON = (By.XPATH, "//div[@data-testid='inline-notification']//svg")
+    INLINE_NOTIFICATION_MESSAGE = (By.XPATH, "//div[@data-testid='inline-notification']//div[contains(@class,'css-6tglye')]/p")
+    # Plan Details
+    PLAN_DETAILS_COLUMN = (By.XPATH, "//div[@data-testid='plan-details-column']")
+    PLAN_DETAILS_TITLE = (By.XPATH, "//h6[contains(@class,'plan-details-title')]")
+    PLAN_INFORMATION = (By.XPATH, "//p[@data-testid='plan-information']")
+    PLAN_DETAILS_CHANGE_LINK = (By.XPATH, "//a[@data-testid='change-plan-link']")
+    FREE_MONTHS_MESSAGE = (By.XPATH, "//p[@data-testid='free-months-message-parity']")
+    REDEEM_OFFER_BUTTON = (By.XPATH, "//button[@data-testid='redeem-new-offer-button']")
+    TRANSFER_SUBSCRIPTION_LINK = (By.XPATH, "//a[@data-testid='simplified-printer-replacement-button']")
+    CANCEL_ENROLLMENT_BUTTON = (By.XPATH, "//button[@data-testid='cancel-your-plan']")
+    # Billing Section
+    BILLING_SECTION_TITLE = (By.XPATH, "//h5[contains(@class,'biling-section-title')]")
+    BILLING_CARD_INFO = (By.XPATH, "//span[@data-testid='master-card-payment-information']")
+    BILLING_CARD_NUMBER = (By.XPATH, "//span[@data-testid='billing-section-credit-card-number']")
+    BILLING_CARD_EXPIRATION = (By.XPATH, "//p[@data-testid='billing-section-credit-card-expiration-info']")
+    CHANGE_BILLING_INFO_LINK = (By.XPATH, "//a[@data-testid='change-billing-info']")
+    ADD_PAYMENT_METHOD_LINK = (By.XPATH,"//*[@data-testid='change-billing-info']")
+    # Shipping Section
+    SHIPPING_SECTION_TITLE = (By.XPATH, "//p[contains(@class,'shippingSection__title')]")
+    SHIPPING_INFORMATION = (By.XPATH, "//div[@data-testid='shipping-information']")
+    SHIPPING_NAME = (By.XPATH, "//div[@data-testid='shipping-information']/p[1]")
+    SHIPPING_STREET = (By.XPATH, "//div[@data-testid='shipping-information']//p[@data-testid='street-name']")
+    SHIPPING_CITY_STATE_ZIP = (By.XPATH, "//div[@data-testid='shipping-information']/div/p[2]")
+    CHANGE_SHIPPING_INFO_LINK = (By.XPATH, "//a[@data-testid='change-shipping-info']")
+    # Promo Card
+    PROMO_CARD = (By.XPATH, "//div[@data-testid='promo-card']")
+    REFER_A_FRIEND_TITLE = (By.XPATH, "//div[@data-testid='refer-a-friend-promo-title']")
+    REFER_A_FRIEND_SUBTITLE = (By.XPATH, "//h6[contains(@class,'raf-content-subtitle')]")
+    REFER_A_FRIEND_SHARE_URL = (By.XPATH, "//span[contains(@class,'share-url-text')]//strong")
+    REFER_A_FRIEND_CODE = (By.XPATH, "//span[contains(@class,'share-url')]/strong")
+    REFER_A_FRIEND_TERMS_LINK = (By.XPATH, "//a[@data-testid='terms-link']")
+    POP_UP_CONTINUE_BUTTON = (By.XPATH, "//span[text()='Continue' and not(ancestor::*[@aria-hidden='true'])]")
+    ACCEPT_ALL = (By.XPATH,"//*[contains(@id, 'consent-accept-all') and .//span[contains(text(), 'Accept')]]")
+    #Signout 
+    DASHBOARD_PROFILE = (By.XPATH, "//*[@data-testid='jarvis-react-consumer-layout__avatar_menu']")
+    DASHBOARD_SIGNOUT_BUTTON = (By.XPATH, "//*[@data-testid='jarvis-react-consumer-layout__logout_button']")
+    #Special Offer Balance Section
+    SPECIAL_OFFER_TEXT = (By.XPATH, "//*[@data-testid='special-offer-info-text']")
+    #Subscription ID
+    SUBSCRIPTION_ID_TEXT = (By.XPATH, "//p[@class='caption-small' and contains(text(), 'Subscription ID')]")
+
