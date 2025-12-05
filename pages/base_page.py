@@ -52,6 +52,9 @@ except Exception:
 
 from core.configManager import ConfigManager
 from core.logger import get_logger, log_allure
+from utils.waits import WaitUtils
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePage:
@@ -66,7 +69,8 @@ class BasePage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.RETRIES = ConfigManager.get_retry_count("step_retry")
+        self.RETRIES = 3   #zz
+
         self.logger = get_logger(self.__class__.__name__)
 
     def _safe_action(self, action_name, func, *args, **kwargs):
@@ -201,3 +205,51 @@ class BasePage:
     def _get_text(self, locator_type, locator_value):
         el = self.driver.find_element(locator_type, locator_value)
         return el.text if el else None
+    
+    def select_custom_dropdown_by_text(self, value, timeout=15):
+        driver = self.driver.driver
+        option_xpath = f"//li[@role='option']//span[contains(normalize-space(text()), '{value}')]"
+        with allure.step(f"Select dropdown value: {value}"):
+            self.logger.info(f"Selecting dropdown option: {value}")
+            try:
+                # Wait for listbox
+                listbox = WebDriverWait(driver, timeout).until(EC.presence_of_element_located(("xpath", "//ul[@role='listbox']")))
+                driver.execute_script("arguments[0].scrollIntoView({block:'center'});", listbox)
+ 
+                # Wait for option
+                option = WebDriverWait(driver, timeout).until(EC.presence_of_element_located(("xpath", option_xpath)))
+                driver.execute_script("arguments[0].scrollIntoView({block:'center'});", option)
+                try:
+                    self.click("xpath", option_xpath)
+                    self.logger.info(f"Selected '{value}' using normal click")
+                    return
+                except Exception as e:
+                    self.logger.warning(f"Normal click failed, trying JS click: {e}")
+                # JS click fallback
+                driver.execute_script("arguments[0].click();", option)
+                self.logger.info(f"Selected '{value}' using JS click")
+ 
+            except Exception as e:
+                msg = f"Failed to select dropdown option '{value}': {e}"
+                self.logger.error(msg)
+                raise Exception(msg)
+           
+    def scroll(self, locator_type, locator_value):
+        """Safely scroll to an element."""
+        action_name = f"Scrolling to element ({locator_type}, {locator_value})"
+        return self._safe_action(
+            action_name,
+            self._scroll,
+            locator_type,
+            locator_value
+        )
+ 
+    def _scroll(self, locator_type, locator_value):
+        element = self.driver.wait_for_element(locator_type, locator_value)
+ 
+        # Scroll element into view
+        self.driver.execute_script(
+            "arguments[0].scrollIntoView({block: 'center'});", element
+        )
+ 
+ 

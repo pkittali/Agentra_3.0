@@ -9,7 +9,7 @@ from core.logger import get_logger
 
 class LaunchLandingPage(BasePage):
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
@@ -18,10 +18,13 @@ class LaunchLandingPage(BasePage):
         with allure.step("Launch HP Portal"):
             self.driver.get("https://instantink-stage1.hpconnectedstage.com/us/en/l/v2")
             self.driver.driver.maximize_window()
+           # self.wait.wait_until_visible(*LandingPageLocators.MAIN_PAGE_IDENTIFIER)
+           # self.accept_cookies()
 
     def click_accept(self):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Clicked I Accept "):
+            self.wait.wait_until_clickable(*LandingPageLocators.ACCEPT_BUTTON)
             self.click(*LandingPageLocators.ACCEPT_BUTTON)
 
     def click_signup_now(self):

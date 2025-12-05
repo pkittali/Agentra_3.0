@@ -2,15 +2,18 @@ import allure
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from core.logger import get_logger
 from pages.base_page import BasePage
 from resources.locators.web_locators import DeepLinkLocators
+from utils.waits import WaitUtils
 
 
 class DeepLinkPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-
+        self.logger=get_logger(self.__class__.__name__)
+        self.wait=WaitUtils(driver)
     # -------------------------
     # URL VALIDATION
     # -------------------------

@@ -30,6 +30,7 @@ class WebDriverManager(BaseDriver):
         wait_for_element(...): Explicit wait using WebDriverWait.
         quit(): Quit browser session.
     """
+    
     def __init__(self, browser='chrome'):
         self.driver = None
         self.browser = browser

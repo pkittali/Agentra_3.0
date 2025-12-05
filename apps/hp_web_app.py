@@ -24,14 +24,9 @@ class HPAppWeb:
     #     self.login_page = LoginPage(driver)
     #     #self.enroll_page = WebEnrollPage(driver)
 
-    
-    
-
-
-    def __init__(self, driver, config):
+    def __init__(self, driver):
         self.driver = driver
-
-        self.login_page = LoginPage(driver, config)
+        self.login_page = LoginPage(driver)
         self.create_account_page = CreateAccountPage(driver)
         self.landing_page=LaunchLandingPage(driver)
         self.onboard_printer_page=OnboardPrinterPage(driver)
@@ -84,7 +79,7 @@ class HPAppWeb:
         # self.landing_page.click_signup_now()
         # self.printer_select_page.printer_selection()
         self.plan_select_page.plan_selection()
-        # self.hp_checkout_page.click_hp_checkout()
+        self.hp_checkout_page.click_hp_checkout()
         
     def start_enrollment(self):
         self.login_page.open()

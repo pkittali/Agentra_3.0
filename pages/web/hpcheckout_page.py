@@ -16,14 +16,18 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class HPCheckoutPage(BasePage):
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
     def click_hp_checkout(self):
         self.logger.info("Clicking HP Checkout button")
         with allure.step("Clicked HP Checkout button"):
-            self.click(*HPCheckoutPageLocators.HP_CHECKOUT_BUTTON) 
+            element=self.wait.wait_until_visible(*HPCheckoutPageLocators.HP_CHECKOUT_BUTTON)
+            if element:
+                self.click(*HPCheckoutPageLocators.HP_CHECKOUT_BUTTON)
+            else:
+                pass
 
     def click_edit_plan(self):
         self.logger.info("Clicking Edit Plan button")

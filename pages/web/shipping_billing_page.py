@@ -8,9 +8,8 @@ from resources.locators.web_locators import ShippingBillingPageLocators
 from core.logger import get_logger
 
 class ShippingBillingPage(BasePage):
-    def __init__(self, driver, config):
-        super().__init__(driver, config)
-        self.driver = driver
+    def __init__(self, driver):
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
@@ -27,6 +26,7 @@ class ShippingBillingPage(BasePage):
     def click_add_shipping(self):
         self.logger.info("Clicking Add Shipping button")
         with allure.step("Click Add Shipping button"):
+            self.wait.wait_until_clickable(*ShippingBillingPageLocators.ADD_SHIPPING_BUTTON)
             self.click(*ShippingBillingPageLocators.ADD_SHIPPING_BUTTON)
 
     def click_add_billing(self):

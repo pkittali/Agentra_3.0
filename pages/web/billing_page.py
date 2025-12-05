@@ -16,7 +16,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class BillingPage(BasePage):
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 

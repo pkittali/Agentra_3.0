@@ -16,7 +16,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class ShippingPage(BasePage):
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
@@ -81,6 +81,7 @@ class ShippingPage(BasePage):
         self.enter_street1(street1)
         self.enter_city(city)
         self.select_state(state_name)
+        print("entered state name")
         self.enter_zipcode(zip_code)
         self.enter_mobile_number(mobile_number)
         if text_message_optin:
@@ -90,6 +91,7 @@ class ShippingPage(BasePage):
     def click_ship_to_this_address(self):
         self.logger.info("Clicking Ship to this address button")
         with allure.step("Clicked Ship to this address button"):
+            self.wait.wait_until_clickable(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON)
             self.click(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON)
 
     

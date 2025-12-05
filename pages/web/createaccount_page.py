@@ -6,30 +6,48 @@ import pytest
 from pages.base_page import BasePage
 from utils.waits import WaitUtils
 from selenium.webdriver.common.by import By
-from resources.locators.web_locators import CreateAccountPageLocators, LoginPageLocators
+from resources.locators.web_locators import CreateAccountPageLocators, LoginPageLocators ,Cookies
 from core.logger import get_logger
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 import re
 
 class CreateAccountPage(BasePage):
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
     
     # def generate_random_string(length=8):
     #     chars = string.ascii_lowercase
     #     return ''.join(random.choices(chars, k=length))
+    def accept_cookies(self, timeout=60):
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_element_located(self.ACCEPT_COOKIES_BUTTON)
+            )
+            WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable(self.ACCEPT_COOKIES_BUTTON)
+            ).click()
+            WebDriverWait(self.driver, timeout).until(
+                EC.invisibility_of_element_located(self.ACCEPT_COOKIES_BUTTON)
+            )
+            print(" Accepted cookies.")
+        except Exception as e:
+            print(f" Cookie banner accept failed or not present: {e}")
 
     def click_create_account(self):
         self.logger.info("Navigating to create account page")
         with allure.step("Clicked Create Account"):
+            self.accept_cookies()
+            self.wait.wait_until_clickable(*CreateAccountPageLocators.CREATE_ACCOUNT_BUTTON)
             self.click(*CreateAccountPageLocators.CREATE_ACCOUNT_BUTTON)
 
     def enter_first_name(self, first_name="John"):
         self.logger.info("Entering first name into input field")
         with allure.step("Entered First Name"):
+            self.wait.wait_until_clickable(*CreateAccountPageLocators.FIRST_NAME_INPUT)
             self.enter_text(*CreateAccountPageLocators.FIRST_NAME_INPUT, first_name)
     
     def enter_last_name(self, last_name="Doe"):

@@ -16,7 +16,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class PlanSelectionPage(BasePage):
     def __init__(self, driver):
-        self.driver = driver
+
+        super().__init__(driver)
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)
 
@@ -40,12 +41,25 @@ class PlanSelectionPage(BasePage):
     def click_monthly_plan(self):
         self.logger.info("Clicking Monthly plan button")
         with allure.step("Clicked Monthly plan button"):
+            self.wait.wait_until_clickable(*PlanSelectionPageLocators.MONTHLY_PLAN_SELECT_BUTTON)
             self.click(*PlanSelectionPageLocators.MONTHLY_PLAN_SELECT_BUTTON)
 
     def click_ink_and_paper_plan(self):
         self.logger.info("Clicking Ink and Paper plan button")
         with allure.step("Clicked Ink and Paper plan button"):
             self.click(*PlanSelectionPageLocators.INK_AND_PAPER_PLAN_SELECT_BUTTON)
+
+    # def plan_selection(self):
+    #      self.logger.info("Selecting both Monthly and Ink & Paper plans")
+
+    #      with allure.step("Select Monthly plan"):
+    #       self.logger.info("Clicking Monthly plan")
+    #       self.click(*PlanSelectionPageLocators.MONTHLY_PLAN_SELECT_BUTTON)
+
+    #      with allure.step("Select Ink and Paper plan"):
+    #       self.logger.info("Clicking Ink and Paper plan")
+    #       self.click(*PlanSelectionPageLocators.INK_AND_PAPER_PLAN_SELECT_BUTTON)
+
 
     def click_yearly_paln(self):
         self.logger.info("Clicking Yearly plan button")
@@ -163,7 +177,9 @@ class PlanSelectionPage(BasePage):
         with allure.step("Selected plan on Plan Selection Page"):
             self.click_monthly_plan()
             self.click_ink_and_paper_plan()
+            
             # self.click_continue()
+
             
     
         

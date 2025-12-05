@@ -35,6 +35,7 @@ Naming Convention:
     - CONSTANTS in UPPER_SNAKE_CASE
     - Group locators logically by page sections if needed
 """
+import logging
 from selenium.webdriver.common.by import By
 
 # class LoginPageLocators:
@@ -74,6 +75,7 @@ class LoginPageLocators:
 class LandingPageLocators:
     ACCEPT_BUTTON = (By.XPATH, "//button[@id='onetrust-accept-btn-handler']")
     SIGN_UP_NOW_BUTTON=(By.XPATH, "//button[@data-testid='header-sign-up-button']")
+   # MAIN_PAGE_IDENTIFIER = (By.CSS_SELECTOR, "header")
 
 class CreateAccountPageLocators:
     CREATE_ACCOUNT_BUTTON = (By.XPATH, "//button[@data-testid='create-account-button']")
@@ -536,3 +538,8 @@ class EnrollmentLocators:
         "//button[@data-testid='printer-enroll-continue-button']"
         "|//*[@data-testid='preenroll-continue-button']"
     )
+
+class Cookies:
+    # accept cookies
+    ACCEPT_COOKIES_BUTTON = (
+            By.XPATH, "//button[@id='onetrust-accept-btn-handler']")

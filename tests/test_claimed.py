@@ -2,7 +2,7 @@ import allure
 import pytest
 from core.testdataManager import TestDataManager
 from core.logger import get_logger
-from apps import HPAppWeb
+from apps import hp_web_app 
 
 
 logger = get_logger(__name__)
@@ -19,11 +19,9 @@ It ensures that:
 4. Success message or post-login page is visible.
 """)
 
-def test_claimed(hpApp, user, pwd):
+def test_claimed(hpApp):
 
-    # user = TestDataManager.get("login", "valid", "username")
-    # pwd = TestDataManager.get("login", "valid", "password")
-    logger.info(f"Starting test_login_web with user={user}")
+    
     hpApp.launch_web()
     hpApp.create_account()
     hpApp.checkout_upto_shipping_billing()

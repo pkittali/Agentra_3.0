@@ -17,7 +17,7 @@ class LoginPage(BasePage):
     def open(self):
         self.logger.info("Navigating to HP Portal Login URL")
         with allure.step("Launch HP Smart Desktop App"):
-            self.driver.get("https://practicetestautomation.com/practice-test-login/")
+            self.driver.get("https://instantink-stage1.hpconnectedstage.com/us/en/l/v2")
 
     def enter_username(self, username):
         self.logger.info("Entering username into input field")        
