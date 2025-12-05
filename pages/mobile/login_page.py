@@ -1,14 +1,20 @@
-import time
-import allure
-import pytest
+# pages/mobile/login_page.py
 from pages.base_page import BasePage
-from utils.waits import WaitUtils
-from selenium.webdriver.common.by import By
-from core.logger import get_logger
 
-
-class LoginPage(BasePage):
+class MobileLoginPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
-        self.logger = get_logger(self.__class__.__name__)
-        self.wait = WaitUtils(driver)
+        self.driver = driver
+
+    def open(self):
+        # for app-based flow maybe ensure app is in foreground
+        pass
+
+    def enter_username(self, locator, username):
+        self.enter_text(locator, username)
+
+    def enter_password(self, locator, pwd):
+        self.enter_text(locator, pwd)
+
+    def click_login(self, locator):
+        self.click(locator)

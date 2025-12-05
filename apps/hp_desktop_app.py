@@ -1,37 +1,13 @@
-# apps/hp_app_desktop.py
+# apps/hp_desktop_app.py
 from pages.desktop.login_page import LoginPage
-from core.configManager import ConfigManager
-
 
 class HPAppDesktop:
-    def __init__(self, driver):
-        self.driver = driver
-        self.main_window = driver.main_window
+    def __init__(self, desktop_mgr, main_window=None):
+        # desktop_mgr is DesktopDriverManager (returned from conftest driver fixture)
+        self.driver = desktop_mgr
+        self.main_window = main_window or getattr(desktop_mgr, "main_window", None)
         self.login_page = LoginPage(self.driver, self.main_window)
-        # self.enroll_page = WebEnrollPage(driver)
-
-    def launchApp(self):
-        self.main_window = self.driver.launch_app()
-
-        # give main_window to pages
-        from pages.desktop.login_page import LoginPage
-        self.login_page = LoginPage(self.driver, self.main_window)
-
-        return self   
 
     def login(self):
         self.login_page.open()
-        # self.login_page.login()
-    
-    def start_enrollment(self):
-        self.login_page.open()
-        # self.login_page.login()
-    
-    def enter_shipping_details(self):
-        self.enroll_page.fill_shipping()
-    
-    def confirm_enrollment(self):
-        self.enroll_page.confirm()
-    
-    def verify_confirmation_screen(self):
-        self.enroll_page.verify_success_message()
+        # whatever sequence clicks login etc.

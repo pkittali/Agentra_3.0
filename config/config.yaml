@@ -1,9 +1,10 @@
+# config/config.yaml
 urls:
   login: "https://practicetestautomation.com/practice-test-login/"
   dashboard: "https://practicetestautomation.com/dashboard/"
 
 credentials:
-  user: "student"
+  username: "student"
   password: "Password123"
 
 timeouts:
@@ -13,6 +14,16 @@ timeouts:
 retries:
   step_retry: 3
   test_retry: 2
+
+mobile:
+  server: "http://127.0.0.1:4723/wd/hub"
+  caps:
+    platformName: "Android"
+    deviceName: "emulator-5554"
+    automationName: "UiAutomator2"
+    appPackage: "com.hp.smart"
+    appActivity: "com.hp.smart.MainActivity"
+    noReset: true
 
 app:
   name: "Agentra Automation"

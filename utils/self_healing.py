@@ -1,120 +1,160 @@
 # utils/self_healing.py
+import os
 import re
 import json
-import os
-from bs4 import BeautifulSoup
 from difflib import SequenceMatcher
+
+from bs4 import BeautifulSoup
 
 
 class SelfHealingEngine:
+    """
+    Driver-aware self-healing engine.
+
+    WEB/APPIUM MODE:
+        - Uses HTML DOM + BeautifulSoup
+        - Supports id / xpath / name / placeholder / aria-label based healing
+
+    DESKTOP MODE:
+        - Healing disabled (no BeautifulSoup, no DOM)
+        - Future extension possible based on UIA tree attributes
+    """
 
     def __init__(self, driver, log_path="reports/healing_log.json"):
-        # Unwrap WebDriverManager / MobileDriverManager etc.
+        """
+        Auto-detect driver type and configure healing appropriately.
+        """
+        # unwrap WebDriverManager if necessary
         if hasattr(driver, "driver"):
-            self.driver = driver.driver       # raw selenium/appium driver
+            self.driver = driver.driver
         else:
             self.driver = driver
+
+        # check driver capability
+        self.is_web = hasattr(self.driver, "page_source")
+        self.is_desktop = hasattr(self.driver, "element_info") or hasattr(self.driver, "child_window")
 
         self.log_path = log_path
         os.makedirs(os.path.dirname(log_path), exist_ok=True)
 
+    # -------------------------------------------------------------------
+    # HELPER: similarity score
+    # -------------------------------------------------------------------
     def similarity(self, a, b):
-        return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+        try:
+            return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+        except Exception:
+            return 0
 
+    # -------------------------------------------------------------------
+    # PUBLIC API: Heal locator if possible
+    # -------------------------------------------------------------------
     def self_heal_locator(self, locator):
         """
-        Heuristic self-healing based on DOM attributes and similarity.
+        Attempts healing based on driver type.
 
-        Supports:
-        - id-based locators
-        - xpath locators using @id, @name, @placeholder, @aria-label
+        locator is expected as tuple: (by, value) for web.
+        Desktop uses dict → healing skipped automatically.
         """
+
+        # ----------------------------------------------------------
+        # DESKTOP MODE → NO HEALING
+        # ----------------------------------------------------------
+        if self.is_desktop:
+            return None  # pywinauto cannot use DOM healing
+
+        # ----------------------------------------------------------
+        # WEB/APPIUM MODE (requires HTML)
+        # ----------------------------------------------------------
+        if not self.is_web:
+            return None
+
+        if locator is None or not isinstance(locator, tuple):
+            return None
+
         by, original_value = locator
 
-        # 🔥 IMPORTANT: use real selenium driver's page_source
-        page_source = self.driver.page_source
-        soup = BeautifulSoup(page_source, "html.parser")
+        try:
+            html = self.driver.page_source
+        except Exception:
+            return None
 
-        # --- Case 1: pure ID locator -------------------------------------
+        soup = BeautifulSoup(html, "html.parser")
+
+        # --- ID healing ---
         if by.lower() == "id":
-            healed = self._heal_by_similarity("id", original_value, soup)
+            healed = self._heal_by_attr("id", original_value, soup)
             if healed:
                 self._log(locator, healed)
                 return healed
 
-        # --- Case 2: XPATH with @id / @name / @placeholder / @aria-label --
+        # --- XPATH healing ---
         if by.lower() == "xpath":
-            # Try to extract @id='<value>' from xpath
-            id_match = re.search(r"@id=['\"]([^'\"]+)['\"]", original_value)
-            if id_match:
-                id_value = id_match.group(1)
-                healed = self._heal_by_similarity("id", id_value, soup)
-                if healed:
-                    self._log(locator, healed)
-                    return healed
+            # extract attributes from xpath
+            for attr in ["id", "name", "placeholder", "aria-label"]:
+                match = re.search(rf"@{attr}=['\"]([^'\"]+)['\"]", original_value)
+                if match:
+                    healed = self._heal_by_attr(attr, match.group(1), soup)
+                    if healed:
+                        self._log(locator, healed)
+                        return healed
 
-            name_match = re.search(r"@name=['\"]([^'\"]+)['\"]", original_value)
-            if name_match:
-                name_value = name_match.group(1)
-                healed = self._heal_by_similarity("name", name_value, soup)
-                if healed:
-                    self._log(locator, healed)
-                    return healed
-
-            placeholder_match = re.search(r"@placeholder=['\"]([^'\"]+)['\"]", original_value)
-            if placeholder_match:
-                placeholder_value = placeholder_match.group(1)
-                healed = self._heal_by_similarity("placeholder", placeholder_value, soup)
-                if healed:
-                    self._log(locator, healed)
-                    return healed
-
-            aria_match = re.search(r"@aria-label=['\"]([^'\"]+)['\"]", original_value)
-            if aria_match:
-                aria_value = aria_match.group(1)
-                healed = self._heal_by_similarity("aria-label", aria_value, soup)
-                if healed:
-                    self._log(locator, healed)
-                    return healed
-
-        # --- Fallback: try raw value against other attributes ------------
-        for attr in ["name", "placeholder", "aria-label"]:
-            healed = self._heal_by_similarity(attr, original_value, soup)
+        # --- fallback: similarity healing across multiple attributes ---
+        for attr in ["id", "name", "placeholder", "aria-label"]:
+            healed = self._heal_by_attr(attr, original_value, soup)
             if healed:
                 self._log(locator, healed)
                 return healed
 
         return None
 
-    def _heal_by_similarity(self, attr, original_value, soup):
-        best_match = None
+    # -------------------------------------------------------------------
+    # INTERNAL: heal by matching attribute similarities
+    # -------------------------------------------------------------------
+    def _heal_by_attr(self, attr, target_value, soup):
+        best = None
         best_score = 0.0
 
         for tag in soup.find_all(attrs={attr: True}):
-            current = tag.get(attr)
-            score = self.similarity(original_value, current)
+            candidate = tag.get(attr)
+            if not candidate:
+                continue
 
-            if score > best_score and score > 0.7:
+            score = self.similarity(candidate, target_value)
+
+            if score > best_score and score >= 0.70:
+                best = candidate
                 best_score = score
-                best_match = current
 
-        if best_match:
-            if attr == "id":
-                return ("id", best_match)
-            return ("xpath", f"//*[@{attr}='{best_match}']")
+        if not best:
+            return None
 
-        return None
+        # return healed locator
+        if attr == "id":
+            return ("id", best)
 
+        return ("xpath", f"//*[@{attr}='{best}']")
+
+    # -------------------------------------------------------------------
+    # LOG HEALED LOCATOR
+    # -------------------------------------------------------------------
     def _log(self, old, new):
-        data = {}
-        if os.path.exists(self.log_path):
-            with open(self.log_path, "r") as f:
-                try:
-                    data = json.load(f)
-                except Exception:
-                    data = {}
+        """
+        Saves old → new mapping in a JSON log file.
+        """
+        try:
+            data = {}
+            if os.path.exists(self.log_path):
+                with open(self.log_path, "r") as f:
+                    try:
+                        data = json.load(f)
+                    except Exception:
+                        data = {}
 
-        data[str(old)] = {"old": old, "new": new}
+            data[str(old)] = {"old": old, "new": new}
 
-        with open(self.log_path, "w") as f:
-            json.dump(data, f, indent=4)
+            with open(self.log_path, "w") as f:
+                json.dump(data, f, indent=4)
+
+        except Exception:
+            pass  # do not interfere with tests
