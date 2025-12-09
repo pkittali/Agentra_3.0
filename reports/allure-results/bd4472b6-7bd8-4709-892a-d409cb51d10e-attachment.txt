@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "C:\Users\JaNi770\OneDrive - HP Inc\Documents\GitHub\Agentra_3.0\pages\base_page.py", line 85, in _safe_action
+    return func(*args, **kwargs)   # SUCCESS → exit immediately
+  File "C:\Users\JaNi770\OneDrive - HP Inc\Documents\GitHub\Agentra_3.0\pages\base_page.py", line 152, in _click
+    self.driver.click(locator_type, locator_value)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JaNi770\OneDrive - HP Inc\Documents\GitHub\Agentra_3.0\core\web_driver.py", line 55, in click
+    self.find_element(locator_type, locator_value).click()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\JaNi770\OneDrive - HP Inc\Documents\GitHub\Agentra_3.0\venv\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 119, in click
+    self._execute(Command.CLICK_ELEMENT)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JaNi770\OneDrive - HP Inc\Documents\GitHub\Agentra_3.0\venv\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 572, in _execute
+    return self._parent.execute(command, params)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JaNi770\OneDrive - HP Inc\Documents\GitHub\Agentra_3.0\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\JaNi770\OneDrive - HP Inc\Documents\GitHub\Agentra_3.0\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 233, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff763c1a235
+	0x7ff763972630
+	0x7ff7637016dd
+	0x7ff7637094c8
+	0x7ff76370c52f
+	0x7ff76370c5ef
+	0x7ff7637623ab
+	0x7ff76375fe4e
+	0x7ff76375cd71
+	0x7ff76375bc10
+	0x7ff76374d3a8
+	0x7ff763782b0a
+	0x7ff76374cc36
+	0x7ff7637ababa
+	0x7ff76374b0ed
+	0x7ff76374bf63
+	0x7ff763c45d60
+	0x7ff763c3fe8a
+	0x7ff763c61005
+	0x7ff76398d71e
+	0x7ff763994e1f
+	0x7ff76397b7c4
+	0x7ff76397b97f
+	0x7ff7639618e8
+	0x7ff8bd9de8d7
+	0x7ff8bee0c53c
+

@@ -8,11 +8,12 @@ from utils.waits import WaitUtils
 from selenium.webdriver.common.by import By
 from resources.locators.web_locators import AddShippingPageLocators, HPCheckoutPageLocators
 from core.logger import get_logger
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException,ElementClickInterceptedException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import re
 from selenium.webdriver.common.action_chains import ActionChains
+
 
 class ShippingPage(BasePage):
     def __init__(self, driver):
@@ -83,21 +84,56 @@ class ShippingPage(BasePage):
         self.select_state(state_name)
         self.enter_zipcode(zip_code)
         self.enter_mobile_number(mobile_number)
-        if text_message_optin:
-            self.check_text_message_option()
+        # if text_message_optin:
+        #     self.check_text_message_option()
         self.click_save_shipping()
     
-    def click_ship_to_this_address_if_visible(self):
-        self.logger.info("Clicking Ship to this address button")
-        with allure.step("Clicked Ship to this address button"):
-            try:
-                wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div[role='dialog']")))
-                self.wait.wait_until_visible(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON,timeout=20)
-                self.wait.wait_until_clickable(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON,timeout=20)
-                if element:
-                    self.click(*AddShippingPageLocators.SHIP_TO_THIS_ADDRESS_BUTTON)
-            except TimeoutException:
-                self.logger.info("Ship to this address button not visible, proceeding without clicking it.")
-                pass
+    # //span[contains(@class,'vn-checkbox__span')]
 
-    
+    def click_ship_to_this_address_if_visible(self):
+        self.logger.info("Checking for address verification popup")
+
+        with allure.step("Handle Address Verification Popup"):
+            try:
+                # Step 1: Detect popup container
+                popup = WebDriverWait(self.driver, 8).until(
+                    # EC.visibility_of_element_located((By.XPATH, "//div[contains(@class,'vn-modal--dialog')]"))
+                    EC.visibility_of_element_located((By.XPATH, "//span[contains(@class,'vn-checkbox__span')]"))
+                )
+                self.logger.info("Address popup detected")
+
+            except TimeoutException:
+                self.logger.info("No address popup visible — test continues")
+                return  # EXIT → Nothing to click
+
+            try:
+                # Step 2: Wait for button inside popup container
+                button = WebDriverWait(self.driver, 10).until(
+                    EC.element_to_be_clickable(
+                        (By.XPATH, "//button[contains(.,'Ship to this address')]")
+                    )
+                )
+                self.logger.info("'Ship to this address' found and clickable")
+
+                try:
+                    button.click()
+                    self.logger.info("Clicked popup button normally")
+
+                except ElementClickInterceptedException:
+                    self.logger.warning("Normal click blocked — using JS click")
+                    self.driver.execute_script("arguments[0].click();", button)
+                    self.logger.info("Popup clicked via JS fallback")
+
+            except TimeoutException:
+                self.logger.error("Popup shown but button not found — skipping click")
+                return
+
+        # Step 3: Wait until popup disappears to avoid Save click blocking
+            try:
+                WebDriverWait(self.driver, 10).until(
+                    EC.invisibility_of_element_located((By.XPATH, "//div[contains(@class,'vn-modal--dialog')]"))
+                )
+                self.logger.info("Popup dismissed successfully")
+
+            except TimeoutException:
+                self.logger.warning("Popup still visible — will not block further execution")

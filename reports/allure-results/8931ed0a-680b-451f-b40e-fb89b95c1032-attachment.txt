@@ -1,0 +1,1 @@
+Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1

@@ -1,0 +1,1 @@
+Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1

@@ -1,0 +1,86 @@
+2025-12-08 10:20:11 | INFO | core.web_driver | Launching Chrome browser...
+2025-12-08 10:20:24 | INFO | tests.test_23_multiple_codes_ui_special_offer_enroll_oobe | Starting test_01_validate_promo
+2025-12-08 10:20:24 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-08 10:20:45 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-08 10:20:45 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@id='onetrust-accept-btn-handler']) - Attempt 1
+2025-12-08 10:20:50 | INFO | LaunchLandingPage | Navigating to HP Portal Login URL
+2025-12-08 10:20:50 | INFO | LaunchLandingPage | Clicking element (xpath, //button[@data-testid='header-sign-up-button']) - Attempt 1
+2025-12-08 10:21:05 | INFO | CreateAccountPage | Navigating to create account page
+2025-12-08 10:21:05 | INFO | CreateAccountPage | Clicking element (xpath, //button[@data-testid='create-account-button']) - Attempt 1
+2025-12-08 10:21:28 | INFO | CreateAccountPage | Entering first name into input field
+2025-12-08 10:21:28 | INFO | CreateAccountPage | Entering 'John' into (xpath, //input[@id='firstName']) - Attempt 1
+2025-12-08 10:21:43 | INFO | CreateAccountPage | Entering last name into input field
+2025-12-08 10:21:43 | INFO | CreateAccountPage | Entering 'Doe' into (xpath, //input[@id='lastName']) - Attempt 1
+2025-12-08 10:21:44 | INFO | CreateAccountPage | Entering email into input field
+2025-12-08 10:21:44 | INFO | CreateAccountPage | Entering 'GSsauqfyhi7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1
+2025-12-08 10:21:45 | INFO | CreateAccountPage | Entering password into input field
+2025-12-08 10:21:45 | INFO | CreateAccountPage | Entering 'GSGSsauqfyhi7@mailsac.com@123' into (xpath, //input[@id='password']) - Attempt 1
+2025-12-08 10:21:46 | INFO | CreateAccountPage | Clicking Submit Create Account button
+2025-12-08 10:21:46 | INFO | CreateAccountPage | Clicking element (xpath, //button[@id='sign-up-submit']) - Attempt 1
+2025-12-08 10:21:46 | INFO | CreateAccountPage | Opening email to fetch verification code
+2025-12-08 10:22:12 | INFO | CreateAccountPage | Entering verification code
+2025-12-08 10:22:12 | INFO | CreateAccountPage | Entering '360807' into (xpath, //input[@id='code']) - Attempt 1
+2025-12-08 10:22:12 | INFO | CreateAccountPage | Clicking Verify button
+2025-12-08 10:22:12 | INFO | CreateAccountPage | Clicking element (xpath, //button[contains(@id,'submit-code')]) - Attempt 1
+2025-12-08 10:22:13 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-12-08 10:22:13 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-12-08 10:22:13 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-12-08 10:23:22 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-12-08 10:23:22 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-12-08 10:23:23 | INFO | HPCheckoutPage | Clicking HP Checkout button
+2025-12-08 10:23:42 | INFO | HPCheckoutPage | Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1
+2025-12-08 10:23:43 | INFO | ShippingBillingPage | Clicking Add Shipping button
+2025-12-08 10:23:43 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
+2025-12-08 10:23:46 | INFO | ShippingPage | Entering Street1
+2025-12-08 10:23:46 | INFO | ShippingPage | Entering '1234 Sunset Blvd' into (xpath, //input[@id='street1']) - Attempt 1
+2025-12-08 10:24:02 | INFO | ShippingPage | Entering City
+2025-12-08 10:24:02 | INFO | ShippingPage | Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1
+2025-12-08 10:24:08 | INFO | ShippingPage | Selecting State
+2025-12-08 10:24:08 | INFO | ShippingPage | Clicking element (xpath, //div[@data-testid='state']//div[@aria-label='Open']) - Attempt 1
+2025-12-08 10:24:09 | INFO | ShippingPage | Selecting dropdown option: California
+2025-12-08 10:24:10 | INFO | ShippingPage | Clicking element (xpath, //li[@role='option']//span[contains(normalize-space(text()), 'California')]) - Attempt 1
+2025-12-08 10:24:11 | INFO | ShippingPage | Selected 'California' using normal click
+2025-12-08 10:24:11 | INFO | ShippingPage | Entering Zipcode
+2025-12-08 10:24:11 | INFO | ShippingPage | Entering '90026' into (xpath, //input[@id='zip-code']) - Attempt 1
+2025-12-08 10:24:12 | INFO | ShippingPage | Entering Mobile Number
+2025-12-08 10:24:12 | INFO | ShippingPage | Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1
+2025-12-08 10:24:14 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-08 10:24:14 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-08 10:24:19 | INFO | ShippingPage | Clicking Save Shipping button
+2025-12-08 10:24:19 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 1
+2025-12-08 10:24:28 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 1/2...
+2025-12-08 10:24:28 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 2
+2025-12-08 10:24:30 | WARNING | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) failed with ElementClickInterceptedException. Retrying 2/2...
+2025-12-08 10:24:30 | INFO | ShippingPage | Clicking element (xpath, //button[@data-testid='save-button']) - Attempt 3
+2025-12-08 10:24:31 | ERROR | ShippingPage |  Failed after 2 retries (StaleElementReferenceException) during: Clicking element (xpath, //button[@data-testid='save-button'])
+Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.176); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff763c1a235
+	0x7ff763972630
+	0x7ff7637016dd
+	0x7ff7637094c8
+	0x7ff76370c52f
+	0x7ff76370c5ef
+	0x7ff7637623ab
+	0x7ff76375fe4e
+	0x7ff76375cd71
+	0x7ff76375bc10
+	0x7ff76374d3a8
+	0x7ff763782b0a
+	0x7ff76374cc36
+	0x7ff7637ababa
+	0x7ff76374b0ed
+	0x7ff76374bf63
+	0x7ff763c45d60
+	0x7ff763c3fe8a
+	0x7ff763c61005
+	0x7ff76398d71e
+	0x7ff763994e1f
+	0x7ff76397b7c4
+	0x7ff76397b97f
+	0x7ff7639618e8
+	0x7ff8bd9de8d7
+	0x7ff8bee0c53c
+

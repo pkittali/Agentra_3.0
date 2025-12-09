@@ -21,7 +21,7 @@ from pages.web.thank_you_page import ThankYouPage
 class HPAppWeb:
     def __init__(self, driver, config):
         self.driver = driver
-        self.config = config
+        # self.config = config
         self.login_page = LoginPage(driver, config)
         self.create_account_page = CreateAccountPage(driver)
         self.landing_page=LaunchLandingPage(driver)
@@ -29,7 +29,7 @@ class HPAppWeb:
         self.printer_select_page=PrinterSelectionPage(driver)
         self.plan_select_page=PlanSelectionPage(driver)
         self.hp_checkout_page=HPCheckoutPage(driver)
-        self.shipping_billing_page=ShippingBillingPage(driver,config)
+        self.shipping_billing_page=ShippingBillingPage(driver)
         self.shippingpage=ShippingPage(driver)
         self.billinginformation_page=BillingInformationPage(driver)
         self.billing_page=BillingPage(driver)
@@ -66,7 +66,6 @@ class HPAppWeb:
         self.create_account_page.fetch_and_enter_otp(test_email)
 
     def onboard_printer(self):
-        # "link_printer_url": "https://www.hpsmartstage.com/us/en/newprinter"
         url="https://www.hpsmartstage.com/us/en/newprinter"
         claim_code="ABCDEFGH"
         self.onboard_printer_page.open_printer_url(url)
@@ -74,8 +73,8 @@ class HPAppWeb:
         self.onboard_printer_page.click_add_printer()
 
     def checkout_upto_shipping_billing(self):
-        # self.landing_page.click_signup_now()
-        # self.printer_select_page.printer_selection()
+        self.landing_page.click_signup_now()
+        self.printer_select_page.printer_selection()
         self.plan_select_page.plan_selection()
         self.hp_checkout_page.click_hp_checkout()
         
@@ -83,18 +82,15 @@ class HPAppWeb:
         self.login_page.open()
         self.login_page.login()
        
-    
     def enter_shipping_details(self):
         self.shipping_billing_page.click_add_shipping()
         self.shippingpage.fill_shipping("9898989898","1234 Sunset Blvd","Los Angeles","California","90026","False")
-        self.shippingpage.click_save_shipping()
         self.shippingpage.click_ship_to_this_address_if_visible()
 
     def enter_billing_details(self):
         self.shipping_billing_page.click_add_billing()
         self.billinginformation_page.click_continue()
         self.billing_page.fill_billing_details("5555555555554444","12","2028","123")
-        self.billing_page.click_save_billing()
 
     def apply_promo_code(self):
         self.shipping_billing_page.click_apply_promotion()

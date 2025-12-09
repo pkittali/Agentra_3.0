@@ -1,0 +1,1 @@
+Entering 'Los Angeles' into (xpath, //input[@id='city']) - Attempt 1

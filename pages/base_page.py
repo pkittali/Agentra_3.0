@@ -26,6 +26,7 @@ Design Principles
 
 import time
 import traceback
+from selenium.webdriver.support.ui import Select
 import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -226,4 +227,13 @@ class BasePage:
             "arguments[0].scrollIntoView({block: 'center'});", element
         )
 
-
+    def select_dropdown_by_value(self, locator, value, timeout=15):
+        try:
+            element = WebDriverWait(self.driver, timeout).until(
+                EC.element_to_be_clickable(locator)
+            )
+            Select(element).select_by_value(str(value))
+        except TimeoutException:
+            raise Exception(f"Dropdown with locator {locator} not found within {timeout} seconds.")
+        except Exception as e:
+            raise Exception(f"Could not select value '{value}' in dropdown {locator}: {e}")

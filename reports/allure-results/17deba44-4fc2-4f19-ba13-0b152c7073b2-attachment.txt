@@ -1,0 +1,1 @@
+Entering 'GSsauqfyhi7@mailsac.com' into (xpath, //input[@id='email']) - Attempt 1

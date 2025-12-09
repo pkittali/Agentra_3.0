@@ -26,3 +26,11 @@
 2025-12-03 14:13:44 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
 2025-12-03 15:06:30 | INFO | ShippingBillingPage | Clicking Add Shipping button
 2025-12-03 15:06:30 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
+2025-12-04 11:49:05 | INFO | ShippingBillingPage | Clicking Add Shipping button
+2025-12-04 11:49:05 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
+2025-12-04 12:08:03 | INFO | ShippingBillingPage | Clicking Add Shipping button
+2025-12-04 12:08:03 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
+2025-12-04 12:19:37 | INFO | ShippingBillingPage | Clicking Add Shipping button
+2025-12-04 12:19:37 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1
+2025-12-08 10:23:43 | INFO | ShippingBillingPage | Clicking Add Shipping button
+2025-12-08 10:23:43 | INFO | ShippingBillingPage | Clicking element (xpath, //button[@data-testid='add-shipping']) - Attempt 1

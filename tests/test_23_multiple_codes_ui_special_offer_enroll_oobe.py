@@ -16,13 +16,12 @@ It ensures that:
 3. Entering user credentials correctly
 4. Creating account
 """)
-# @pytest.mark.parametrize('user,pwd', [('student','Password123')])
 def test_23_multiple_codes_ui_special_offer_enroll_oobe(hpApp): 
     
     logger.info(f"Starting test_01_validate_promo")
     hpApp.launch_web()
     hpApp.create_account()
-    # hpApp.onboard_printer()
+    hpApp.onboard_printer()
     hpApp.checkout_upto_shipping_billing()
     hpApp.enter_shipping_details()
     hpApp.enter_billing_details()

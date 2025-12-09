@@ -1,0 +1,1 @@
+Entering '9898989898' into (xpath, //input[@id='phoneNumberSmall']) - Attempt 1

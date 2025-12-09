@@ -300,3 +300,23 @@ Symbols not available. Dumping unresolved backtrace:
 2025-12-03 15:05:10 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
 2025-12-03 15:06:13 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
 2025-12-03 15:06:13 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-12-04 11:47:46 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-12-04 11:47:46 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-12-04 11:47:46 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-12-04 11:48:49 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-12-04 11:48:49 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-12-04 12:06:46 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-12-04 12:06:46 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-12-04 12:06:46 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-12-04 12:07:47 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-12-04 12:07:47 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-12-04 12:18:15 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-12-04 12:18:15 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-12-04 12:18:15 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-12-04 12:19:17 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-12-04 12:19:17 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1
+2025-12-08 10:22:13 | INFO | PlanSelectionPage | Selecting plan on Plan Selection Page
+2025-12-08 10:22:13 | INFO | PlanSelectionPage | Clicking Monthly plan button
+2025-12-08 10:22:13 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='i_ink-plan-type-card-select-button']) - Attempt 1
+2025-12-08 10:23:22 | INFO | PlanSelectionPage | Clicking Ink and Paper plan button
+2025-12-08 10:23:22 | INFO | PlanSelectionPage | Clicking element (xpath, //button[@data-testid='select-plan-ink-and-paper']) - Attempt 1

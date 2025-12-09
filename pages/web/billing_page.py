@@ -28,8 +28,8 @@ class BillingPage(BasePage):
     def select_expiry_date(self, month, year):
         self.logger.info(f"Selecting expiry date: {month}/{year}")
         with allure.step(f"Selected expiry date: {month}/{year}"):
-            self.select_custom_dropdown_by_text(month)
-            self.select_custom_dropdown_by_text(year)
+            self.select_dropdown_by_value(month)
+            self.select_dropdown_by_value(year)
 
     def enter_cvv(self, cvv):
         self.logger.info(f"Entering CVV: {cvv}")
@@ -41,20 +41,12 @@ class BillingPage(BasePage):
         with allure.step("Clicked Save Billing button"):
             self.click(*BillingPageLocators.NEXT_BUTTON)
 
-    #update for usage of allure and logger
-    # def fill_billing_details(self):
-    #     test_card_number = "4111111111111111"
-    #     test_expiry_month = "12"
-    #     test_expiry_year = "2025"
-    #     test_cvv = "123"
-
-    #     self.enter_card_number(test_card_number)
-    #     self.select_expiry_date(test_expiry_month, test_expiry_year)
-    #     self.enter_cvv(test_cvv)
 
     def fill_billing_details(self,test_card_number,test_expiry_month,test_expiry_year,test_cvv):
         self.logger.info("Filling billing details")
         with allure.step("Filling billing details"):
+            iframe = self.driver.driver.find_element(By.ID, "pgs-iframe")
+            self.driver.driver.switch_to.frame(iframe)
             self.enter_card_number(test_card_number)
             self.select_expiry_date(test_expiry_month, test_expiry_year)
             self.enter_cvv(test_cvv)

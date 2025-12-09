@@ -8,8 +8,13 @@ from resources.locators.web_locators import ShippingBillingPageLocators
 from core.logger import get_logger
 
 class ShippingBillingPage(BasePage):
-    def __init__(self, driver, config):
-        super().__init__(driver, config)
+    # def __init__(self, driver, config):
+    #     super().__init__(driver, config)
+    #     self.driver = driver
+    #     self.logger = get_logger(self.__class__.__name__)
+    #     self.wait = WaitUtils(driver)
+    def __init__(self, driver):
+        super().__init__(driver)
         self.driver = driver
         self.logger = get_logger(self.__class__.__name__)
         self.wait = WaitUtils(driver)

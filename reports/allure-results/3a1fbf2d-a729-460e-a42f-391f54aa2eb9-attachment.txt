@@ -1,0 +1,1 @@
+Clicking element (xpath, //button[@data-testid='choose-HP-checkout']) - Attempt 1
