@@ -2,6 +2,8 @@
 urls:
   login: "https://practicetestautomation.com/practice-test-login/"
   dashboard: "https://practicetestautomation.com/dashboard/"
+  instantink_landing_url: "https://instantink-stage1.hpconnectedstage.com/us/en/l/v2"
+  web_onboard_printer_url: "https://www.hpsmartstage.com/us/en/newprinter"
 
 credentials:
   username: "student"
@@ -27,3 +29,25 @@ mobile:
 
 app:
   name: "Agentra Automation"
+
+shippingDetails:
+  ca_address:
+    street: "1600 Amphitheatre Parkway"
+    city: "Mountain View"
+    state: "California"
+    zip_code: "94043"
+    mobile: "9898989898"
+
+  non_ca_address:
+    street: "350 5th Avenue"
+    city: "New York"
+    state: "NY"
+    zip_code: "10118"
+    mobile: "9898989898"
+
+billingDetails:
+  card_number: "5555555555554444"
+  expiry_month: "12"
+  expiry_year: "25"
+  cvv: "123"
+

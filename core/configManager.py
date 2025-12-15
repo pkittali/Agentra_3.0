@@ -44,3 +44,16 @@ class ConfigManager:
         if cls._config is None:
             cls.load()
         return cls._config.get("retries", {}).get(key, 1)
+    
+    @classmethod
+    def get_shipping(cls, address_type):
+        if cls._config is None:
+            cls.load()
+        return cls._config.get("shippingDetails", {}).get(address_type)
+    
+    @classmethod
+    def get_billing(cls, key):
+        if cls._config is None:
+            cls.load()
+        return cls._config.get("billingDetails", {}).get(key)
+
