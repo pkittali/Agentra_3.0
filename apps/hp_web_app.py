@@ -2,7 +2,6 @@
 import random
 import string
 from core.configManager import ConfigManager
-from pages.subscription_page import SubscriptionPage
 from pages.web import *
 from pages.web.automatic_renewal_page import ARNPage
 from pages.web.billing_page import BillingPage
@@ -17,6 +16,7 @@ from pages.web.printer_select_page import PrinterSelectionPage
 from pages.web.shipping_billing_page import ShippingBillingPage
 from pages.web.shippingpage import ShippingPage
 from pages.web.special_offers_page import SpecialOffersPage
+from pages.web.subscription_page import SubscriptionPage
 from pages.web.thank_you_page import ThankYouPage
 
 class HPAppWeb:
