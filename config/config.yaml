@@ -51,3 +51,6 @@ billingDetails:
   expiry_year: "25"
   cvv: "123"
 
+claimCode:
+  claim_code: "ABCDEFGH"
+

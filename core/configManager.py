@@ -56,4 +56,12 @@ class ConfigManager:
         if cls._config is None:
             cls.load()
         return cls._config.get("billingDetails", {}).get(key)
+    
+    @classmethod
+    def get_claim_code(cls, key):
+        if cls._config is None:
+            cls.load()
+        return cls._config.get("claimCode", {}).get(key)
+    
+
 

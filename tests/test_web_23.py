@@ -26,13 +26,14 @@ def test_23_multiple_codes_ui_special_offer_enroll_oobe(driver):
     exp_month = ConfigManager.get_billing("expiry_month")
     exp_year = ConfigManager.get_billing("expiry_year")
     cvv = ConfigManager.get_billing("cvv")
+    claim_code = ConfigManager.get_claim_code("claim_code")
+
 
     hpApp = HPAppWeb(driver)
     logger.info(f"Starting test_01_validate_promo")
 
     hpApp.launch_web()
     hpApp.create_account()
-    claim_code="ABCDEFGH"
     hpApp.onboard_printer(claim_code)
     hpApp.checkout_upto_shipping_billing()
     hpApp.enter_shipping_details(ca_address["mobile"],
